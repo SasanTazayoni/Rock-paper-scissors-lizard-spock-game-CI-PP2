@@ -9,13 +9,98 @@
     <title>Rock paper scissors lizard spock game</title>
   </head>
   <body>
-    <header>title</header>
+    <header><h1>Rock Paper Scissors Lizard Spock game</h1></header>
     <main>
-      <div>selection of emoji icon</div>
-      <div>scores</div>
-      <div>total scores</div>
-      <div>modal and overlay</div>
+      <div class="selections">
+        <button class="selection" data-selection="rock">✊</button>
+        <button class="selection" data-selection="paper">🖐</button>
+        <button class="selection" data-selection="scissors">✌️</button>
+        <button class="selection" data-selection="scissors">🤏</button>
+        <button class="selection" data-selection="scissors">🖖</button>
+      </div>
+      <div class="scores">
+        <div>
+          Player:
+          <span class="score" data-player-score>0</span>
+        </div>
+        <div data-last-column>
+          Computer:
+          <span class="score" data-computer-score>0</span>
+        </div>
+      </div>
+      <div>
+        <div>
+          Player:
+          <span class="total-score" data-player-wins>0</span>
+        </div>
+        <div data-last-column>
+          Computer:
+          <span class="total-score" data-computer-wins>0</span>
+        </div>
+      </div>
+      <div>
+        <div class="start-game-modal" data-modal>
+          <h2>How it works (rules)</h2>
+          <img
+            src="assets/images/rules.png"
+            alt="A picture showing how the rock paper lizard spock game works"
+          />
+          <p class="modal-content" data-modal-content>
+            The game is an extension on top of the original game - Rock Paper
+            Scissors. Each player picks a variable and reveals it
+            simultaneously. This game is more interesting because more than two
+            players can play together and there is less probability of a draw
+            occurring. The winner is the one who defeats most the others. In a
+            tie, the process is repeated until a winner is found.
+          </p>
+          <p class="modal-content" data-modal-content>
+            Rock beats scissors and lizard but loses to paper and spock. <br />
+            Paper beats rock and spock but loses to scissors and lizard. <br />
+            Scissors beats paper and lizard but loses to spock and rock. <br />
+            Lizard beats spock and paper but loses to rock and scissors. <br />
+            Spock beats rock and scissors but loses to paper and lizard.
+          </p>
+          <p class="modal-content" data-modal-content>
+            This is all illustrated in the diagram.
+          </p>
+          <p class="modal-content" data-modal-content>
+            In this particular application, there will only be two players - the
+            user and the computer. There will be a total of 9 rounds per game
+            for each win which means that the first player to win 5 round will
+            win a game.
+          </p>
+          <button class="modal-btn" data-modal-btn>Play game</button>
+        </div>
+        <div class="overlay" data-overlay></div>
+      </div>
+      <div>
+        <div class="end-game-modal" data-modal>
+          <h2 data-end-game-message></h2>
+          <button class="modal-btn" data-modal-btn>See rules</button>
+          <button class="modal-btn" data-modal-btn>Play again</button>
+        </div>
+        <div class="overlay" data-overlay></div>
+      </div>
     </main>
-    <footer>credits and github link</footer>
+    <footer>
+      <p>
+        &copy; Rock Paper Scissors Lizard Spock game 2023 created by Sasan
+        Tazayoni
+      </p>
+      <a
+        href="https://github.com/SasanTazayoni"
+        target="_blank"
+        rel="noopener"
+        class="github-link"
+        aria-label="Github profile link"
+      >
+        <i class="fa-brands fa-github"></i>
+      </a>
+    </footer>
+    <!-- Font Awesome script -->
+    <script
+      src="https://kit.fontawesome.com/cc28b3bda6.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
