@@ -1,0 +1,11 @@
+.github-link i {
+    width: max-content;
+    border-radius: 10px;
+    font-size: 30px;
+    transition: transform 0.5s;
+    padding: 15px 0;
+}
+
+.github-link i:hover {
+    transform: scale(1.2);
+}
