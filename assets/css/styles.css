@@ -116,6 +116,16 @@ h1 {
     color: red;
 }
 
+.result {
+    opacity: 0.3;
+    font-size: 40px;
+}
+
+.result.winner {
+    font-size: 60px;
+    opacity: 1;
+}
+
 /* Modals and modal content */
 
 h2 {
