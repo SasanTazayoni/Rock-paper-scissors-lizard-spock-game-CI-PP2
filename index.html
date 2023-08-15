@@ -28,21 +28,18 @@
           <span class="score loss" data-computer-score>0</span>
         </div>
       </div>
-      <div>
-        <div class="start-game-modal" data-modal>
-          <h2>How it works (rules)</h2>
-          <p class="modal-content" data-modal-content>
-            The game is an extension on top of the original game - Rock Paper
-            Scissors. Each player picks a variable and reveals it
-            simultaneously. This game is more interesting because more than two
-            players can play together and there is less probability of a draw
-            occurring. The winner is the one who defeats most of the others. In a
-            tie, the process is repeated until a winner is found.
-          </p>
-          <img
-            src="assets/images/rules.png"
-            alt="A picture showing how the rock paper lizard spock game works"
-          />
+        <!-- Modals -->
+      <div class="start-game-modal" data-modal>
+        <h2>How it works (rules)</h2>
+        <p>
+          The game is an extension on top of the original game - Rock Paper
+          Scissors. Each player picks a variable and reveals it
+          simultaneously. This game is more interesting because more than two
+          players can play together and there is less probability of a draw
+          occurring. The winner is the one who defeats most of the others. In a
+          tie, the process is repeated until a winner is found.
+        </p>
+        <div class="rules">
           <ul>
             <li>
               <span class="icon">✊</span> Rock beats scissors and lizard but loses to paper and spock.
@@ -60,37 +57,37 @@
               <span class="icon">🖖</span> Spock beats rock and scissors but loses to paper and lizard.
             </li>
           </ul>
-          <p class="modal-content" data-modal-content>
-            <span class="bold">This is all illustrated in the diagram above.</span>
-          </p>
-          <p class="modal-content" data-modal-content>
-            In this particular application, there will only be two players - the
-            user and the computer. There will be a total of 9 rounds per game
-            for each win which means that the first player to win 5 rounds will
-            win a game. The round scores will be indicated just below the game icons. 
-            <span class="bold">In order to play click on the icon</span> 
-            of your choice and the computer will select randomly.
-          </p>
-          <button class="modal-btn" data-modal-btn>Play game</button>
+          <img
+            src="assets/images/rules.png"
+            class="modal-image"
+            alt="A picture showing how the rock paper lizard spock game works"
+          />
         </div>
-        <div class="overlay" data-overlay></div>
+        <p>
+          In this particular application, there will only be two players - the
+          user and the computer. There will be a total of 9 rounds per game
+          for each win which means that the first player to win 5 rounds will
+          win a game. The round scores will be indicated just below the selectable 
+          game icons. In order to play click on the button below and then 
+          <span class="bold">select an icon</span> of your choice and the
+          computer will select also randomly against you.
+        </p>
+        <button class="modal-btn" data-modal-btn>Play game</button>
       </div>
-      <div>
-        <div class="end-game-modal" data-modal>
-          <h2 data-end-game-message></h2>
-          <div>
-            Total wins:
-            <span class="score" data-player-wins>0</span>
-          </div>
-          <div>
-            Total losses:
-            <span class="score loss" data-computer-wins>0</span>
-          </div>
-          <button class="modal-btn" data-modal-btn>See rules</button>
-          <button class="modal-btn" data-modal-btn>Play again</button>
+      <div class="end-game-modal" data-modal>
+        <h2 data-end-game-message></h2>
+        <div>
+          Total wins:
+          <span class="score" data-player-wins>0</span>
         </div>
-        <div class="overlay" data-overlay></div>
+        <div>
+          Total losses:
+          <span class="score loss" data-computer-wins>0</span>
+        </div>
+        <button class="modal-btn" data-modal-btn>See rules</button>
+        <button class="modal-btn" data-modal-btn>Play again</button>
       </div>
+      <div class="overlay" data-overlay></div>
     </main>
     <footer>
       <p>

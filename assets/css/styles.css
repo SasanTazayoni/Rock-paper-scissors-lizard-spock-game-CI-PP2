@@ -1,8 +1,17 @@
+html {
+    height: 100%;
+}
+
 body {
     background: rgb(232, 227, 255);
     font-size: 20px;
     margin: 0;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
+
+/* Main UI */
 
 h1 {
     text-align: center;
@@ -50,14 +59,70 @@ h1 {
     color: red;
 }
 
+/* Modals and modal content */
+
+.start-game-modal {
+    background: darkblue;
+    border: 4px solid rgb(232, 227, 255);
+    border-radius: 20px;
+    color: white;
+    left: 50%;
+    padding: 20px;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: 0.3s ease-in-out;
+    width: 1200px;
+    z-index: 1;
+}
+
+.rules {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rules li {
+    font-size: 24px;
+}
+
+.modal-image {
+    width: 300px;
+    display: inline-block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
+    opacity: 0.5;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+    margin-top: 0;
+}
+
 .icon {
-    font-size: 120%;
+    font-size: 150%;
 }
 
 .bold {
     font-weight: bold;
     font-size: 120%;
 }
+
+.end-game-modal {
+    transform: scale(0);
+}
+
+/* Footer */
 
 footer {
     border-top: 1px solid rgb(0, 255, 191);
@@ -66,6 +131,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: auto;
 }
 
 footer p {
@@ -75,9 +141,9 @@ footer p {
 .github-link i {
     width: max-content;
     border-radius: 10px;
-    font-size: 30px;
+    font-size: 20px;
     transition: all 0.5s;
-    padding: 10px;
+    margin-left: 10px;
     color: white;
 }
 
