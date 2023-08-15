@@ -17,6 +17,7 @@ openRulesModalBtn.forEach(btn => {
 
 function closeModal() {
     inititalModal.classList.remove('open');
+    scoresModal.classList.remove('open');
     overlay.classList.remove('open');
 }
 
