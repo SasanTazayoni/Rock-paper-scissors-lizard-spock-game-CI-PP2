@@ -1,6 +1,7 @@
 body {
     background: rgb(232, 227, 255);
     font-size: 20px;
+    margin: 0;
 }
 
 h1 {
@@ -58,14 +59,25 @@ h1 {
     font-size: 120%;
 }
 
+footer {
+    border-top: 1px solid rgb(0, 255, 191);
+    color: white;
+    background: darkblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .github-link i {
     width: max-content;
     border-radius: 10px;
     font-size: 30px;
-    transition: transform 0.5s;
+    transition: all 0.5s;
     padding: 10px;
+    color: white;
 }
 
 .github-link i:hover {
     transform: scale(1.2);
+    color: rgb(232, 227, 255);
 }
