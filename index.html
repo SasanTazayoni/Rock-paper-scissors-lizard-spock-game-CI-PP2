@@ -11,7 +11,7 @@
   <body>
     <div class="btn-container">
       <button class="btn--dark" data-rules-btn>See rules</button>
-      <button class="btn--dark">Check score</button>
+      <button class="btn--dark" data-scores-btn>Check score</button>
     </div>
     <header><h1>Rock Paper Scissors Lizard Spock game</h1></header>
     <main>
@@ -79,18 +79,19 @@
         </p>
         <button class="btn" data-play-btn>Play game</button>
       </div>
-      <div class="end-game-modal">
+      <div class="game-scores-modal" data-scores-modal>
         <h2 data-end-game-message></h2>
-        <div>
-          Total wins:
-          <span class="score" data-player-wins>0</span>
+        <div class="game-scores">
+          <div>
+            Total wins:
+            <span class="player-game-score" data-player-wins>0</span>
+          </div>
+          <div>
+            Total losses:
+            <span class="computer-game-score" data-computer-wins>0</span>
+          </div>
         </div>
-        <div>
-          Total losses:
-          <span class="score loss" data-computer-wins>0</span>
-        </div>
-        <button class="btn" data-rules-btn>See rules</button>
-        <button class="btn" data-play-btn>Play again</button>
+        <button class="btn" data-play-btn>Continue</button>
       </div>
       <div class="overlay open" data-overlay></div>
     </main>
