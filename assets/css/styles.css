@@ -28,6 +28,11 @@ h1 {
     transform: scale(1.15);
 }
 
+.bold {
+    font-weight: bold;
+    font-size: 120%;
+}
+
 .github-link i {
     width: max-content;
     border-radius: 10px;

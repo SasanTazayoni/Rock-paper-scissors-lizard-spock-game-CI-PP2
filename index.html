@@ -30,21 +30,17 @@
       </div>
       <div>
         <div>
-          Player:
-          <span class="total-score" data-player-wins>0</span>
+          Wins:
+          <span class="score" data-player-wins>0</span>
         </div>
         <div data-last-column>
-          Computer:
-          <span class="total-score" data-computer-wins>0</span>
+          Losses:
+          <span class="score" data-computer-wins>0</span>
         </div>
       </div>
       <div>
         <div class="start-game-modal" data-modal>
           <h2>How it works (rules)</h2>
-          <img
-            src="assets/images/rules.png"
-            alt="A picture showing how the rock paper lizard spock game works"
-          />
           <p class="modal-content" data-modal-content>
             The game is an extension on top of the original game - Rock Paper
             Scissors. Each player picks a variable and reveals it
@@ -53,6 +49,10 @@
             occurring. The winner is the one who defeats most the others. In a
             tie, the process is repeated until a winner is found.
           </p>
+          <img
+            src="assets/images/rules.png"
+            alt="A picture showing how the rock paper lizard spock game works"
+          />
           <ul>
             <li>
               ✊ Rock beats scissors and lizard but loses to paper and spock.
@@ -71,13 +71,14 @@
             </li>
           </ul>
           <p class="modal-content" data-modal-content>
-            This is all illustrated in the diagram.
+            <span class="bold">This is all illustrated in the diagram.</span>
           </p>
           <p class="modal-content" data-modal-content>
             In this particular application, there will only be two players - the
             user and the computer. There will be a total of 9 rounds per game
             for each win which means that the first player to win 5 rounds will
-            win a game.
+            win a game. In order to play <span class="bold">click on the icon</span> 
+            of your choice and the computer will select randomly.
           </p>
           <button class="modal-btn" data-modal-btn>Play game</button>
         </div>
