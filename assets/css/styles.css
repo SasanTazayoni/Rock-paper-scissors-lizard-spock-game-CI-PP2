@@ -68,6 +68,10 @@ footer {
     align-items: center;
 }
 
+footer p {
+    margin: 10px 0;
+}
+
 .github-link i {
     width: max-content;
     border-radius: 10px;
