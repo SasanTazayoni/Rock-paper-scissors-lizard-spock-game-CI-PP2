@@ -1,9 +1,39 @@
+body {
+    background: lightblue;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+}
+
+.selections {
+    display: flex;
+    justify-content: center;
+}
+
+.selection {
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 100px;
+    cursor: pointer;
+    margin: 0 20px;
+    opacity: 0.5;
+    transition: all 0.3s;
+}
+
+.selection:hover {
+    opacity: 1;
+    transform: scale(1.15);
+}
+
 .github-link i {
     width: max-content;
     border-radius: 10px;
     font-size: 30px;
     transition: transform 0.5s;
-    padding: 15px 0;
+    padding: 10px;
 }
 
 .github-link i:hover {
