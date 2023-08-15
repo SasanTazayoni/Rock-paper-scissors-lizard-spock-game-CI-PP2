@@ -3,12 +3,8 @@ const overlay = document.querySelector('[data-overlay]');
 const playGameBtn = document.querySelectorAll('[data-play-btn]');
 const openRulesModalBtn = document.querySelectorAll('[data-rules-btn]');
 
-playGameBtn.forEach(btn => {
-    btn.addEventListener('click', () => {
-        overlay.classList.remove('open');
-        inititalModal.classList.remove('open');
-    });
-});
+playGameBtn.forEach(btn => btn.addEventListener('click', closeModal));
+overlay.addEventListener('click', closeModal);
 
 openRulesModalBtn.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -16,3 +12,8 @@ openRulesModalBtn.forEach(btn => {
         inititalModal.classList.add('open');
     });
 });
+
+function closeModal() {
+    inititalModal.classList.remove('open');
+    overlay.classList.remove('open');
+}
