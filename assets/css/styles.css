@@ -1,5 +1,6 @@
 body {
-    background: lightblue;
+    background: rgb(232, 227, 255);
+    font-size: 20px;
 }
 
 h1 {
@@ -26,6 +27,30 @@ h1 {
 .selection:hover {
     opacity: 1;
     transform: scale(1.15);
+}
+
+.scores {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    font-size: 30px;
+    margin-top: 30px;
+}
+
+.score {
+    font-size: 150%;
+    margin-left: 5px;
+    color: rgb(1, 207, 1);
+}
+
+.loss {
+    color: red;
+}
+
+.icon {
+    font-size: 120%;
 }
 
 .bold {

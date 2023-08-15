@@ -25,17 +25,7 @@
         </div>
         <div data-last-column>
           Computer:
-          <span class="score" data-computer-score>0</span>
-        </div>
-      </div>
-      <div>
-        <div>
-          Wins:
-          <span class="score" data-player-wins>0</span>
-        </div>
-        <div data-last-column>
-          Losses:
-          <span class="score" data-computer-wins>0</span>
+          <span class="score loss" data-computer-score>0</span>
         </div>
       </div>
       <div>
@@ -46,7 +36,7 @@
             Scissors. Each player picks a variable and reveals it
             simultaneously. This game is more interesting because more than two
             players can play together and there is less probability of a draw
-            occurring. The winner is the one who defeats most the others. In a
+            occurring. The winner is the one who defeats most of the others. In a
             tie, the process is repeated until a winner is found.
           </p>
           <img
@@ -55,29 +45,30 @@
           />
           <ul>
             <li>
-              ✊ Rock beats scissors and lizard but loses to paper and spock.
+              <span class="icon">✊</span> Rock beats scissors and lizard but loses to paper and spock.
             </li>
             <li>
-              🖐 Paper beats rock and spock but loses to scissors and lizard.
+              <span class="icon">🖐</span> Paper beats rock and spock but loses to scissors and lizard.
             </li>
             <li>
-              ✌️ Scissors beats paper and lizard but loses to spock and rock.
+              <span class="icon">✌️</span> Scissors beats paper and lizard but loses to spock and rock.
             </li>
             <li>
-              🤏 Lizard beats spock and paper but loses to rock and scissors.
+              <span class="icon">🤏</span> Lizard beats spock and paper but loses to rock and scissors.
             </li>
             <li>
-              🖖 Spock beats rock and scissors but loses to paper and lizard.
+              <span class="icon">🖖</span> Spock beats rock and scissors but loses to paper and lizard.
             </li>
           </ul>
           <p class="modal-content" data-modal-content>
-            <span class="bold">This is all illustrated in the diagram.</span>
+            <span class="bold">This is all illustrated in the diagram above.</span>
           </p>
           <p class="modal-content" data-modal-content>
             In this particular application, there will only be two players - the
             user and the computer. There will be a total of 9 rounds per game
             for each win which means that the first player to win 5 rounds will
-            win a game. In order to play <span class="bold">click on the icon</span> 
+            win a game. The round scores will be indicated just below the game icons. 
+            <span class="bold">In order to play click on the icon</span> 
             of your choice and the computer will select randomly.
           </p>
           <button class="modal-btn" data-modal-btn>Play game</button>
@@ -87,6 +78,14 @@
       <div>
         <div class="end-game-modal" data-modal>
           <h2 data-end-game-message></h2>
+          <div>
+            Total wins:
+            <span class="score" data-player-wins>0</span>
+          </div>
+          <div>
+            Total losses:
+            <span class="score loss" data-computer-wins>0</span>
+          </div>
           <button class="modal-btn" data-modal-btn>See rules</button>
           <button class="modal-btn" data-modal-btn>Play again</button>
         </div>
