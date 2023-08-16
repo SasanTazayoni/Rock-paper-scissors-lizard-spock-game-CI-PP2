@@ -89,3 +89,7 @@ function playRound(playerChoice, computerChoice) {
         return 'DRAW';
     }
 }
+
+function determineWinner(selection, opponentSelection) {
+    return selection.beats.includes(opponentSelection.name);
+}
