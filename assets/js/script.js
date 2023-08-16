@@ -5,6 +5,7 @@ const openRulesModalBtn = document.querySelectorAll('[data-rules-btn]');
 const checkScoresBtn = document.querySelector('[data-scores-btn]');
 const scoresModal = document.querySelector('[data-scores-modal]');
 const selectionIcons = document.querySelectorAll('[data-selection]');
+const lastColumn = document.querySelector('[data-last-column]');
 let playerScore = document.querySelector('[data-player-score]');
 let computerScore = document.querySelector('[data-computer-score]');
 let win = document.querySelector('[data-player-wins]');
@@ -63,22 +64,24 @@ checkScoresBtn.addEventListener('click', () => {
 // Game functionality
 
 function computerPlay() {
-    return rules[Math.floor(Math.random() * rules.length - 1)][0];
+    const randomIndex = Math.floor(Math.random() * rules.length);
+    return rules[randomIndex].name;
 }
 
 selectionIcons.forEach(icon => {
     icon.addEventListener('click', () => {
         const computerResult = computerPlay();
         const selectedIcon = icon.dataset.selection;
-        const playerResult = rules.find(rule => rule.name === selectedIcon);
+        const playerResult = (rules.find(rule => rule.name === selectedIcon)).name;
         const gameResult = playRound(playerResult, computerResult);
-        game(gameResult);
+        // game(gameResult);
     });
 });
 
 function playRound(playerChoice, computerChoice) {
     const playerWin = determineWinner(playerChoice, computerChoice);
     const computerWin = determineWinner(computerChoice, playerChoice);
+
     updateUI(computerChoice, computerWin);
     updateUI(playerChoice, playerWin);
     if (playerWin) {
@@ -91,5 +94,14 @@ function playRound(playerChoice, computerChoice) {
 }
 
 function determineWinner(selection, opponentSelection) {
-    return selection.beats.includes(opponentSelection.name);
+    return selection.beats === opponentSelection.name;
+}
+
+function updateUI(selection, winner) {
+    const element = document.createElement('div');
+    element.innerText = selection.symbol;
+    if (winner) {
+        element.classList.add('winner');
+    }
+    lastColumn.after(element);
 }
