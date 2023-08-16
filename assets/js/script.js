@@ -73,8 +73,8 @@ selectionIcons.forEach(icon => {
         const computerChoice = computerPlay();
         const selectedIcon = icon.dataset.selection;
         const playerChoice = rules.find(rule => rule.name === selectedIcon);
-        const gameResult = playRound(playerChoice, computerChoice);
-        // game(gameResult);
+        const roundResult = playRound(playerChoice, computerChoice);
+        incrementScore(roundResult);
     });
 });
 
@@ -104,4 +104,9 @@ function updateUI(selection, winner) {
         element.classList.add('winner');
     }
     lastColumn.after(element);
+}
+
+function incrementScore(result) {
+    if (result === 'DRAW') return;
+    else return result === 'WIN' ? playerScore.innerText++ : computerScore.innerText++;
 }
