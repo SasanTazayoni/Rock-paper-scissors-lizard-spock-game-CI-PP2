@@ -41,6 +41,7 @@ const rules = [
 // Opening and closing the modals
 
 playGameBtn.forEach(btn => btn.addEventListener('click', closeModal));
+checkScoresBtn.addEventListener('click', openScoresModal);
 overlay.addEventListener('click', closeModal);
 
 openRulesModalBtn.forEach(btn => {
@@ -56,10 +57,10 @@ function closeModal() {
     overlay.classList.remove('open');
 }
 
-checkScoresBtn.addEventListener('click', () => {
+function openScoresModal() {
     scoresModal.classList.add('open');
     overlay.classList.add('open');
-});
+}
 
 // Game functionality
 
@@ -108,5 +109,14 @@ function updateUI(selection, winner) {
 
 function incrementScore(result) {
     if (result === 'DRAW') return;
-    else return result === 'WIN' ? playerScore.innerText++ : computerScore.innerText++;
+    else result === 'WIN' ? playerScore.innerText++ : computerScore.innerText++;
+
+    if (gameOver()) {
+        openScoresModal();
+        addText();
+    }
+}
+
+function gameOver() {
+    return playerScore.innerText === 5 || computerScore.innerText === 5;
 }
