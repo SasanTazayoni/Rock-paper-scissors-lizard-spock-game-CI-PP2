@@ -65,23 +65,22 @@ checkScoresBtn.addEventListener('click', () => {
 
 function computerPlay() {
     const randomIndex = Math.floor(Math.random() * rules.length);
-    return rules[randomIndex].name;
+    return rules[randomIndex];
 }
 
 selectionIcons.forEach(icon => {
     icon.addEventListener('click', () => {
-        const computerResult = computerPlay();
+        const computerChoice = computerPlay();
         const selectedIcon = icon.dataset.selection;
-        const playerResult = (rules.find(rule => rule.name === selectedIcon)).name;
-        const gameResult = playRound(playerResult, computerResult);
+        const playerChoice = rules.find(rule => rule.name === selectedIcon);
+        const gameResult = playRound(playerChoice, computerChoice);
         // game(gameResult);
     });
 });
 
 function playRound(playerChoice, computerChoice) {
-    const playerWin = determineWinner(playerChoice, computerChoice);
-    const computerWin = determineWinner(computerChoice, playerChoice);
-
+    const playerWin = determineWinner(playerChoice.beats, computerChoice.name);
+    const computerWin = determineWinner(computerChoice.beats, playerChoice.name);
     updateUI(computerChoice, computerWin);
     updateUI(playerChoice, playerWin);
     if (playerWin) {
@@ -94,7 +93,7 @@ function playRound(playerChoice, computerChoice) {
 }
 
 function determineWinner(selection, opponentSelection) {
-    return selection.beats === opponentSelection.name;
+    return selection.includes(opponentSelection);
 }
 
 function updateUI(selection, winner) {
