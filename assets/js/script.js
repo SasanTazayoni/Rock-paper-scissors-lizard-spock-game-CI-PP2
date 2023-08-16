@@ -99,6 +99,7 @@ function determineWinner(selection, opponentSelection) {
 function updateUI(selection, winner) {
     const element = document.createElement('div');
     element.innerText = selection.symbol;
+    element.classList.add('result');
     if (winner) {
         element.classList.add('winner');
     }
