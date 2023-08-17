@@ -10,6 +10,7 @@ let playerScore = document.querySelector('[data-player-score]');
 let computerScore = document.querySelector('[data-computer-score]');
 let win = document.querySelector('[data-player-wins]');
 let lose = document.querySelector('[data-computer-wins]');
+let gameActive = true;
 const endGameMessage = document.querySelector('[data-end-game-message]');
 const rules = [
     {
@@ -57,6 +58,9 @@ function closeModal() {
     scoresModal.classList.remove('open');
     overlay.classList.remove('open');
     endGameMessage.innerText = '';
+    if (gameActive === false) {
+        resetUI(playerScore, computerScore);
+    }
 }
 
 function openScoresModal() {
@@ -114,6 +118,7 @@ function incrementScore(result) {
     else result === 'WIN' ? playerScore.innerText++ : computerScore.innerText++;
 
     if (gameOver()) {
+        gameActive = false;
         openScoresModal();
         addText();
     }
@@ -127,3 +132,13 @@ function addText() {
     parseInt(playerScore.innerText) === 5 ? endGameMessage.innerText = 'You won this game!' : endGameMessage.innerText = 'You lost this game';
     endGameMessage.style.fontSize = '60px';
 }
+
+function resetUI(playerScore, computerScore) {
+    playerScore.innerText = 0;
+    computerScore.innerText = 0;
+    const addedElements = document.querySelectorAll('.result');
+    addedElements.forEach(element => {
+        element.remove();
+    });
+}
+
