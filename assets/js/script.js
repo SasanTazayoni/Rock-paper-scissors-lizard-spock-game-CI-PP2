@@ -10,6 +10,8 @@ let playerScore = document.querySelector('[data-player-score]');
 let computerScore = document.querySelector('[data-computer-score]');
 let win = document.querySelector('[data-player-wins]');
 let lose = document.querySelector('[data-computer-wins]');
+localStorage.setItem('playerWins', 0);
+localStorage.setItem('computerWins', 0);
 let gameActive = true;
 const endGameMessage = document.querySelector('[data-end-game-message]');
 const rules = [
@@ -143,7 +145,13 @@ function addText() {
 }
 
 function incrementGameScore(message) {
-    message === true ? win.innerText++ : lose.innerText++;
+    if (message === true) {
+        win.innerText++;
+        localStorage.setItem('playerWins', win.innerText);
+    } else {
+        lose.innerText++;
+        localStorage.setItem('computerWins', lose.innerText);
+    }
 }
 
 function resetUI(playerScore, computerScore) {
@@ -155,3 +163,10 @@ function resetUI(playerScore, computerScore) {
     });
 }
 
+window.onload = function() {
+    const playerWins = localStorage.getItem('playerWins');
+    const computerWins = localStorage.getItem('computerWins');
+
+    win.innerText = playerWins || 0;
+    lose.innerText = computerWins || 0;
+};
