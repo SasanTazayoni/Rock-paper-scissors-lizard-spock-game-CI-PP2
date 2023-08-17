@@ -10,8 +10,6 @@ let playerScore = document.querySelector('[data-player-score]');
 let computerScore = document.querySelector('[data-computer-score]');
 let win = document.querySelector('[data-player-wins]');
 let lose = document.querySelector('[data-computer-wins]');
-localStorage.setItem('playerWins', 0);
-localStorage.setItem('computerWins', 0);
 let gameActive = true;
 const endGameMessage = document.querySelector('[data-end-game-message]');
 const rules = [
