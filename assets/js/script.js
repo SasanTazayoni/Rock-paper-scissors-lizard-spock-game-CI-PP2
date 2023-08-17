@@ -10,6 +10,7 @@ let playerScore = document.querySelector('[data-player-score]');
 let computerScore = document.querySelector('[data-computer-score]');
 let win = document.querySelector('[data-player-wins]');
 let lose = document.querySelector('[data-computer-wins]');
+const endGameMessage = document.querySelector('[data-end-game-message]');
 const rules = [
     {
         name: 'rock',
@@ -55,6 +56,7 @@ function closeModal() {
     inititalModal.classList.remove('open');
     scoresModal.classList.remove('open');
     overlay.classList.remove('open');
+    endGameMessage.innerText = '';
 }
 
 function openScoresModal() {
@@ -118,5 +120,10 @@ function incrementScore(result) {
 }
 
 function gameOver() {
-    return playerScore.innerText === 5 || computerScore.innerText === 5;
+    return parseInt(playerScore.innerText) === 5 || parseInt(computerScore.innerText) === 5;
+}
+
+function addText() {
+    parseInt(playerScore.innerText) === 5 ? endGameMessage.innerText = 'You won this game!' : endGameMessage.innerText = 'You lost this game';
+    endGameMessage.style.fontSize = '60px';
 }
