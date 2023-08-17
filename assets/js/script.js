@@ -1,15 +1,16 @@
 const inititalModal = document.querySelector('[data-modal]');
 const overlay = document.querySelector('[data-overlay]');
 const playGameBtn = document.querySelectorAll('[data-play-btn]');
+const resetBtn = document.querySelector('[data-reset-btn]');
 const openRulesModalBtn = document.querySelectorAll('[data-rules-btn]');
 const checkScoresBtn = document.querySelector('[data-scores-btn]');
 const scoresModal = document.querySelector('[data-scores-modal]');
 const selectionIcons = document.querySelectorAll('[data-selection]');
 const lastColumn = document.querySelector('[data-last-column]');
-let playerScore = document.querySelector('[data-player-score]');
-let computerScore = document.querySelector('[data-computer-score]');
-let win = document.querySelector('[data-player-wins]');
-let lose = document.querySelector('[data-computer-wins]');
+const playerScore = document.querySelector('[data-player-score]');
+const computerScore = document.querySelector('[data-computer-score]');
+const win = document.querySelector('[data-player-wins]');
+const lose = document.querySelector('[data-computer-wins]');
 let gameActive = true;
 const endGameMessage = document.querySelector('[data-end-game-message]');
 const rules = [
@@ -67,6 +68,15 @@ function openScoresModal() {
     scoresModal.classList.add('open');
     overlay.classList.add('open');
 }
+
+// Reset game scores
+
+resetBtn.addEventListener('click', () => {
+    localStorage.setItem('playerWins', 0);
+    localStorage.setItem('computerWins', 0);
+    win.innerText = 0;
+    lose.innerText = 0;
+});
 
 // Game functionality
 
