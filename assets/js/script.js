@@ -38,7 +38,7 @@ const rules = [
         symbol: '🖖',
         beats: ['scissors', 'rock']
     }
-]
+];
 
 // Opening and closing the modals
 
@@ -115,7 +115,7 @@ function updateUI(selection, winner) {
 
 function incrementScore(result) {
     if (result === 'DRAW') return;
-    else result === 'WIN' ? playerScore.innerText++ : computerScore.innerText++;
+    result === 'WIN' ? playerScore.innerText++ : computerScore.innerText++;
 
     if (gameOver()) {
         gameActive = false;
