@@ -297,11 +297,6 @@ h2 {
     font-size: 150%;
 }
 
-.bold {
-    font-weight: bold;
-    font-size: 120%;
-}
-
 .game-scores-modal {
     transform: scale(0);
 }
