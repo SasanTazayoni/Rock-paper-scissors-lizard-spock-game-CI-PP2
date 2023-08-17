@@ -1,4 +1,4 @@
-# Rock Paper Scissors Lizard Spock game
+# Rock Paper Scissors Lizard Spock game ✊ 🖐 ✌️ 🤏 🖖
 
 The game serves as an expanded version of the classic 'Rock Paper Scissors' game, introducing additional variables for players to choose from. Participants make their selections in unison. Notably, this iteration accommodates more than two players, significantly reducing the likelihood of a tie. Victory is achieved by outplaying the majority of opponents. In cases of a tie, the game is reiterated until a clear winner emerges.
 
