@@ -149,7 +149,7 @@ function addText() {
     }
          
     incrementGameScore(winMessage);
-    endGameMessage.style.fontSize = '60px';
+    endGameMessage.style.fontSize = '30px';
 }
 
 function incrementGameScore(message) {

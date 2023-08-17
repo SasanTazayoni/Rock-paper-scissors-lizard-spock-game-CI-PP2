@@ -417,7 +417,7 @@ h2 {
     position: fixed;
     top: 50%;
     transform: translate(-50%, -50%);
-    max-width: 1200px;
+    width: max-content;
     z-index: 1;
 }
 
@@ -430,7 +430,7 @@ h2 {
     justify-content: center;
     align-items: center;
     gap: 60px;
-    font-size: 40px;
+    font-size: 24px;
 }
 
 .player-game-score {
@@ -442,7 +442,7 @@ h2 {
 }
 
 @media screen and (max-width: 1024px) {
-    .start-game-modal {
+    .start-game-modal.open {
         padding: 16px;
     }
 
@@ -468,7 +468,7 @@ h2 {
 }
 
 @media screen and (max-width: 428px) {
-    .start-game-modal {
+    .start-game-modal.open {
         padding: 10px;
     }
 
@@ -482,12 +482,28 @@ h2 {
 
     .btn {
         font-size: 0.8rem;
+        margin-top: 24px;
+    }
+
+    .game-scores {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .game-scores-modal {
+        padding: 20px;
     }
 }
 
 @media screen and (max-width: 324px) {
     .rules {
         max-width: 240px;
+    }
+
+    .game-scores-modal {
+        padding: 12px;
     }
 }
 
