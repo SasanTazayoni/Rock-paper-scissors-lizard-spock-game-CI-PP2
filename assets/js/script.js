@@ -129,8 +129,21 @@ function gameOver() {
 }
 
 function addText() {
-    parseInt(playerScore.innerText) === 5 ? endGameMessage.innerText = 'You won this game!' : endGameMessage.innerText = 'You lost this game';
+    let winMessage;
+    if (parseInt(playerScore.innerText) === 5) {
+        endGameMessage.innerText = 'You won this game!';
+        winMessage = true;
+    } else {
+        endGameMessage.innerText = 'You lost this game';
+        winMessage = false;
+    }
+         
+    incrementGameScore(winMessage);
     endGameMessage.style.fontSize = '60px';
+}
+
+function incrementGameScore(message) {
+    message === true ? win.innerText++ : lose.innerText++;
 }
 
 function resetUI(playerScore, computerScore) {
