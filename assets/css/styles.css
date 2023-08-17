@@ -17,9 +17,61 @@ body {
 
 /* Main UI */
 
+.btns {
+    display: flex;
+    justify-content: space-between;
+}
+
 .btn-container {
     display: flex;
     justify-content: flex-end;
+}
+
+.btn--reset {
+    margin: 20px;
+    display: block;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: red;
+    border: red 0.125em solid;
+    text-decoration: none;
+    padding: 0.25em 1.25em;
+    border-radius: 0.25em;
+    background: var(--color-primary);
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+    0 0 0.45em var(--color-primary);
+    box-shadow: inset 0 0 0.25em 0 red, 0 0 0.25em 0 red;
+    position: relative;
+    transition: background-color 0.5s;
+    width: 200px;
+}
+
+.btn--reset::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    box-shadow: 0 0 0.5em 0.25em red;
+    transition: all 0.5s;
+}
+
+.btn--reset:hover, .btn--dark:focus {
+    background: red;
+    color: var(--color-primary);
+    text-shadow: none;
+}
+
+.btn--reset:hover::before,
+.btn--reset:focus::before {
+    opacity: 1;
+}
+
+.btn--reset:hover::after,
+.btn--reset:focus::before {
+    opacity: 1;
 }
 
 .btn--dark {
