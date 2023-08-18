@@ -5,3 +5,5 @@ The game serves as an expanded version of the classic 'Rock Paper Scissors' game
 This specific application is designed for a two-player scenario, involving the user and the computer. Each game consists of 9 rounds, and the first player to secure 5 round victories will clinch the overall game triumph. Round scores will be visibly displayed beneath the available game icons. To initiate play, simply click the button below, make your icon selection, and the computer will then randomly make its choice to compete against you.
 
 You can play the game on the live site [here](https://sasantazayoni.github.io/rock-paper-scissors-lizard-spock-game/).
+
+![Rock paper scissors lizard spock game on various devices](documentation/responsiveness.png)
