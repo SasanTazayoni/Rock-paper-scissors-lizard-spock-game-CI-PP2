@@ -396,15 +396,15 @@ h2 {
     left: 0;
     right: 0;
     bottom: 0;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     background-color: #000;
+    display: block;
     opacity: 0.5;
-    transition: opacity 0.3s;
 }
 
 .overlay {
-    opacity: 0;
+    display: none;
 }
 
 .icon {
