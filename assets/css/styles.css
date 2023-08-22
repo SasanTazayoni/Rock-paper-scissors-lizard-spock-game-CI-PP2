@@ -303,6 +303,11 @@ h2 {
     z-index: 1;
 }
 
+.start-game-modal p {
+    font-style: italic;
+    text-align: center;
+}
+
 .start-game-modal {
     display: none;
 }
