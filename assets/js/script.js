@@ -71,11 +71,23 @@ function openScoresModal() {
 
 // Reset game scores
 
-resetBtn.addEventListener('click', () => {
+resetBtn.addEventListener('click', e => {
     localStorage.setItem('playerWins', 0);
     localStorage.setItem('computerWins', 0);
     win.innerText = 0;
     lose.innerText = 0;
+
+    let x = e.clientX - e.target.offsetLeft;
+    let y = e.clientY - e.target.offsetTop;
+
+    let ripples = document.createElement('span');
+    ripples.style.left = x + 'px';
+    ripples.style.top = y + 'px';
+    resetBtn.appendChild(ripples);
+
+    setTimeout(() => {
+        ripples.remove();
+    }, 500);
 });
 
 // Game functionality
