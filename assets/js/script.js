@@ -121,6 +121,13 @@ function updateUI(selection, winner) {
         element.classList.add('winner');
     }
     lastColumn.after(element);
+
+    adjustOverlayHeight();
+}
+
+function adjustOverlayHeight() {
+    const bodyHeight = document.body.scrollHeight;
+    overlay.style.height = `${bodyHeight}px`;
 }
 
 function incrementScore(result) {
@@ -169,6 +176,12 @@ function resetUI(playerScore, computerScore) {
     addedElements.forEach(element => {
         element.remove();
     });
+
+    resetOverlayHeight();
+}
+
+function resetOverlayHeight() {
+    overlay.style.height = '';
 }
 
 window.onload = function() {
@@ -178,3 +191,5 @@ window.onload = function() {
     win.innerText = playerWins || 0;
     lose.innerText = computerWins || 0;
 };
+
+window.addEventListener('resize', adjustOverlayHeight);
