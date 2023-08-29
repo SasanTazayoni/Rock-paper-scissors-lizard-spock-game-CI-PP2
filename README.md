@@ -255,7 +255,6 @@ One of the most helpful ways to test the application was to have a few different
 
 | Name | Age | Tech BG |
 | --- | --- | --- |
-| Amy | 36 | High |
 | Joe | 35 | High |
 | Varun | 32 | Low |
 | Saba | 30 | High |
@@ -267,3 +266,31 @@ Lighthouse was a helpful tool for checking where where the website was experienc
 ![Lighthouse performance test](documentation/lighthouse.jpg)
 
 The results show that the web application stands as an example of meticulous development, boasting exceptional scores across key criteria. With an unwavering commitment to inclusivity, the application achieves a perfect 100% for accessibility, ensuring that all users can seamlessly engage with its content. Fast loading times contribute to an impeccable 100% performance rating, enhancing the user experience. A strong 100% SEO score reflects the dedication to visibility and discoverability on the web. While the commitment to best practices is evident with a commendable 92%, the relentless pursuit of excellence in every facet is evident. This holistic approach culminates in an application that embodies both cutting-edge technology and user-centric design.
+
+### PowerMapper Compatibility
+
+![PowerMapper compatibility test](documentation/powermapper.jpg)
+
+As the results show, the website is highly compatible across all browsers.
+
+### Bugs
+
+* There are no known bugs and any that existed were promptly addressed and fixed.
+
+## Deployment
+
+1. Log into [GitHub](https://github.com/).
+2. Locate the [repository](https://github.com/SasanTazayoni/Rock-paper-scissors-lizard-spock-game-CI-PP2).
+3. Locate the settings option along the options bar at the top of the page.
+4. Locate the 'Pages' option on the left side bar and click on it.
+5. Under the 'Branch' subheading there should be a drop-down menu - select 'Master' from the branch options.
+6. Click the save button.
+7. Github pages will build your website with the code supplied and begin hosting it when it is completed - the process usually takes a few minutes.
+8. The website URL will now be visible on the green bar under the section header. This will remain there permanently and you can refer back to it at any time.
+
+## Credits
+
+* Thanks to [Kevin Powell](https://www.youtube.com/@KevinPowell) from YouTube for neon button hover-effect.
+* Thanks to [WebDevSimplified](https://www.youtube.com/@WebDevSimplified) from YouTube for inspiration to build this project.
+* Thanks to my friends and family for thoroughly testing out my web application and giving useful suggestions.
+* Thanks to my mentor Antonio Rodriguez for the helpful direction in starting this project and all of the helpful resources provided that helped throughout.
