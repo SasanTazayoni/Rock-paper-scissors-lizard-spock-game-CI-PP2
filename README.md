@@ -31,7 +31,6 @@ You can play the game on the live site [here](https://sasantazayoni.github.io/Ro
   - [Third-party testing](#third-party-testing)
   - [Lighthouse testing](#lighthouse-testing)
   - [PowerMapper Compatibility](#powermapper-compatibility)
-  - [Other testing](#other-testing)
   - [Bugs](#bugs)
 - [Deployment](#deployment)
 - [Credits](#credits)
