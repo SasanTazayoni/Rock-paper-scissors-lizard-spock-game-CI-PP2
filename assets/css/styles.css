@@ -105,8 +105,8 @@ body {
     }
 
     100% {
-        width: 4000px;
-        height: 3000px;
+        width: 4500px;
+        height: 4000px;
         opacity: 0;
     }
 }
