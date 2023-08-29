@@ -46,3 +46,16 @@ You can play the game on the live site [here](https://sasantazayoni.github.io/Ro
 * As a user, I want to be able to keep a record of and track how many games I have won or lost overall.
 * As a user, I want to be able to check the game instructions in case I forget how the game works.
 * As a user, I want to be able to reset the record of game results.
+
+## Design
+
+### Overall feel
+
+Embodying a modern and captivating aesthetic, this application offers an overall ambience that is both contemporary and visually pleasing. While its primary role is to provide entertainment, it also serves as a valuable tool for resolving disagreements when consensus proves elusive.
+
+
+### Colour scheme
+
+![Color Swatches](documentation/colours.png)
+
+This carefully curated color combination blends bold contrasts and soothing shades to enhance user experience, infuse energy, and maintain visual clarity in our web application.
