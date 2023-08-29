@@ -260,3 +260,11 @@ One of the most helpful ways to test the application was to have a few different
 | Joe | 35 | High |
 | Varun | 32 | Low |
 | Saba | 30 | High |
+
+### Lighthouse testing
+
+Lighthouse was a helpful tool for checking where where the website was experiencing the most issues.
+
+![Lighthouse performance test](documentation/lighthouse.jpg)
+
+The results show that the web application stands as an example of meticulous development, boasting exceptional scores across key criteria. With an unwavering commitment to inclusivity, the application achieves a perfect 100% for accessibility, ensuring that all users can seamlessly engage with its content. Fast loading times contribute to an impeccable 100% performance rating, enhancing the user experience. A strong 100% SEO score reflects the dedication to visibility and discoverability on the web. While the commitment to best practices is evident with a commendable 92%, the relentless pursuit of excellence in every facet is evident. This holistic approach culminates in an application that embodies both cutting-edge technology and user-centric design.
