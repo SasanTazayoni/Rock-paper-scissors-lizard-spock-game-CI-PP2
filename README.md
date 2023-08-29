@@ -92,4 +92,20 @@ The main game UI with an open modal: <br>
 * All buttons have a neon hover effect when hovered over: <br>
     * Buttons: <br>
     
-    ![The reset button](documentation/resetbtn.jpg) !![The reset button with hover](documentation/resetbtnhover.jpg) ![The open-rules button](documentation/openrulesbtn.jpg) ![The open-rules button with hover](documentation/openrulesbtnhover.jpg) ![The open-scores button](documentation/openscoresbtn.jpg) ![The open-scores button with hover](documentation/openscoresbtnhover.jpg) ![The close-rules button](documentation/closerulesbtn.jpg) ![The close-rules button with hover](documentation/closerulesbtnhover.jpg) ![The close-scores button](documentation/closescoresbtn.jpg) ![The close-scores button with hover](documentation/closescoresbtnhover.jpg)
+  ![The reset button](documentation/resetbtn.jpg)
+  ![The open-rules button](documentation/openrulesbtn.jpg)
+  ![The open-scores button](documentation/openscoresbtn.jpg)
+  ![The close-rules button](documentation/closerulesbtn.jpg)
+  ![The close-scores button](documentation/closescoresbtn.jpg)
+
+  * Buttons with hover effects: <br>
+
+  ![The reset button with hover](documentation/resetbtnhover.jpg)
+  ![The open-rules button with hover](documentation/openrulesbtnhover.jpg)
+  ![The open-scores button with hover](documentation/openscoresbtnhover.jpg)
+  ![The close-rules button with hover](documentation/closerulesbtnhover.jpg)
+  ![The close-scores button with hover](documentation/closescoresbtnhover.jpg)
+  
+* The reset button has an additional pulse effect when clicked to indicate that the button has taken action: <br>
+
+  ![The reset button oulse effect](documentation/resetbtnpulse.jpg)
