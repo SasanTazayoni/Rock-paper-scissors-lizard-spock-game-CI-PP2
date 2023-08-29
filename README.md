@@ -74,7 +74,7 @@ The main game UI: <br>
 
 The rules modal: <br>
 
-![The rules modal](documentation/scores-modal.jpg) <br>
+![The rules modal](documentation/rules-modal.jpg) <br>
 
 The game scores modal: <br>
 
