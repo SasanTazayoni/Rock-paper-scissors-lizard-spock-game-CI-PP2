@@ -35,3 +35,14 @@ You can play the game on the live site [here](https://sasantazayoni.github.io/Ro
   - [Bugs](#bugs)
 - [Deployment](#deployment)
 - [Credits](#credits)
+
+## User Experience
+
+### User stories
+
+* As a user, I want to immediately understand what the game is about and how it works.
+* As a user, I want to play the game as soon as possible.
+* As a user, I want a clear indication of my current score and to know my round result each time I play a round.
+* As a user, I want to be able to keep a record of and track how many games I have won or lost overall.
+* As a user, I want to be able to check the game instructions in case I forget how the game works.
+* As a user, I want to be able to reset the record of game results.
