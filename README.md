@@ -189,3 +189,31 @@ I used the following websites to check my code for syntax errors:
 * [HTML validator](https://validator.w3.org/)
 * [CSS validator](https://jigsaw.w3.org/css-validator/)
 * [JavaScript validator](https://jshint.com/)
+
+
+### Testing User Stories from (UX) section
+
+* As a user, I want to immediately understand what the game is about and how it works.
+  * Upon opening the application the rules modal is already open. This explains the rules of the game and how to play.
+  * Screenshot of the view when the application is opened: <br>
+
+    ![The rules modal](documentation/rulesmodal.jpg) <br>
+    
+* As a user, I want to play the game as soon as possible.
+  * The "play game" button (see previous screenshot) is clearly visible within the rules modal and on clicking gives access to the main game UI.
+  * Alternatively the overlay can be clicked to close the modal and access the main game UI. <br>
+  
+* As a user, I want a clear indication of my current score and to know my round result each time I play a round.
+  * The scores are clearly indicated in the main UI: <br>
+
+    ![The round scores](documentation/roundresult.jpg) <br>
+* As a user, I want to be able to keep a record of and track how many games I have won or lost overall.
+  * Clicking the "Wins & Losses" button in the main UI will display the game scores modal: <br>
+
+    ![The game scores modal](documentation/scoresmodal.jpg) <br>
+* As a user, I want to be able to check the game instructions in case I forget how the game works.
+  * Clicking the "See rules" button in the main UI will open a modal that displays the rules: <br>
+
+    ![The rules modal](documentation/rulesmodal.jpg) <br>
+* As a user, I want to be able to reset the record of game results.
+  * Clicking the "Reset" button on the main UI which is visible in the main UI will achieve this.
