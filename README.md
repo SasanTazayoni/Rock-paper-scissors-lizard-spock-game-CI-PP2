@@ -119,3 +119,19 @@ The main game UI with an open modal: <br>
   ![The game scores modal](documentation/scoresmodal.jpg)
 
 * Modals can be closed by clicking on the button corresponding to the modal or by clicking on the overlay.
+* The game icons have a hover effect on them indicating that they can be clicked: <br>
+
+  ![The game icons](documentation/icons.jpg)
+
+* Whenever an icon is clicked, it is compared against the computer's choice (which is random) and the UI is updated accordingly.
+    * When the player wins, the round score of the player is incremented by 1 and the player's chosen icon is displayed with maximum opacity and slightly enlarged in the space beneath the player's score while the computer's choice is displayed with partial opacity in the space beneath the computer's round score: <br>
+
+    ![Winning a round](documentation/win.jpg)
+
+    * When the player loses, the round score of the computer is incremented by 1 and the computer's chosen icon is displayed with maximum opacity and slightly enlarged in the space beneath the computer's score while the player's choice is displayed with partial opacity in the space beneath the player's round score: <br>
+
+    ![Losing a round](documentation/lose.jpg)
+
+    * In the case of a draw, neither round is incremented and both chosen icons display with partial opacity beneath the respective scores
+ 
+    ![Drawing a round](documentation/draw.jpg)
