@@ -124,14 +124,30 @@ The main game UI with an open modal: <br>
   ![The game icons](documentation/icons.jpg)
 
 * Whenever an icon is clicked, it is compared against the computer's choice (which is random) and the UI is updated accordingly.
-    * When the player wins, the round score of the player is incremented by 1 and the player's chosen icon is displayed with maximum opacity and slightly enlarged in the space beneath the player's score while the computer's choice is displayed with partial opacity in the space beneath the computer's round score: <br>
+    * When the player wins, the round score of the player is incremented by 1 and the player's chosen icon is displayed with maximum opacity and slightly enlarged in the space beneath the player's round score while the computer's choice is displayed with partial opacity in the space beneath the computer's round score: <br>
 
     ![Winning a round](documentation/win.jpg)
 
-    * When the player loses, the round score of the computer is incremented by 1 and the computer's chosen icon is displayed with maximum opacity and slightly enlarged in the space beneath the computer's score while the player's choice is displayed with partial opacity in the space beneath the player's round score: <br>
+    * When the player loses, the round score of the computer is incremented by 1 and the computer's chosen icon is displayed with maximum opacity and slightly enlarged in the space beneath the computer's round score while the player's choice is displayed with partial opacity in the space beneath the player's round score: <br>
 
     ![Losing a round](documentation/lose.jpg)
 
     * In the case of a draw, neither round is incremented and both chosen icons display with partial opacity beneath the respective scores
  
     ![Drawing a round](documentation/draw.jpg)
+
+* After each round, the results are recorded both in the round scores and in the UI so that the player can see their previous choices as well as the computer's. The viewport will extend in size if there are many round played:
+
+    ![Multiple rounds played](documentation/multiround.jpg)
+
+* The game ends when either the player or the computer has 5 round wins. This increments the game scores in the scores modal and is stored in local storage in case the player closes their browser. Text is dynamically inserted into the scores modal depending on whether the player has won or lost the game and then removed when the modal is closed:
+
+    ![End of game text](documentation/dynamictext.jpg)
+
+* The game scores (but not round scores) can be reset using the reset button in the main UI.
+
+### Future features
+
+* A voice recognition can be introduced for a better user experience. This should be able to open the rules, check the scores, close modals, reset and play the game by saying simple commands like "Rules" or "Scores" or "Lizard".
+* A feature can be added to allow multiple players to play against each other.
+* Sound effects can be added for better user experience.
