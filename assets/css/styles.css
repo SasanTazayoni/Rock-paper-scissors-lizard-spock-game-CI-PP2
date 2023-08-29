@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
+
 :root {
     --color-primary: rgb(232, 227, 255);
 }
@@ -8,6 +10,7 @@ html {
 
 body {
     background: var(--color-primary);
+    font-family: "Exo 2", Arial, Helvetica, sans-serif;
     font-size: 20px;
     margin: 0;
     min-height: 100%;
