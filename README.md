@@ -7,3 +7,31 @@ This specific application is designed for a two-player scenario, involving the u
 You can play the game on the live site [here](https://sasantazayoni.github.io/Rock-paper-scissors-lizard-spock-game-CI-PP2/).
 
 ![Rock paper scissors lizard spock game on various devices](documentation/responsiveness.png)
+
+## Table of Contents
+
+- [User Experience](#user-experience)
+  - [User stories](#user-stories)
+  - [Design](#design)
+    * [Overall feel](#overall-feel)
+    * [Colour Scheme](#colour-scheme)
+    * [Typography](#typography)
+  - [Wireframes](#wireframes)
+- [Features](#features)
+  - [Current features](#current-features)
+  - [Future features](#future-features)
+- [Technologies used](#technologies-used)
+  - [Languages used](#languages-used)
+  - [Frameworks, libraries and programs used](#frameworks-libraries-and-programs-used)
+- [Testing](#testing)
+  - [Validator testing](#validator-testing)
+  - [Testing User Stories from (UX) section](#testing-user-stories-from-ux-section)
+  - [Personal testing](#personal-testing)
+  - [Responsinator](#responsinator)
+  - [Third-party testing](#third-party-testing)
+  - [Lighthouse testing](#lighthouse-testing)
+  - [PowerMapper Compatibility](#powermapper-compatibility)
+  - [Other testing](#other-testing)
+  - [Bugs](#bugs)
+- [Deployment](#deployment)
+- [Credits](#credits)
