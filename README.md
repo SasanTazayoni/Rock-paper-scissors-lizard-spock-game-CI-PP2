@@ -47,19 +47,39 @@ You can play the game on the live site [here](https://sasantazayoni.github.io/Ro
 * As a user, I want to be able to check the game instructions in case I forget how the game works.
 * As a user, I want to be able to reset the record of game results.
 
-## Design
+### Design
 
-### Overall feel
+#### Overall feel
 
 Embodying a modern and captivating aesthetic, this application offers an overall ambience that is both contemporary and visually pleasing. While its primary role is to provide entertainment, it also serves as a valuable tool for resolving disagreements when consensus proves elusive.
 
 
-### Colour scheme
+#### Colour scheme
 
 ![Color Swatches](documentation/colours.png)
 
 This carefully curated color combination blends bold contrasts and soothing shades to enhance user experience, infuse energy, and maintain visual clarity in our web application.
 
-### Typography
+#### Typography
 
 'Exo 2' is the font of choice in this application with a fallback of the font-stack 'Arial, Helvetica, sans-serif'. This was a deliberate decision to align with the game's dynamic and modern aesthetic. With its geometric letterforms and clean lines, Exo 2 effectively captures the energy and excitement that our game offers. Its legibility and versatility ensure that players can navigate effortlessly while being immersed in the vibrant experience we've crafted.
+
+#### Wireframes
+
+Comprehensive wireframes were developed to cater to all screen sizes. The decision to create single wireframes, without the need for variations in different screen sizes, was driven by the minimal impact on design elements beyond font and icon sizes. Explore the wireframes here:
+
+The main game UI: <br>
+
+![The main game UI](documentation/main-ui.jpg) <br>
+
+The rules modal: <br>
+
+![The rules modal](documentation/rules-modal.jpg) <br>
+
+The game scores modal: <br>
+
+![The game scores modal](documentation/scores-modal.jpg) <br>
+
+The main game UI with an open modal: <br>
+
+![The main game UI with an open modal](documentation/main-ui-with-open-modal.jpg) <br>
