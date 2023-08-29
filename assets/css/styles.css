@@ -13,8 +13,6 @@ body {
     min-height: 100%;
     display: flex;
     flex-direction: column;
-    overflow-x: hidden;
-    overflow-y: hidden;
 }
 
 @media screen and (max-width: 1024px) {
@@ -101,12 +99,12 @@ body {
     0% {
         width: 0;
         height: 0;
-        opacity: 0.3;
+        opacity: 0.8;
     }
 
     100% {
-        width: 4500px;
-        height: 4000px;
+        width: 200px;
+        height: 200px;
         opacity: 0;
     }
 }
