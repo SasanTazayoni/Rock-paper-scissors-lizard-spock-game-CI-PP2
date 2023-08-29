@@ -178,3 +178,14 @@ The main game UI with an open modal: <br>
 * [StackOverflow](https://stackoverflow.com/) used to problem solve and deal with queries.
 * [Getemoji](https://getemoji.com/) used to obtain game icons.
 * [Seekpng](https://www.seekpng.com/) used to obtain rules modal image.
+
+
+## Testing
+
+### Validator testing
+
+I used the following websites to check my code for syntax errors:
+
+* [HTML validator](https://validator.w3.org/)
+* [CSS validator](https://jigsaw.w3.org/css-validator/)
+* [JavaScript validator](https://jshint.com/)
