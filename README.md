@@ -152,3 +152,29 @@ The main game UI with an open modal: <br>
 * A voice recognition can be introduced for a better user experience. This should be able to open the rules, check the scores, close modals, reset and play the game by saying simple commands like "Rules" or "Scores" or "Lizard".
 * A feature can be added to allow multiple players to play against each other.
 * Sound effects can be added for better user experience.
+
+## Technologies used
+
+### Languages used
+
+* HTML5
+* CSS3
+* JavaScript
+
+### Frameworks, libraries and programs used
+
+* [Font Awesome](https://fontawesome.com/) used for github icon.
+* [Coolors](https://coolors.co/) used to display colour palette used on the website.
+* [Google Fonts](https://fonts.google.com/) used to import 'Exo 2' font.
+* [Github](https://github.com/) used to host repository.
+* [Github pages](https://pages.github.com/) used to deploy the application.
+* [Gitpod](https://www.gitpod.io/) used to develop project and organise version control.
+* [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) used for performance review.
+* [Caniuse](https://caniuse.com/) used to check compatibility of code syntax with other browsers.
+* [PowerMapper](https://www.powermapper.com/) used to check compatibility of website with other browsers.
+* [Amiresposive](https://amiresponsive.co.uk/) used to display website on the most common devices.
+* [Responsinator](http://www.responsinator.com/) used to check if site was responsive on different screen sizes.
+* [ChatGPT](https://chat.openai.com/) used to verify code.
+* [StackOverflow](https://stackoverflow.com/) used to problem solve and deal with queries.
+* [Getemoji](https://getemoji.com/) used to obtain game icons.
+* [Seekpng](https://www.seekpng.com/) used to obtain rules modal image.
