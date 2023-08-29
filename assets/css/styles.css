@@ -45,6 +45,7 @@ body {
 .btn--reset {
     margin: 20px;
     display: block;
+    font-family: "Exo 2", Arial, Helvetica, sans-serif;
     font-size: 1.2rem;
     cursor: pointer;
     color: red;
@@ -115,6 +116,7 @@ body {
 .btn--dark {
     margin: 20px;
     display: block;
+    font-family: "Exo 2", Arial, Helvetica, sans-serif;
     font-size: 1.2rem;
     cursor: pointer;
     color: darkblue;
@@ -361,6 +363,7 @@ h2 {
 .btn {
     margin: 40px auto 20px;
     display: block;
+    font-family: "Exo 2", Arial, Helvetica, sans-serif;
     font-size: 1.2rem;
     cursor: pointer;
     color: var(--color-primary);
