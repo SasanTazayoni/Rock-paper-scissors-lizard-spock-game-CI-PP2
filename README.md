@@ -216,4 +216,6 @@ I used the following websites to check my code for syntax errors:
 
     ![The rules modal](documentation/rulesmodal.jpg) <br>
 * As a user, I want to be able to reset the record of game results.
-  * Clicking the "Reset" button on the main UI which is visible in the main UI will achieve this.
+  * Clicking the "Reset" button on the main UI which is visible in the main UI will achieve this: <br>
+
+    ![The reset button](documentation/resetbtn.jpg) <br>
