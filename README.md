@@ -68,18 +68,10 @@ This carefully curated color combination blends bold contrasts and soothing shad
 
 Comprehensive wireframes were developed to cater to all screen sizes. The decision to create single wireframes, without the need for variations in different screen sizes, was driven by the minimal impact on design elements beyond font and icon sizes. Explore the wireframes here:
 
-* The main game UI:
-
 ![The main game UI](documentation/main-ui.png)
-
-* The rules modal:
 
 ![The rules modal](documentation/rules-modal.png)
 
-* The game scores modal:
-
 ![The game scores modal](documentation/scores-modal.png)
-
-* The main game UI with an open modal:
 
 ![The main game UI with an open modal](documentation/main-ui-with-open-modal.png)
