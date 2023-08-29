@@ -249,3 +249,14 @@ I used the following websites to check my code for syntax errors:
 ### Responsinator
 
 Responsinator was used to make sure that the website was fully responsive on all devices. The results can be viewed [here](http://www.responsinator.com/?url=https%3A%2F%2Fsasantazayoni.github.io%2FRock-paper-scissors-lizard-spock-game-CI-PP2%2F). <br >
+
+### Third-Party Testing
+
+One of the most helpful ways to test the application was to have a few different people test it on various devices.
+
+| Name | Age | Tech BG |
+| --- | --- | --- |
+| Amy | 36 | High |
+| Joe | 35 | High |
+| Varun | 32 | Low |
+| Saba | 30 | High |
