@@ -4,7 +4,7 @@ The game serves as an expanded version of the classic 'Rock Paper Scissors' game
 
 This specific application is designed for a two-player scenario, involving the user and the computer. Each game consists of 9 rounds, and the first player to secure 5 round victories will clinch the overall game triumph. Round scores will be visibly displayed beneath the available game icons. To initiate play, simply click the button below, make your icon selection, and the computer will then randomly make its choice to compete against you.
 
-You can play the game on the live site [here](https://sasantazayoni.github.io/Rock-paper-scissors-lizard-spock-game-CI-PP2/){:target="_blank"}.
+You can play the game on the live site [here](https://sasantazayoni.github.io/Rock-paper-scissors-lizard-spock-game-CI-PP2/).
 
 ![Rock paper scissors lizard spock game on various devices](documentation/responsiveness.png)
 
@@ -163,21 +163,21 @@ The main game UI with an open modal: <br>
 
 ### Frameworks, libraries and programs used
 
-* [Font Awesome](https://fontawesome.com/){:target="_blank"} used for github icon.
-* [Coolors](https://coolors.co/){:target="_blank"} used to display colour palette used on the website.
-* [Google Fonts](https://fonts.google.com/){:target="_blank"} used to import 'Exo 2' font.
-* [Github](https://github.com/){:target="_blank"} used to host repository.
-* [Github pages](https://pages.github.com/){:target="_blank"} used to deploy the application.
-* [Gitpod](https://www.gitpod.io/){:target="_blank"} used to develop project and organise version control.
-* [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/){:target="_blank"} used for performance review.
-* [Caniuse](https://caniuse.com/){:target="_blank"} used to check compatibility of code syntax with other browsers.
-* [PowerMapper](https://www.powermapper.com/){:target="_blank"} used to check compatibility of website with other browsers.
-* [Amiresposive](https://amiresponsive.co.uk/){:target="_blank"} used to display website on the most common devices.
-* [Responsinator](http://www.responsinator.com/){:target="_blank"} used to check if site was responsive on different screen sizes.
-* [ChatGPT](https://chat.openai.com/){:target="_blank"} used to verify code.
-* [StackOverflow](https://stackoverflow.com/){:target="_blank"} used to problem solve and deal with queries.
-* [Getemoji](https://getemoji.com/){:target="_blank"} used to obtain game icons.
-* [Seekpng](https://www.seekpng.com/){:target="_blank"} used to obtain rules modal image.
+* [Font Awesome](https://fontawesome.com/) used for github icon.
+* [Coolors](https://coolors.co/) used to display colour palette used on the website.
+* [Google Fonts](https://fonts.google.com/) used to import 'Exo 2' font.
+* [Github](https://github.com/) used to host repository.
+* [Github pages](https://pages.github.com/) used to deploy the application.
+* [Gitpod](https://www.gitpod.io/) used to develop project and organise version control.
+* [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) used for performance review.
+* [Caniuse](https://caniuse.com/) used to check compatibility of code syntax with other browsers.
+* [PowerMapper](https://www.powermapper.com/) used to check compatibility of website with other browsers.
+* [Amiresposive](https://amiresponsive.co.uk/) used to display website on the most common devices.
+* [Responsinator](http://www.responsinator.com/) used to check if site was responsive on different screen sizes.
+* [ChatGPT](https://chat.openai.com/) used to verify code.
+* [StackOverflow](https://stackoverflow.com/) used to problem solve and deal with queries.
+* [Getemoji](https://getemoji.com/) used to obtain game icons.
+* [Seekpng](https://www.seekpng.com/) used to obtain rules modal image.
 
 
 ## Testing
@@ -186,9 +186,9 @@ The main game UI with an open modal: <br>
 
 I used the following websites to check my code for syntax errors:
 
-* [HTML validator](https://validator.w3.org/){:target="_blank"}
-* [CSS validator](https://jigsaw.w3.org/css-validator/){:target="_blank"}
-* [JavaScript validator](https://jshint.com/){:target="_blank"}
+* [HTML validator](https://validator.w3.org/)
+* [CSS validator](https://jigsaw.w3.org/css-validator/)
+* [JavaScript validator](https://jshint.com/)
 
 
 ### Testing User Stories from (UX) section
@@ -248,4 +248,4 @@ I used the following websites to check my code for syntax errors:
 
 ### Responsinator
 
-Responsinator was used to make sure that the website was fully responsive on all devices. The results can be viewed [here](http://www.responsinator.com/?url=https%3A%2F%2Fsasantazayoni.github.io%2FRock-paper-scissors-lizard-spock-game-CI-PP2%2F){:target="_blank"}. <br >
+Responsinator was used to make sure that the website was fully responsive on all devices. The results can be viewed [here](http://www.responsinator.com/?url=https%3A%2F%2Fsasantazayoni.github.io%2FRock-paper-scissors-lizard-spock-game-CI-PP2%2F). <br >
