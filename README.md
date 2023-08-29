@@ -136,14 +136,15 @@ The main game UI with an open modal: <br>
  
     ![Drawing a round](documentation/draw.jpg)
 
-* After each round, the results are recorded both in the round scores and in the UI so that the player can see their previous choices as well as the computer's. The viewport will extend in size if there are many round played:
+* After each round, the results are recorded both in the round scores and in the UI so that the player can see their previous choices as well as the computer's. For each round played, the icons selected will appear on top of the icons selected in the previous round (i.e. Older rounds will get pushed down the page). The viewport will extend in size if there are many round played:
 
     ![Multiple rounds played](documentation/multiround.jpg)
 
 * The game ends when either the player or the computer has 5 round wins. This increments the game scores in the scores modal and is stored in local storage in case the player closes their browser. Text is dynamically inserted into the scores modal depending on whether the player has won or lost the game and then removed when the modal is closed:
 
     ![End of game text](documentation/dynamictext.jpg)
-
+  
+* When the modal is closed after a game end, the round scores reset to 0 for both the player and the computer and all added icons are removed from the page (the game is reset).
 * The game scores (but not round scores) can be reset using the reset button in the main UI.
 
 ### Future features
