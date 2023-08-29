@@ -215,7 +215,37 @@ I used the following websites to check my code for syntax errors:
   * Clicking the "See rules" button in the main UI will open a modal that displays the rules: <br>
 
     ![The rules modal](documentation/rulesmodal.jpg) <br>
+
 * As a user, I want to be able to reset the record of game results.
   * Clicking the "Reset" button on the main UI which is visible in the main UI will achieve this: <br>
 
     ![The reset button](documentation/resetbtn.jpg) <br>
+
+### Personal testing
+
+* Samsung Galaxy S9
+  * Samsung Internet
+  * Microsoft Edge
+  * Mozilla Firefox
+  * Google Chrome
+* iPhone 6
+  * Safari
+* iPhone SE
+  * Safari
+  * Google Chrome
+* iPhone 12 Mini
+  * Safari
+* iPhone 14
+  * Safari
+* iPad 11" Pro
+  * Safari
+* Aorus 7
+  * Google Chrome
+  * Mozilla Firefox
+  * Microsoft Edge
+  * Opera
+  * Brave
+
+### Responsinator
+
+Responsinator was used to make sure that the website was fully responsive on all devices. The results can be viewed [here](http://www.responsinator.com/?url=https%3A%2F%2Fsasantazayoni.github.io%2FRock-paper-scissors-lizard-spock-game-CI-PP2%2F) <br >
