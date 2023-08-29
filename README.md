@@ -70,19 +70,19 @@ Comprehensive wireframes were developed to cater to all screen sizes. The decisi
 
 The main game UI: <br>
 
-![The main game UI](documentation/main-ui.jpg) <br>
+![The main game UI](documentation/main-ui-wframe.jpg) <br>
 
 The rules modal: <br>
 
-![The rules modal](documentation/rules-modal.jpg) <br>
+![The rules modal](documentation/rules-modal-wframe.jpg) <br>
 
 The game scores modal: <br>
 
-![The game scores modal](documentation/scores-modal.jpg) <br>
+![The game scores modal](documentation/scores-modal-wframe.jpg) <br>
 
 The main game UI with an open modal: <br>
 
-![The main game UI with an open modal](documentation/main-ui-with-open-modal.jpg) <br>
+![The main game UI with an open modal](documentation/main-ui-with-open-modal-wframe.jpg) <br>
 
 ## Features  
 
@@ -106,6 +106,16 @@ The main game UI with an open modal: <br>
   ![The close-rules button with hover](documentation/closerulesbtnhover.jpg)
   ![The close-scores button with hover](documentation/closescoresbtnhover.jpg)
   
-* The reset button has an additional pulse effect when clicked to indicate that the button has taken action: <br>
+* The reset button has an additional pulse effect when clicked to indicate that the button has reset the game scores: <br>
 
   ![The reset button oulse effect](documentation/resetbtnpulse.jpg)
+
+* Clicking on the "See rules" button opens the rules modal: <br>
+
+  ![The rules modal](documentation/rulesmodal.jpg)
+
+* Clicking on the "Wins & Losses" button opens the game scores modal: <br>
+
+  ![The game scores modal](documentation/scoresmodal.jpg)
+
+* Modals can be closed by clicking on the button corresponding to the modal or by clicking on the overlay.
