@@ -92,6 +92,8 @@ resetBtn.addEventListener('click', e => {
     }, 500);
 });
 
+// Sound effect for buttons
+
 buttonsWithSound.forEach(button => {
     button.addEventListener('mouseenter', () => {
       hoverSound.play();
