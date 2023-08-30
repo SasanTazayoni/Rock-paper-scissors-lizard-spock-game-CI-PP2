@@ -281,7 +281,8 @@ As the results show, the website is highly compatible across all browsers.
 
 ### Bugs
 
-* There are no known bugs and any that existed were promptly addressed and fixed.
+* On a horizontal mobile view with specific phones, it is possible that the rules modal will not allow scrolling throughout the entire height of the modal (i.e. it may be possible that the title of the rules modal and the "Play game" button are inaccessible). This problem has been adjusted to work on most mobiles but not every mobile was available for testing.
+* On Google Chrome by default the sound disabled when a new page is rendered - This means that the sound effect for the "Play game" button will initially not play but will after the first user interaction.
 
 ## Deployment
 
