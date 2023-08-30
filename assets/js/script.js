@@ -1,3 +1,5 @@
+const hoverSound = document.querySelector('[data-sound]');
+const buttonsWithSound = document.querySelectorAll('.sound');
 const inititalModal = document.querySelector('[data-modal]');
 const overlay = document.querySelector('[data-overlay]');
 const playGameBtn = document.querySelectorAll('[data-play-btn]');
@@ -88,6 +90,12 @@ resetBtn.addEventListener('click', e => {
     setTimeout(() => {
         ripples.remove();
     }, 500);
+});
+
+buttonsWithSound.forEach(button => {
+    button.addEventListener('mouseenter', () => {
+      hoverSound.play();
+    });
 });
 
 // Game functionality

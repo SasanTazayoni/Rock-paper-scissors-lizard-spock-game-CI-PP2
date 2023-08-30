@@ -15,11 +15,15 @@
     <title>Rock paper scissors lizard spock game</title>
   </head>
   <body>
+    <audio data-sound>
+      <source src="assets/sounds/light.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
     <nav class="btns">
-      <button class="btn--reset" data-reset-btn>Reset</button>
+      <button class="btn--reset sound" data-reset-btn>Reset</button>
       <div class="btn-container">
-        <button class="btn--dark" data-rules-btn>See rules</button>
-        <button class="btn--dark" data-scores-btn>Wins & losses</button>
+        <button class="btn--dark sound" data-rules-btn>See rules</button>
+        <button class="btn--dark sound" data-scores-btn>Wins & losses</button>
       </div>
     </nav>
     <header><h1>Rock Paper Scissors Lizard Spock game</h1></header>
@@ -70,7 +74,7 @@
             alt="Rock-paper-lizard-Spock game rules diagram"
           />
         </div>
-        <button class="btn" data-play-btn>Play game</button>
+        <button class="btn sound" data-play-btn>Play game</button>
       </section>
       <section class="game-scores-modal" data-scores-modal>
         <h2 data-end-game-message></h2>
@@ -84,7 +88,7 @@
             <span class="computer-game-score" data-computer-wins>0</span>
           </div>
         </div>
-        <button class="btn" data-play-btn>Continue</button>
+        <button class="btn sound" data-play-btn>Continue</button>
       </section>
       <div class="overlay open" data-overlay></div>
     </main>
