@@ -1,5 +1,7 @@
 const hoverSound = document.querySelector('[data-sound]');
 const buttonsWithSound = document.querySelectorAll('.sound');
+const volumeToggle = document.querySelector('[data-volume-toggle]');
+let isMuted = false;
 const inititalModal = document.querySelector('[data-modal]');
 const overlay = document.querySelector('[data-overlay]');
 const playGameBtn = document.querySelectorAll('[data-play-btn]');
@@ -96,8 +98,25 @@ resetBtn.addEventListener('click', e => {
 
 buttonsWithSound.forEach(button => {
     button.addEventListener('mouseenter', () => {
-      hoverSound.play();
+        if (!isMuted) {
+            hoverSound.play();
+        }
     });
+});
+
+// Mute sound
+
+volumeToggle.addEventListener('click', e => {
+    e.stopPropagation();
+    if (isMuted) {
+        isMuted = false;
+        volumeToggle.innerHTML = '<i class="fa-solid fa-volume-high"></i>';
+        hoverSound.play();
+    } else {
+        isMuted = true;
+        volumeToggle.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>';
+        hoverSound.pause();
+    }
 });
 
 // Game functionality
