@@ -111,11 +111,11 @@ The main game UI with an open modal: <br>
 
   ![The reset button oulse effect](documentation/resetbtnpulse.jpg)
 
-* Clicking on the "See rules" button opens the rules modal: <br>
+* Clicking on the "See rules" button opens the rules modal (can be done at any time): <br>
 
   ![The rules modal](documentation/rulesmodal.jpg)
 
-* Clicking on the "Wins & Losses" button opens the game scores modal: <br>
+* Clicking on the "Wins & Losses" button opens the game scores modal (can be done at any time): <br>
 
   ![The game scores modal](documentation/scoresmodal.jpg)
 
