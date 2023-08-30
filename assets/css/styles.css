@@ -90,6 +90,8 @@ body {
     opacity: 1;
 }
 
+/* Reset button pulse effect */
+
 .btn--reset > span {
     position: absolute;
     background: red;
@@ -308,7 +310,7 @@ h1 {
     }
 }
 
-/* Modals and modal content */
+/* Rules modal */
 
 h2 {
     text-align: center;
@@ -352,6 +354,10 @@ h2 {
     list-style: none;
     margin: 0;
     padding: 20px;
+}
+
+.icon {
+    font-size: 150%;
 }
 
 .modal-image {
@@ -421,6 +427,8 @@ h2 {
     opacity: 1;
 }
 
+/* Overlay */
+
 .overlay.open {
     position: absolute;
     top: 0;
@@ -437,9 +445,7 @@ h2 {
     display: none;
 }
 
-.icon {
-    font-size: 150%;
-}
+/* Scores modal */
 
 .game-scores-modal {
     display: none;
