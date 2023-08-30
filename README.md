@@ -152,7 +152,7 @@ The main game UI with an open modal: <br>
 
 * A voice recognition can be introduced for a better user experience. This should be able to open the rules, check the scores, close modals, reset and play the game by saying simple commands like "Rules" or "Scores" or "Lizard".
 * A feature can be added to allow multiple players to play against each other.
-* Sound effects can be added for better user experience.
+* More sound effects can be added for better user experience.
 
 ## Technologies used
 
