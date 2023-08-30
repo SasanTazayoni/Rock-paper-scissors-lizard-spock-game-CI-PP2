@@ -25,11 +25,11 @@
     <header><h1>Rock Paper Scissors Lizard Spock game</h1></header>
     <main>
       <div class="selections">
-        <button class="selection" data-selection="rock">✊</button>
-        <button class="selection" data-selection="paper">🖐</button>
-        <button class="selection" data-selection="scissors">✌️</button>
-        <button class="selection" data-selection="lizard">🤏</button>
-        <button class="selection" data-selection="spock">🖖</button>
+        <button class="selection" data-selection="rock" aria-label="Rock icon: A fist raised in a rock gesture">✊</button>
+        <button class="selection" data-selection="paper" aria-label="Paper icon: An open hand with fingers spread">🖐</button>
+        <button class="selection" data-selection="scissors" aria-label="Scissors icon: A hand showing the scissors gesture">✌️</button>
+        <button class="selection" data-selection="lizard" aria-label="Lizard icon: A hand showing the lizard gesture">🤏</button>
+        <button class="selection" data-selection="spock" aria-label="Spock icon: A hand showing the Spock gesture">🖖</button>
       </div>
       <div class="scores">
         <div>
@@ -49,25 +49,25 @@
         <div class="rules">
           <ul class="rules-list">
             <li>
-              <span class="icon">✊</span> Rock beats scissors and lizard but loses to paper and spock.
+              <span class="icon" aria-label="Rock icon: A fist raised in a rock gesture">✊</span> Rock beats scissors and lizard but loses to paper and spock.
             </li>
             <li>
-              <span class="icon">🖐</span> Paper beats rock and spock but loses to scissors and lizard.
+              <span class="icon" aria-label="Paper icon: An open hand with fingers spread">🖐</span> Paper beats rock and spock but loses to scissors and lizard.
             </li>
             <li>
-              <span class="icon">✌️</span> Scissors beats paper and lizard but loses to spock and rock.
+              <span class="icon" aria-label="Scissors icon: A hand showing the scissors gesture">✌️</span> Scissors beats paper and lizard but loses to spock and rock.
             </li>
             <li>
-              <span class="icon">🤏</span> Lizard beats spock and paper but loses to rock and scissors.
+              <span class="icon" aria-label="Lizard icon: A hand showing the lizard gesture">🤏</span> Lizard beats spock and paper but loses to rock and scissors.
             </li>
             <li>
-              <span class="icon">🖖</span> Spock beats rock and scissors but loses to paper and lizard.
+              <span class="icon" aria-label="Spock icon: A hand showing the Spock gesture">🖖</span> Spock beats rock and scissors but loses to paper and lizard.
             </li>
           </ul>
           <img
             src="assets/images/rules.png"
             class="modal-image"
-            alt="A picture showing how the rock paper lizard spock game works"
+            alt="Rock-paper-lizard-Spock game rules diagram"
           />
         </div>
         <button class="btn" data-play-btn>Play game</button>
