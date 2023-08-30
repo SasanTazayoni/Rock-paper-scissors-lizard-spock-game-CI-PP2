@@ -338,6 +338,7 @@ h2 {
 .start-game-modal p {
     font-style: italic;
     text-align: center;
+    font-weight: bold;
 }
 
 .start-game-modal {
@@ -514,6 +515,10 @@ h2 {
         padding: 10px;
     }
 
+    .start-game-modal p {
+        max-width: 340px;
+    }
+
     .rules {
         max-width: 300px;
     }
@@ -534,12 +539,20 @@ h2 {
 }
 
 @media screen and (max-width: 376px) {
+    .start-game-modal p {
+        max-width: 280px;
+    }
+
     .game-scores-modal {
         padding: 20px;
     }
 }
 
 @media screen and (max-width: 324px) {
+    .start-game-modal p {
+        max-width: 240px;
+    }
+
     .rules {
         max-width: 240px;
     }
