@@ -90,7 +90,7 @@ The main game UI with an open modal: <br>
 ### Current features  
 
 * The application is designed using Responsive Design and is fully responsive on all devices. This includes the modals and their content.
-* All buttons have a neon hover effect when hovered over: <br>
+* All buttons have a neon glow effect when hovered over for an enhanced user experience: <br>
     * Buttons: <br>
     
   ![The reset button](documentation/resetbtn.jpg)
@@ -107,7 +107,7 @@ The main game UI with an open modal: <br>
   ![The close-rules button with hover](documentation/closerulesbtnhover.jpg)
   ![The close-scores button with hover](documentation/closescoresbtnhover.jpg)
   
-* The reset button has an additional pulse effect when clicked to indicate that the button has reset the game scores: <br>
+* The reset button has an additional pulse effect when clicked for clarity to indicate that the button has reset the game scores: <br>
 
   ![The reset button oulse effect](documentation/resetbtnpulse.jpg)
 
@@ -120,7 +120,7 @@ The main game UI with an open modal: <br>
   ![The game scores modal](documentation/scoresmodal.jpg)
 
 * Modals can be closed by clicking on the button corresponding to the modal or by clicking on the overlay.
-* The game icons have a hover effect on them indicating that they can be clicked: <br>
+* The game icons have a hover effect on them indicating that they can be interacted with: <br>
 
   ![The game icons](documentation/icons.jpg)
 
@@ -147,6 +147,7 @@ The main game UI with an open modal: <br>
   
 * When the modal is closed after a game end, the round scores reset to 0 for both the player and the computer and all added icons are removed from the page (the game is reset).
 * The game scores (but not round scores) can be reset using the reset button in the main UI.
+* Each button has a sound effect when hovered over for an enhanced user experience.
 
 ### Future features
 
@@ -179,6 +180,7 @@ The main game UI with an open modal: <br>
 * [StackOverflow](https://stackoverflow.com/) used to problem solve and deal with queries.
 * [Getemoji](https://getemoji.com/) used to obtain game icons.
 * [Seekpng](https://www.seekpng.com/) used to obtain rules modal image.
+* [Epidemicsound](https://www.epidemicsound.com/) used to obtain sound hover effect for buttons.
 
 
 ## Testing
