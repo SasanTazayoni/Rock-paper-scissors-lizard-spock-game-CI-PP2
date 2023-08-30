@@ -15,23 +15,23 @@
     <title>Rock paper scissors lizard spock game</title>
   </head>
   <body>
-    <div class="btns">
+    <nav class="btns">
       <button class="btn--reset" data-reset-btn>Reset</button>
       <div class="btn-container">
         <button class="btn--dark" data-rules-btn>See rules</button>
         <button class="btn--dark" data-scores-btn>Wins & losses</button>
       </div>
-    </div>
+    </nav>
     <header><h1>Rock Paper Scissors Lizard Spock game</h1></header>
     <main>
-      <div class="selections">
+      <section class="selections">
         <button class="selection" data-selection="rock" aria-label="Rock icon: A fist raised in a rock gesture">✊</button>
         <button class="selection" data-selection="paper" aria-label="Paper icon: An open hand with fingers spread">🖐</button>
         <button class="selection" data-selection="scissors" aria-label="Scissors icon: A hand showing the scissors gesture">✌️</button>
         <button class="selection" data-selection="lizard" aria-label="Lizard icon: A hand showing the lizard gesture">🤏</button>
         <button class="selection" data-selection="spock" aria-label="Spock icon: A hand showing the Spock gesture">🖖</button>
-      </div>
-      <div class="scores">
+      </section>
+      <section class="scores">
         <div>
           Player:
           <span class="score" data-player-score>0</span>
@@ -40,10 +40,10 @@
           Computer:
           <span class="score loss" data-computer-score>0</span>
         </div>
-      </div>
+      </section>
 
       <!-- Modals -->
-      <div class="start-game-modal open" data-modal>
+      <section class="start-game-modal open" data-modal>
         <h2>How it works (rules)</h2>
         <p>In order to play just click the icon!</p>
         <div class="rules">
@@ -71,8 +71,8 @@
           />
         </div>
         <button class="btn" data-play-btn>Play game</button>
-      </div>
-      <div class="game-scores-modal" data-scores-modal>
+      </section>
+      <section class="game-scores-modal" data-scores-modal>
         <h2 data-end-game-message></h2>
         <div class="game-scores">
           <div>
@@ -85,7 +85,7 @@
           </div>
         </div>
         <button class="btn" data-play-btn>Continue</button>
-      </div>
+      </section>
       <div class="overlay open" data-overlay></div>
     </main>
     <footer>
