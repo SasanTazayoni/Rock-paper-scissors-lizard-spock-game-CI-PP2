@@ -8,7 +8,7 @@ The two-player rendition of Rock Paper Scissors Lizard Spock offers a dynamic an
 
 You can play the game on the live site [here](https://sasantazayoni.github.io/Rock-paper-scissors-lizard-spock-game-CI-PP2/).
 
-Important note for assessors: While the project requirement specifies placing JavaScript code in external files just above the closing body tag, I have opted to enhance the project's performance and best practices by linking the JavaScript file using the 'defer' keyword in the head tag. This ensures an optimal loading sequence while adhering to recommended practices.
+**Important note for assessors: While the project requirement specifies placing JavaScript code in external files just above the closing body tag, I have opted to enhance the project's performance and best practices by linking the JavaScript file using the 'defer' keyword in the head tag. This ensures an optimal loading sequence while adhering to recommended practices.**
 
 ![Rock paper scissors lizard spock game on various devices](documentation/responsiveness.png)
 
