@@ -60,6 +60,7 @@ body {
     position: relative;
     transition: background-color 0.5s;
     width: 200px;
+    height: 45px;
 }
 
 .btn--reset::after {
@@ -127,6 +128,7 @@ body {
     position: relative;
     transition: background-color 0.5s;
     width: 200px;
+    height: 45px;
 }
 
 .btn--dark::after {
@@ -149,6 +151,56 @@ body {
 
 .btn--dark:hover::after {
     opacity: 1;
+}
+
+.sound-btn {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: darkblue;
+    border: darkblue 0.125em solid;
+    text-decoration: none;
+    padding: 1em 0.5em;
+    border-radius: 20px;
+    background: var(--color-primary);
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+    0 0 0.3em darkblue;
+    box-shadow: inset 0 0 0.25em 0 darkblue, 0 0 0.25em 0 darkblue;
+    transition: background-color 0.5s;
+    position: relative;
+    width: 45px;
+    height: 45px;
+}
+
+.sound-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    border-radius: 20px;
+    box-shadow: 0 0 0.25em 0.25em darkblue;
+    transition: all 0.5s;
+    pointer-events: none;
+}
+
+.sound-btn:hover, .sound-btn:focus {
+    background: darkblue;
+    color: var(--color-primary);
+    text-shadow: none;
+}
+
+.sound-btn:hover::after {
+    opacity: 1;
+}
+
+.sound-btn > i {
+    font-size: 0.8rem;
 }
 
 h1 {
@@ -214,6 +266,14 @@ h1 {
         font-size: 1rem;    
         padding: 0.2em 1em; 
         width: 160px;
+        height: 35px;
+    }
+
+    .sound-btn {
+        margin: 16px;
+        font-size: 1rem;
+        width: 35px;
+        height: 35px;
     }
 
     h1 {
@@ -237,6 +297,14 @@ h1 {
         padding: 0.2em 0.5em;
         font-size: 0.8rem;
         width: 100px;
+        height: 30px;
+    }
+
+    .sound-btn {
+        margin: 12px;
+        font-size: 0.8rem;
+        width: 30px;
+        height: 30px;
     }
 
     h1 {
@@ -250,7 +318,24 @@ h1 {
 }
 
 @media screen and (max-width: 428px) {
-    .btn--reset, .btn--dark {
+    .btns {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn--dark {
+        margin: 8px;
+    }
+
+    .btn--reset {
+        margin: 8px auto;
+    }
+
+    .btn-container {
+        justify-content: center;
+    }
+
+    .sound-btn {
         margin: 8px;
     }
 
@@ -273,19 +358,6 @@ h1 {
 }
 
 @media screen and (max-width: 376px) {
-    .btns {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .btn--reset {
-        margin: 8px auto;
-    }
-
-    .btn-container {
-        justify-content: center;
-    }
-
     .selection {
         font-size: 30px;
     }
@@ -352,57 +424,7 @@ h2 {
     padding-left: 20px;
 }
 
-.sound-btn {
-    margin: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    cursor: pointer;
-    color: var(--color-primary);
-    border: var(--color-primary) 0.125em solid;
-    text-decoration: none;
-    padding: 1em 0.5em;
-    border-radius: 20px;
-    background: darkblue;
-    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
-    0 0 0.45em var(--color-primary);
-    box-shadow: inset 0 0 0.25em 0 var(--color-primary), 0 0 0.25em 0 var(--color-primary);
-    transition: background-color 0.5s;
-    position: relative;
-    width: 80px;
-    height: 80px;
-}
-
-.sound-btn::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 0;
-    border-radius: 20px;
-    box-shadow: 0 0 0.25em 0.25em var(--color-primary);
-    transition: all 0.5s;
-    pointer-events: none;
-}
-
-.sound-btn:hover, .sound-btn:focus {
-    background: var(--color-primary);
-    color: darkblue;
-    text-shadow: none;
-}
-
-.sound-btn:hover::after {
-    opacity: 1;
-}
-
-.sound-btn > i {
-    font-size: 32px;
-}
-
-.start-game-modal p {
+.start-game-modal.open p {
     font-style: italic;
     text-align: center;
     font-weight: bold;
@@ -555,7 +577,7 @@ h2 {
         padding: 10px;
     }
 
-    .start-game-modal p {
+    .start-game-modal.open p {
         max-width: 340px;
     }
 
@@ -576,19 +598,10 @@ h2 {
         flex-direction: column;
         gap: 0;
     }
-
-    .sound-btn {
-        width: 50px;
-        height: 50px;
-    }
-
-    .sound-btn > i {
-        font-size: 16px;
-    }
 }
 
 @media screen and (max-width: 376px) {
-    .start-game-modal p {
+    .start-game-modal.open p {
         max-width: 280px;
     }
 
@@ -598,7 +611,7 @@ h2 {
 }
 
 @media screen and (max-width: 324px) {
-    .start-game-modal p {
+    .start-game-modal.open p {
         max-width: 240px;
     }
 
