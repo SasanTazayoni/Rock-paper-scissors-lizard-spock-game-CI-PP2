@@ -64,6 +64,12 @@ function pauseTasks() {
     }
 }
 
+function resumeTasks() {
+    if (tabVisible && !isMuted) {
+        hoverSound.play();
+    }
+}
+
 // Opening and closing the modals
 
 playGameBtn.forEach(btn => btn.addEventListener('click', closeModal));
