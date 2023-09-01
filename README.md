@@ -277,12 +277,12 @@ The results show that the web application stands as an example of meticulous dev
 
 ![PowerMapper compatibility test](documentation/powermapper.jpg)
 
-As the results show, the website is highly compatible across all browsers.
+As the results show, the application is highly compatible across all browsers.
 
 ### Bugs
 
 * Emojis on iPhones exhibit varying formatting and can occupy a relatively larger width, particularly noticeable on smaller iPhone models with narrower viewport widths. Consequently, on these devices, emojis positioned at the extremities might experience partial cropping due to the spacing between them. Moving forward, I intend to exercise greater prudence when incorporating emojis in my future applications, taking into consideration these potential formatting and spacing issues.
-* On Google Chrome by default the sound disabled when a new page is rendered - This means that the sound effect for the "Play game" button will initially not play but will after the first user interaction.
+* On Google Chrome by default the sound disabled when a new page is rendered - This means that the sound effect for the "Play game" button will initially not play when hovered over but will after the first user interaction.
 
 ## Deployment
 
