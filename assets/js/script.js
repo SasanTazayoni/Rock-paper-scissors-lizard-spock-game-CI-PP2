@@ -63,16 +63,12 @@ function hasUserInteracted() {
 // Pause game while tabbed out
 
 document.addEventListener("visibilitychange", function() {
-    if (document.visibilityState === "visible") {
-        tabVisible = true;
-        if (!isMuted && hasUserInteracted()) {
-            hoverSound.play();
-        }
-    } else {
+    if (document.visibilityState !== "visible") {
         tabVisible = false;
         isMuted = true;
         volumeToggle.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>';
-        hoverSound.pause();
+    } else {
+        tabVisible = true;
     }
 });
 
