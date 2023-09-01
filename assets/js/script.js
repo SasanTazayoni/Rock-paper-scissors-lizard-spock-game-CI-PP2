@@ -17,6 +17,7 @@ const win = document.querySelector('[data-player-wins]');
 const lose = document.querySelector('[data-computer-wins]');
 let gameActive = true;
 let tabVisible = true;
+let userInteracted = false;
 const endGameMessage = document.querySelector('[data-end-game-message]');
 const rules = [
     {
@@ -46,6 +47,19 @@ const rules = [
     }
 ];
 
+// Check if user has interacted
+
+function handleUserInteraction() {
+    userInteracted = true;
+}
+
+window.addEventListener('click', handleUserInteraction);
+window.addEventListener('keydown', handleUserInteraction);
+
+function hasUserInteracted() {
+    return userInteracted;
+}
+
 // Pause game while tabbed out
 
 document.addEventListener("visibilitychange", function() {
@@ -59,13 +73,11 @@ document.addEventListener("visibilitychange", function() {
 });
 
 function pauseTasks() {
-    if (!isMuted) {
-        hoverSound.pause();
-    }
+    hoverSound.pause();
 }
 
 function resumeTasks() {
-    if (tabVisible && !isMuted) {
+    if (tabVisible && !isMuted && !hasUserInteracted()) {
         hoverSound.play();
     }
 }
@@ -123,9 +135,9 @@ resetBtn.addEventListener('click', e => {
 
 buttonsWithSound.forEach(button => {
     button.addEventListener('mouseenter', () => {
-        if (!isMuted && tabVisible) {
+        if (!isMuted && tabVisible && hasUserInteracted()) {
             hoverSound.play();
-        }
+        } else return;
     });
 });
 
