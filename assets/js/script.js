@@ -1,7 +1,7 @@
 const hoverSound = document.querySelector('[data-sound]');
 const buttonsWithSound = document.querySelectorAll('.sound');
 const volumeToggle = document.querySelector('[data-volume-toggle]');
-let isMuted = false;
+let isMuted = true;
 const inititalModal = document.querySelector('[data-modal]');
 const overlay = document.querySelector('[data-overlay]');
 const playGameBtn = document.querySelectorAll('[data-play-btn]');
@@ -65,22 +65,16 @@ function hasUserInteracted() {
 document.addEventListener("visibilitychange", function() {
     if (document.visibilityState === "visible") {
         tabVisible = true;
-        resumeTasks();
+        if (!isMuted && hasUserInteracted()) {
+            hoverSound.play();
+        }
     } else {
         tabVisible = false;
-        pauseTasks();
+        isMuted = true;
+        volumeToggle.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>';
+        hoverSound.pause();
     }
 });
-
-function pauseTasks() {
-    hoverSound.pause();
-}
-
-function resumeTasks() {
-    if (tabVisible && !isMuted && !hasUserInteracted()) {
-        hoverSound.play();
-    }
-}
 
 // Opening and closing the modals
 
@@ -145,16 +139,16 @@ buttonsWithSound.forEach(button => {
 
 volumeToggle.addEventListener('click', e => {
     e.stopPropagation();
-    if (isMuted) {
+    if (!isMuted) {
+        isMuted = true;
+        volumeToggle.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>';
+        hoverSound.pause();
+    } else {
         isMuted = false;
         volumeToggle.innerHTML = '<i class="fa-solid fa-volume-high"></i>';
         if (tabVisible) {
             hoverSound.play();
         }
-    } else {
-        isMuted = true;
-        volumeToggle.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>';
-        hoverSound.pause();
     }
 });
 
