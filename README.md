@@ -183,6 +183,7 @@ The main game UI with an open modal: <br>
 * [Getemoji](https://getemoji.com/) used to obtain game icons.
 * [Seekpng](https://www.seekpng.com/) used to obtain rules modal image.
 * [Epidemicsound](https://www.epidemicsound.com/) used to obtain sound hover effect for buttons.
+* [Favicon.io](https://favicon.io/) used to generate favicon.
 
 
 ## Testing
