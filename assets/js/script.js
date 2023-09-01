@@ -16,6 +16,7 @@ const computerScore = document.querySelector('[data-computer-score]');
 const win = document.querySelector('[data-player-wins]');
 const lose = document.querySelector('[data-computer-wins]');
 let gameActive = true;
+let tabVisible = true;
 const endGameMessage = document.querySelector('[data-end-game-message]');
 const rules = [
     {
@@ -44,6 +45,24 @@ const rules = [
         beats: ['scissors', 'rock']
     }
 ];
+
+// Pause game while tabbed out
+
+document.addEventListener("visibilitychange", function() {
+    if (document.visibilityState === "visible") {
+        tabVisible = true;
+        resumeTasks();
+    } else {
+        tabVisible = false;
+        pauseTasks();
+    }
+});
+
+function pauseTasks() {
+    if (!isMuted) {
+        hoverSound.pause();
+    }
+}
 
 // Opening and closing the modals
 
@@ -98,7 +117,7 @@ resetBtn.addEventListener('click', e => {
 
 buttonsWithSound.forEach(button => {
     button.addEventListener('mouseenter', () => {
-        if (!isMuted) {
+        if (!isMuted && tabVisible) {
             hoverSound.play();
         }
     });
@@ -111,7 +130,9 @@ volumeToggle.addEventListener('click', e => {
     if (isMuted) {
         isMuted = false;
         volumeToggle.innerHTML = '<i class="fa-solid fa-volume-high"></i>';
-        hoverSound.play();
+        if (tabVisible) {
+            hoverSound.play();
+        }
     } else {
         isMuted = true;
         volumeToggle.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>';
