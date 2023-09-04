@@ -150,6 +150,14 @@ The main game UI with an open modal: <br>
 * When the modal is closed after a game end, the round scores reset to 0 for both the player and the computer and all added icons are removed from the page (the game is reset).
 * The game scores (but not round scores) can be reset using the reset button in the main UI.
 * Each button has a sound effect when hovered over for an enhanced user experience.
+* The sound effects are initially toggled off for users and can be toggled on from the main UI by clicking the sound icon: <br>
+
+    ![Sound button off](documentation/soundoff.jpg)
+
+* The sound is automatically toggled off when another browser or tab is opened and viewed.
+* The sound can be toggled on by clicking the sound icon: <br>
+
+    ![Sound button on](documentation/soundon.jpg)
 
 ### Future features
 
