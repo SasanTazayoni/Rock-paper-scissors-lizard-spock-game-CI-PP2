@@ -284,7 +284,6 @@ As the results show, the application is highly compatible across all browsers.
 
 * On a horizontal mobile view with specific phones, it is possible that the rules modal will not allow scrolling throughout the entire height of the modal (i.e. it may be possible that the title of the rules modal and the "Play game" button are inaccessible). This problem has been adjusted to work on most mobiles but not every mobile was available for testing. With the tested devices, this problem has been fixed by adding "max-height: 100vh;" and "overflow-y: auto;" to the rules modal class selector in its open state within the CSS (".start-game-modal.open"). <br> --> As of the 31st of August, this problem is now completely solved and should work on any device.
 * Emojis on iPhones exhibit varying formatting and can occupy a relatively larger width, particularly noticeable on smaller iPhone models with narrower viewport widths. Consequently, on these devices, emojis positioned at the extremities might experience partial cropping due to the spacing between them. Moving forward, I intend to exercise greater prudence when incorporating emojis in my future applications, taking into consideration these potential formatting and spacing issues.
-* On Google Chrome by default the sound disabled when a new page is rendered - This means that the sound effect for the "Play game" button will initially not play when hovered over but will after the first user interaction.
 
 ## Deployment
 
