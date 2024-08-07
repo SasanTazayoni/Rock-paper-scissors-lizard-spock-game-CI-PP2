@@ -1,5 +1,7 @@
 # Rock Paper Scissors Lizard Spock game ✊ 🖐 ✌️ 🤏 🖖
 
+![HTML](tech/html.png) ![CSS](tech/css.png) ![Javascript](tech/javascript.png)
+
 Introducing an enriched iteration of the classic 'Rock Paper Scissors' game, this version introduces two additional variables, elevating the decision-making process to new heights. Players make their selections simultaneously, infusing an element of suspense into each move. While this version is versatile enough for multiple players, this particular application is designed for a captivating two-player interaction. It pits the user against the computer, offering a game tailored for enthusiasts who appreciate pop culture references and delight in playful, social games. Triumph is attained by strategically outsmarting the computer's selections and selecting the icon that counters its choice. In the event of a tied match, a rematch ensues, persisting until a decisive victor emerges.
 
 This tailored application revolves around a user-computer dynamic, providing an experience that appeals to a wide range of age groups, from teenagers to adults who are familiar with the show and its references. It features a sequence of 9 rounds per game, offering an engaging twist on the traditional gameplay. To clinch an overall victory, players must achieve 5 wins within these rounds to win a game. Round scores are prominently displayed below the array of game icons, ensuring a clear view of the ongoing battle. Initiating gameplay is effortless: a simple click on the "Play game" button followed by a game icon (✊, 🖐, ✌️, 🤏, 🖖) in the main user interface and the computer will counter with its own randomized choice, culminating in an entertaining clash of wits!
@@ -14,48 +16,47 @@ You can play the game on the live site [here](https://sasantazayoni.github.io/Ro
 
 ## Table of Contents
 
-- [User Experience](#user-experience)
-  - [User stories](#user-stories)
-  - [Design](#design)
-    * [Overall feel](#overall-feel)
-    * [Colour Scheme](#colour-scheme)
-    * [Typography](#typography)
-  - [Wireframes](#wireframes)
-- [Features](#features)
-  - [Current features](#current-features)
-  - [Future features](#future-features)
-- [Technologies used](#technologies-used)
-  - [Languages used](#languages-used)
-  - [Frameworks, libraries and programs used](#frameworks-libraries-and-programs-used)
-- [Testing](#testing)
-  - [Validator testing](#validator-testing)
-  - [Testing User Stories from (UX) section](#testing-user-stories-from-ux-section)
-  - [Personal testing](#personal-testing)
-  - [Responsinator](#responsinator)
-  - [Third-party testing](#third-party-testing)
-  - [Lighthouse testing](#lighthouse-testing)
-  - [PowerMapper Compatibility](#powermapper-compatibility)
-  - [Bugs](#bugs)
-- [Deployment](#deployment)
-- [Credits](#credits)
+-   [User Experience](#user-experience)
+    -   [User stories](#user-stories)
+    -   [Design](#design)
+        -   [Overall feel](#overall-feel)
+        -   [Colour Scheme](#colour-scheme)
+        -   [Typography](#typography)
+    -   [Wireframes](#wireframes)
+-   [Features](#features)
+    -   [Current features](#current-features)
+    -   [Future features](#future-features)
+-   [Technologies used](#technologies-used)
+    -   [Languages used](#languages-used)
+    -   [Frameworks, libraries and programs used](#frameworks-libraries-and-programs-used)
+-   [Testing](#testing)
+    -   [Validator testing](#validator-testing)
+    -   [Testing User Stories from (UX) section](#testing-user-stories-from-ux-section)
+    -   [Personal testing](#personal-testing)
+    -   [Responsinator](#responsinator)
+    -   [Third-party testing](#third-party-testing)
+    -   [Lighthouse testing](#lighthouse-testing)
+    -   [PowerMapper Compatibility](#powermapper-compatibility)
+    -   [Bugs](#bugs)
+-   [Deployment](#deployment)
+-   [Credits](#credits)
 
 ## User Experience
 
 ### User stories
 
-* As a user, I want to immediately understand what the game is about and how it works.
-* As a user, I want to play the game as soon as possible.
-* As a user, I want a clear indication of my current score and to know my round result each time I play a round.
-* As a user, I want to be able to keep a record of and track how many games I have won or lost overall.
-* As a user, I want to be able to check the game instructions in case I forget how the game works.
-* As a user, I want to be able to reset the record of game results.
+-   As a user, I want to immediately understand what the game is about and how it works.
+-   As a user, I want to play the game as soon as possible.
+-   As a user, I want a clear indication of my current score and to know my round result each time I play a round.
+-   As a user, I want to be able to keep a record of and track how many games I have won or lost overall.
+-   As a user, I want to be able to check the game instructions in case I forget how the game works.
+-   As a user, I want to be able to reset the record of game results.
 
 ### Design
 
 #### Overall feel
 
 Embodying a modern and captivating aesthetic, this application offers an overall ambience that is both contemporary and visually pleasing. While its primary role is to provide entertainment, it also serves as a valuable tool for resolving disagreements when consensus proves elusive.
-
 
 #### Colour scheme
 
@@ -87,112 +88,113 @@ The main game UI with an open modal: <br>
 
 ![The main game UI with an open modal](documentation/main-ui-with-open-modal-wframe.jpg) <br>
 
-## Features  
+## Features
 
-### Current features  
+### Current features
 
-* The application is designed using Responsive Design and is fully responsive on all devices. This includes the modals and their content.
-* All buttons have a neon glow effect when hovered over for an enhanced user experience: <br>
-    * Buttons: <br>
-    
-  ![The reset button](documentation/resetbtn.jpg)
-  ![The open-rules button](documentation/openrulesbtn.jpg)
-  ![The open-scores button](documentation/openscoresbtn.jpg)
-  ![The close-rules button](documentation/closerulesbtn.jpg)
-  ![The close-scores button](documentation/closescoresbtn.jpg)
+-   The application is designed using Responsive Design and is fully responsive on all devices. This includes the modals and their content.
+-   All buttons have a neon glow effect when hovered over for an enhanced user experience: <br>
 
-  * Buttons with hover effects: <br>
+    -   Buttons: <br>
 
-  ![The reset button with hover](documentation/resetbtnhover.jpg)
-  ![The open-rules button with hover](documentation/openrulesbtnhover.jpg)
-  ![The open-scores button with hover](documentation/openscoresbtnhover.jpg)
-  ![The close-rules button with hover](documentation/closerulesbtnhover.jpg)
-  ![The close-scores button with hover](documentation/closescoresbtnhover.jpg)
-  
-* The reset button has an additional pulse effect when clicked for clarity to indicate that the button has reset the game scores: <br>
+    ![The reset button](documentation/resetbtn.jpg)
+    ![The open-rules button](documentation/openrulesbtn.jpg)
+    ![The open-scores button](documentation/openscoresbtn.jpg)
+    ![The close-rules button](documentation/closerulesbtn.jpg)
+    ![The close-scores button](documentation/closescoresbtn.jpg)
 
-  ![The reset button oulse effect](documentation/resetbtnpulse.jpg)
+    -   Buttons with hover effects: <br>
 
-* Clicking on the "See rules" button opens the rules modal (can be done at any time): <br>
+    ![The reset button with hover](documentation/resetbtnhover.jpg)
+    ![The open-rules button with hover](documentation/openrulesbtnhover.jpg)
+    ![The open-scores button with hover](documentation/openscoresbtnhover.jpg)
+    ![The close-rules button with hover](documentation/closerulesbtnhover.jpg)
+    ![The close-scores button with hover](documentation/closescoresbtnhover.jpg)
 
-  ![The rules modal](documentation/rulesmodal.jpg)
+-   The reset button has an additional pulse effect when clicked for clarity to indicate that the button has reset the game scores: <br>
 
-* Clicking on the "Wins & Losses" button opens the game scores modal (can be done at any time): <br>
+    ![The reset button oulse effect](documentation/resetbtnpulse.jpg)
 
-  ![The game scores modal](documentation/scoresmodal.jpg)
+-   Clicking on the "See rules" button opens the rules modal (can be done at any time): <br>
 
-* Modals can be closed by clicking on the button corresponding to the modal or by clicking on the overlay.
-* The game icons have a hover effect on them indicating that they can be interacted with: <br>
+    ![The rules modal](documentation/rulesmodal.jpg)
 
-  ![The game icons](documentation/icons.jpg)
+-   Clicking on the "Wins & Losses" button opens the game scores modal (can be done at any time): <br>
 
-* Whenever an icon is clicked, it is compared against the computer's choice (which is random) and the UI is updated accordingly.
-    * When the player wins, the round score of the player is incremented by 1 and the player's chosen icon is displayed with maximum opacity and slightly enlarged in the space beneath the player's round score while the computer's choice is displayed with partial opacity in the space beneath the computer's round score: <br>
+    ![The game scores modal](documentation/scoresmodal.jpg)
+
+-   Modals can be closed by clicking on the button corresponding to the modal or by clicking on the overlay.
+-   The game icons have a hover effect on them indicating that they can be interacted with: <br>
+
+    ![The game icons](documentation/icons.jpg)
+
+-   Whenever an icon is clicked, it is compared against the computer's choice (which is random) and the UI is updated accordingly.
+
+    -   When the player wins, the round score of the player is incremented by 1 and the player's chosen icon is displayed with maximum opacity and slightly enlarged in the space beneath the player's round score while the computer's choice is displayed with partial opacity in the space beneath the computer's round score: <br>
 
     ![Winning a round](documentation/win.jpg)
 
-    * When the player loses, the round score of the computer is incremented by 1 and the computer's chosen icon is displayed with maximum opacity and slightly enlarged in the space beneath the computer's round score while the player's choice is displayed with partial opacity in the space beneath the player's round score: <br>
+    -   When the player loses, the round score of the computer is incremented by 1 and the computer's chosen icon is displayed with maximum opacity and slightly enlarged in the space beneath the computer's round score while the player's choice is displayed with partial opacity in the space beneath the player's round score: <br>
 
     ![Losing a round](documentation/lose.jpg)
 
-    * In the case of a draw, neither round is incremented and both chosen icons display with partial opacity beneath the respective scores
- 
+    -   In the case of a draw, neither round is incremented and both chosen icons display with partial opacity beneath the respective scores
+
     ![Drawing a round](documentation/draw.jpg)
 
-* After each round, the results are recorded both in the round scores and in the UI so that the player can see their previous choices as well as the computer's. For each round played, the icons selected will appear on top of the icons selected in the previous round (i.e. Older rounds will get pushed down the page). The viewport will extend in size if there are many round played:
+-   After each round, the results are recorded both in the round scores and in the UI so that the player can see their previous choices as well as the computer's. For each round played, the icons selected will appear on top of the icons selected in the previous round (i.e. Older rounds will get pushed down the page). The viewport will extend in size if there are many round played:
 
     ![Multiple rounds played](documentation/multiround.jpg)
 
-* The game ends when either the player or the computer has 5 round wins. This increments the game scores in the scores modal and is stored in local storage in case the player closes their browser. Text is dynamically inserted into the scores modal depending on whether the player has won or lost the game and then removed when the modal is closed:
+-   The game ends when either the player or the computer has 5 round wins. This increments the game scores in the scores modal and is stored in local storage in case the player closes their browser. Text is dynamically inserted into the scores modal depending on whether the player has won or lost the game and then removed when the modal is closed:
 
     ![End of game text](documentation/dynamictext.jpg)
-  
-* When the modal is closed after a game end, the round scores reset to 0 for both the player and the computer and all added icons are removed from the page (the game is reset).
-* The game scores (but not round scores) can be reset using the reset button in the main UI.
-* Each button has a sound effect when hovered over for an enhanced user experience.
-* The sound effects are initially toggled off for users and can be toggled on from the main UI by clicking the sound icon: <br>
+
+-   When the modal is closed after a game end, the round scores reset to 0 for both the player and the computer and all added icons are removed from the page (the game is reset).
+-   The game scores (but not round scores) can be reset using the reset button in the main UI.
+-   Each button has a sound effect when hovered over for an enhanced user experience.
+-   The sound effects are initially toggled off for users and can be toggled on from the main UI by clicking the sound icon: <br>
 
     ![Sound button off](documentation/soundoff.jpg)
 
-* The sound is automatically toggled off when another browser or tab is opened and viewed.
-* The sound can be toggled on by clicking the sound icon: <br>
+-   The sound is automatically toggled off when another browser or tab is opened and viewed.
+-   The sound can be toggled on by clicking the sound icon: <br>
 
     ![Sound button on](documentation/soundon.jpg)
 
 ### Future features
 
-* A voice recognition can be introduced for a better user experience. This should be able to open the rules, check the scores, close modals, reset and play the game by saying simple commands like "Rules" or "Scores" or "Lizard".
-* A feature can be added to allow multiple players to play against each other.
-* More sound effects can be added for better user experience.
+-   A voice recognition can be introduced for a better user experience. This should be able to open the rules, check the scores, close modals, reset and play the game by saying simple commands like "Rules" or "Scores" or "Lizard".
+-   A feature can be added to allow multiple players to play against each other.
+-   More sound effects can be added for better user experience.
 
 ## Technologies used
 
 ### Languages used
 
-* HTML5
-* CSS3
-* JavaScript
+-   HTML5
+-   CSS3
+-   JavaScript
 
 ### Frameworks, libraries and programs used
 
-* [Font Awesome](https://fontawesome.com/) used for github icon.
-* [Coolors](https://coolors.co/) used to display colour palette used on the website.
-* [Google Fonts](https://fonts.google.com/) used to import 'Exo 2' font.
-* [Github](https://github.com/) used to host repository.
-* [Github pages](https://pages.github.com/) used to deploy the application.
-* [Gitpod](https://www.gitpod.io/) used to develop project and organise version control.
-* [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) used for performance review.
-* [Caniuse](https://caniuse.com/) used to check compatibility of code syntax with other browsers.
-* [PowerMapper](https://www.powermapper.com/) used to check compatibility of website with other browsers.
-* [Amiresposive](https://amiresponsive.co.uk/) used to display website on the most common devices.
-* [Responsinator](http://www.responsinator.com/) used to check if site was responsive on different screen sizes.
-* [ChatGPT](https://chat.openai.com/) used to verify code.
-* [StackOverflow](https://stackoverflow.com/) used to problem solve and deal with queries.
-* [Getemoji](https://getemoji.com/) used to obtain game icons.
-* [Seekpng](https://www.seekpng.com/) used to obtain rules modal image.
-* [Epidemicsound](https://www.epidemicsound.com/) used to obtain sound hover effect for buttons.
-* [Favicon.io](https://favicon.io/) used to generate favicon.
-
+-   [Font Awesome](https://fontawesome.com/) used for github icon.
+-   [Coolors](https://coolors.co/) used to display colour palette used on the website.
+-   [Google Fonts](https://fonts.google.com/) used to import 'Exo 2' font.
+-   [Github](https://github.com/) used to host repository.
+-   [Github pages](https://pages.github.com/) used to deploy the application.
+-   [Gitpod](https://www.gitpod.io/) used to develop project and organise version control.
+-   [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) used for performance review.
+-   [Caniuse](https://caniuse.com/) used to check compatibility of code syntax with other browsers.
+-   [PowerMapper](https://www.powermapper.com/) used to check compatibility of website with other browsers.
+-   [Amiresposive](https://amiresponsive.co.uk/) used to display website on the most common devices.
+-   [Responsinator](http://www.responsinator.com/) used to check if site was responsive on different screen sizes.
+-   [ChatGPT](https://chat.openai.com/) used to verify code.
+-   [StackOverflow](https://stackoverflow.com/) used to problem solve and deal with queries.
+-   [Getemoji](https://getemoji.com/) used to obtain game icons.
+-   [Seekpng](https://www.seekpng.com/) used to obtain rules modal image.
+-   [Epidemicsound](https://www.epidemicsound.com/) used to obtain sound hover effect for buttons.
+-   [Favicon.io](https://favicon.io/) used to generate favicon.
 
 ## Testing
 
@@ -200,65 +202,70 @@ The main game UI with an open modal: <br>
 
 I used the following websites to check my code for syntax errors:
 
-* [HTML validator](https://validator.w3.org/)
-* [CSS validator](https://jigsaw.w3.org/css-validator/)
-* [JavaScript validator](https://jshint.com/)
-
+-   [HTML validator](https://validator.w3.org/)
+-   [CSS validator](https://jigsaw.w3.org/css-validator/)
+-   [JavaScript validator](https://jshint.com/)
 
 ### Testing User Stories from (UX) section
 
-* As a user, I want to immediately understand what the game is about and how it works.
-  * Upon opening the application the rules modal is already open. This explains the rules of the game and how to play.
-  * Screenshot of the view when the application is opened: <br>
+-   As a user, I want to immediately understand what the game is about and how it works.
 
-    ![The rules modal](documentation/rulesmodal.jpg) <br>
-    
-* As a user, I want to play the game as soon as possible.
-  * The "play game" button (see previous screenshot) is clearly visible within the rules modal and on clicking gives access to the main game UI.
-  * Alternatively the overlay can be clicked to close the modal and access the main game UI. <br>
-  
-* As a user, I want a clear indication of my current score and to know my round result each time I play a round.
-  * The scores are clearly indicated in the main UI: <br>
+    -   Upon opening the application the rules modal is already open. This explains the rules of the game and how to play.
+    -   Screenshot of the view when the application is opened: <br>
 
-    ![The round scores](documentation/roundresult.jpg) <br>
-* As a user, I want to be able to keep a record of and track how many games I have won or lost overall.
-  * Clicking the "Wins & Losses" button in the main UI will display the game scores modal: <br>
+        ![The rules modal](documentation/rulesmodal.jpg) <br>
 
-    ![The game scores modal](documentation/scoresmodal.jpg) <br>
-* As a user, I want to be able to check the game instructions in case I forget how the game works.
-  * Clicking the "See rules" button in the main UI will open a modal that displays the rules: <br>
+-   As a user, I want to play the game as soon as possible.
+    -   The "play game" button (see previous screenshot) is clearly visible within the rules modal and on clicking gives access to the main game UI.
+    -   Alternatively the overlay can be clicked to close the modal and access the main game UI. <br>
+-   As a user, I want a clear indication of my current score and to know my round result each time I play a round.
 
-    ![The rules modal](documentation/rulesmodal.jpg) <br>
+    -   The scores are clearly indicated in the main UI: <br>
 
-* As a user, I want to be able to reset the record of game results.
-  * Clicking the "Reset" button on the main UI which is visible in the main UI will achieve this: <br>
+        ![The round scores](documentation/roundresult.jpg) <br>
 
-    ![The reset button](documentation/resetbtn.jpg) <br>
+-   As a user, I want to be able to keep a record of and track how many games I have won or lost overall.
+
+    -   Clicking the "Wins & Losses" button in the main UI will display the game scores modal: <br>
+
+        ![The game scores modal](documentation/scoresmodal.jpg) <br>
+
+-   As a user, I want to be able to check the game instructions in case I forget how the game works.
+
+    -   Clicking the "See rules" button in the main UI will open a modal that displays the rules: <br>
+
+        ![The rules modal](documentation/rulesmodal.jpg) <br>
+
+-   As a user, I want to be able to reset the record of game results.
+
+    -   Clicking the "Reset" button on the main UI which is visible in the main UI will achieve this: <br>
+
+        ![The reset button](documentation/resetbtn.jpg) <br>
 
 ### Personal testing
 
-* Samsung Galaxy S9
-  * Samsung Internet
-  * Microsoft Edge
-  * Mozilla Firefox
-  * Google Chrome
-* iPhone 6
-  * Safari
-* iPhone SE
-  * Safari
-  * Google Chrome
-* iPhone 12 Mini
-  * Safari
-* iPhone 14
-  * Safari
-* iPad 11" Pro
-  * Safari
-* Aorus 7
-  * Google Chrome
-  * Mozilla Firefox
-  * Microsoft Edge
-  * Opera
-  * Brave
+-   Samsung Galaxy S9
+    -   Samsung Internet
+    -   Microsoft Edge
+    -   Mozilla Firefox
+    -   Google Chrome
+-   iPhone 6
+    -   Safari
+-   iPhone SE
+    -   Safari
+    -   Google Chrome
+-   iPhone 12 Mini
+    -   Safari
+-   iPhone 14
+    -   Safari
+-   iPad 11" Pro
+    -   Safari
+-   Aorus 7
+    -   Google Chrome
+    -   Mozilla Firefox
+    -   Microsoft Edge
+    -   Opera
+    -   Brave
 
 ### Responsinator
 
@@ -268,11 +275,11 @@ Responsinator was used to make sure that the website was fully responsive on all
 
 One of the most helpful ways to test the application was to have a few different people test it on various devices.
 
-| Name | Age | Tech BG |
-| --- | --- | --- |
-| Joe | 35 | High |
-| Varun | 32 | Low |
-| Saba | 30 | High |
+| Name  | Age | Tech BG |
+| ----- | --- | ------- |
+| Joe   | 35  | High    |
+| Varun | 32  | Low     |
+| Saba  | 30  | High    |
 
 ### Lighthouse testing
 
@@ -290,8 +297,8 @@ As the results show, the application is highly compatible across all browsers.
 
 ### Bugs
 
-* On a horizontal mobile view with specific phones, it is possible that the rules modal will not allow scrolling throughout the entire height of the modal (i.e. it may be possible that the title of the rules modal and the "Play game" button are inaccessible). This problem has been adjusted to work on most mobiles but not every mobile was available for testing. With the tested devices, this problem has been fixed by adding "max-height: 100vh;" and "overflow-y: auto;" to the rules modal class selector in its open state within the CSS (".start-game-modal.open"). <br> --> As of the 31st of August, this problem is now completely solved and should work on any device.
-* Emojis on iPhones exhibit varying formatting and can occupy a relatively larger width, particularly noticeable on smaller iPhone models with narrower viewport widths. Consequently, on these devices, emojis positioned at the extremities might experience partial cropping due to the spacing between them. Moving forward, I intend to exercise greater prudence when incorporating emojis in my future applications, taking into consideration these potential formatting and spacing issues.
+-   On a horizontal mobile view with specific phones, it is possible that the rules modal will not allow scrolling throughout the entire height of the modal (i.e. it may be possible that the title of the rules modal and the "Play game" button are inaccessible). This problem has been adjusted to work on most mobiles but not every mobile was available for testing. With the tested devices, this problem has been fixed by adding "max-height: 100vh;" and "overflow-y: auto;" to the rules modal class selector in its open state within the CSS (".start-game-modal.open"). <br> --> As of the 31st of August, this problem is now completely solved and should work on any device.
+-   Emojis on iPhones exhibit varying formatting and can occupy a relatively larger width, particularly noticeable on smaller iPhone models with narrower viewport widths. Consequently, on these devices, emojis positioned at the extremities might experience partial cropping due to the spacing between them. Moving forward, I intend to exercise greater prudence when incorporating emojis in my future applications, taking into consideration these potential formatting and spacing issues.
 
 ## Deployment
 
@@ -306,7 +313,7 @@ As the results show, the application is highly compatible across all browsers.
 
 ## Credits
 
-* Thanks to [Kevin Powell](https://www.youtube.com/@KevinPowell) from YouTube for neon button hover-effect.
-* Thanks to [WebDevSimplified](https://www.youtube.com/@WebDevSimplified) from YouTube for inspiration to build this project.
-* Thanks to my friends and family for thoroughly testing out my web application and giving useful suggestions.
-* Thanks to my mentor Antonio Rodriguez for the helpful direction in starting this project and all of the helpful resources provided that helped throughout.
+-   Thanks to [Kevin Powell](https://www.youtube.com/@KevinPowell) from YouTube for neon button hover-effect.
+-   Thanks to [WebDevSimplified](https://www.youtube.com/@WebDevSimplified) from YouTube for inspiration to build this project.
+-   Thanks to my friends and family for thoroughly testing out my web application and giving useful suggestions.
+-   Thanks to my mentor Antonio Rodriguez for the helpful direction in starting this project and all of the helpful resources provided that helped throughout.
