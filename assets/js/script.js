@@ -11,7 +11,6 @@ const playerScore = document.querySelector("[data-player-score]");
 const computerScore = document.querySelector("[data-computer-score]");
 const win = document.querySelector("[data-player-wins]");
 const lose = document.querySelector("[data-computer-wins]");
-let gameActive = true;
 const endGameMessage = document.querySelector("[data-end-game-message]");
 const rules = [
   {
@@ -59,9 +58,7 @@ function closeModal() {
   scoresModal.classList.remove("open");
   overlay.classList.remove("open");
   endGameMessage.innerText = "";
-  if (gameActive === false) {
-    resetUI(playerScore, computerScore);
-  }
+  resetUI(playerScore, computerScore);
 }
 
 function openScoresModal() {
@@ -76,6 +73,8 @@ resetBtn.addEventListener("click", (e) => {
   localStorage.setItem("computerWins", 0);
   win.innerText = 0;
   lose.innerText = 0;
+
+  resetUI(playerScore, computerScore);
 
   let x = e.clientX - e.target.offsetLeft;
   let y = e.clientY - e.target.offsetTop;
@@ -147,7 +146,6 @@ function incrementScore(result) {
   result === "WIN" ? playerScore.innerText++ : computerScore.innerText++;
 
   if (gameOver()) {
-    gameActive = false;
     openScoresModal();
     addText();
   }
