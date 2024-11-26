@@ -51,7 +51,11 @@ export function initUIEventListeners() {
   });
   checkGameScoresBtn.addEventListener("click", openScoresModal);
   openRulesModalBtn.addEventListener("click", openRulesModal);
-  overlay.addEventListener("click", closeModal);
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      closeModal();
+    }
+  });
   window.onload = loadScoresFromLocalStorage;
 }
 
