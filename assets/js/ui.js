@@ -9,8 +9,8 @@ const playerRoundScore = document.querySelector("[data-player-round-score]");
 const computerRoundScore = document.querySelector(
   "[data-computer-round-score]"
 );
-let playerGameWins = document.querySelector("[data-player-game-wins]");
-let computerGameWins = document.querySelector("[data-computer-game-wins]");
+const playerGameWins = document.querySelector("[data-player-game-wins]");
+const computerGameWins = document.querySelector("[data-computer-game-wins]");
 
 export function openScoresModal() {
   scoresModal.classList.add("open");
@@ -99,18 +99,17 @@ export function displayEndGameMessage() {
   if (playerScoreValue === 5) {
     endGameMessage.innerText = "You won this game!";
     endGameMessage.style.fontSize = "30px";
-    return "WIN";
+    updateGameScores("WIN");
   } else {
     endGameMessage.innerText = "Loser";
     endGameMessage.style.fontSize = "30px";
-    return "LOSE";
+    updateGameScores("LOSE");
   }
 }
 
-function updateGameScores() {
+function updateGameScores(result) {
   let playerWins = parseInt(localStorage.getItem("playerWins") || 0);
   let computerWins = parseInt(localStorage.getItem("computerWins") || 0);
-  const result = displayEndGameMessage();
 
   if (result === "WIN") {
     playerWins++;
