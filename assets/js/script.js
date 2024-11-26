@@ -26,11 +26,11 @@ selectionIcons.forEach((icon) => {
 
 resetBtn.addEventListener("click", (e) => {
   resetUI();
-  resetLocalStorage();
+  resetScores();
   resetRippleEffect(e);
 });
 
-function resetLocalStorage() {
+function resetScores() {
   localStorage.setItem("playerWins", 0);
   localStorage.setItem("computerWins", 0);
   document.querySelector("[data-player-game-wins]").innerText = 0;
