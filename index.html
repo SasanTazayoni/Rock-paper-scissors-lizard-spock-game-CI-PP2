@@ -15,7 +15,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
     <link rel="stylesheet" href="assets/css/styles.css">
-    <script src="assets/js/script.js" defer></script>
+    <script src="assets/js/script.js" type="module"></script>
     <title>Rock paper scissors lizard spock game</title>
   </head>
   <body>
@@ -23,7 +23,7 @@
       <button class="btn--reset" aria-label="Reset Button" data-reset-btn>Reset</button>
       <div class="btn-container">
         <button class="btn--dark" aria-label="Dark Theme Button" data-rules-btn>See rules</button>
-        <button class="btn--dark" aria-label="Dark Theme Button" data-scores-btn>Wins & losses</button>
+        <button class="btn--dark" aria-label="Dark Theme Button" data-game-scores-btn>Wins & losses</button>
       </div>
     </nav>
     <header><h1>Rock Paper Scissors Lizard Spock game</h1></header>
@@ -38,11 +38,11 @@
       <section class="scores">
         <div>
           Player:
-          <span class="score" data-player-score>0</span>
+          <span class="score" data-player-round-score>0</span>
         </div>
         <div data-last-column>
           Computer:
-          <span class="score loss" data-computer-score>0</span>
+          <span class="score loss" data-computer-round-score>0</span>
         </div>
       </section>
 
@@ -80,17 +80,17 @@
         <button class="btn" data-play-btn>Play game</button>
       </section>
 
-      <!-- Scores modal -->
-      <section class="game-scores-modal" data-scores-modal>
+      <!-- Game scores modal -->
+      <section class="game-scores-modal" data-game-scores-modal>
         <h2 data-end-game-message></h2>
         <div class="game-scores">
           <div>
             Total wins:
-            <span class="player-game-score" data-player-wins>0</span>
+            <span class="player-game-score" data-player-game-wins>0</span>
           </div>
           <div>
             Total losses:
-            <span class="computer-game-score" data-computer-wins>0</span>
+            <span class="computer-game-score" data-computer-game-wins>0</span>
           </div>
         </div>
         <button class="btn" data-play-btn>Continue</button>
