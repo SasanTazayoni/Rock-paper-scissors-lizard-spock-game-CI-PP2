@@ -530,7 +530,7 @@ h2 {
 
 @media screen and (max-width: 376px) {
   .start-game-modal.open {
-    padding: ;
+    padding: 5px;
   }
 
   .start-game-modal.open p {
