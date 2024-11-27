@@ -1,4 +1,10 @@
-export const rules = [
+export type Rules = {
+  name: string;
+  symbol: string;
+  beats: string[];
+};
+
+export const rules: Rules[] = [
   { name: "rock", symbol: "✊", beats: ["scissors", "lizard"] },
   { name: "paper", symbol: "🖐", beats: ["rock", "spock"] },
   { name: "scissors", symbol: "✌️", beats: ["paper", "lizard"] },
@@ -6,23 +12,25 @@ export const rules = [
   { name: "spock", symbol: "🖖", beats: ["scissors", "rock"] },
 ];
 
-export function computerPlay() {
+export type Selection = (typeof rules)[number]["name"];
+
+export let computerChoice: Rules;
+export let playerChoice: Rules;
+
+export function computerPlay(): Rules {
   const randomIndex = Math.floor(Math.random() * rules.length);
   return rules[randomIndex];
 }
 
-export let computerChoice = null;
-export let playerChoice = null;
-
-export function playGameRound(playerSelection) {
-  playerChoice = rules.find((rule) => rule.name === playerSelection);
+export function playGameRound(playerSelection: Selection) {
+  playerChoice = rules.find((rule) => rule.name === playerSelection)!;
   computerChoice = computerPlay();
 
   const roundResult = playRound(playerChoice, computerChoice);
   return roundResult;
 }
 
-export function playRound(playerChoice, computerChoice) {
+export function playRound(playerChoice: Rules, computerChoice: Rules) {
   const playerWin = determineWinner(playerChoice.beats, computerChoice.name);
   const computerWin = determineWinner(computerChoice.beats, playerChoice.name);
 
@@ -31,7 +39,10 @@ export function playRound(playerChoice, computerChoice) {
   return "DRAW";
 }
 
-export function determineWinner(selection, opponentSelection) {
+export function determineWinner(
+  selection: string[],
+  opponentSelection: string
+) {
   return selection.includes(opponentSelection);
 }
 
@@ -43,6 +54,6 @@ export function getPlayerChoice() {
   return playerChoice;
 }
 
-export function gameOver(playerScore, computerScore) {
-  return parseInt(playerScore) === 5 || parseInt(computerScore) === 5;
+export function gameOver(playerScore: number, computerScore: number) {
+  return playerScore === 5 || computerScore === 5;
 }

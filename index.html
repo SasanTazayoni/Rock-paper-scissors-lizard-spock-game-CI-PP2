@@ -14,8 +14,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <script src="assets/js/script.js" type="module"></script>
+    <link rel="stylesheet" href="./src/assets/css/styles.css">
+    <script src="./src/script.ts" type="module"></script>
     <title>Rock paper scissors lizard spock game</title>
   </head>
   <body>
@@ -38,16 +38,16 @@
       <section class="scores">
         <div>
           Player:
-          <span class="score" data-player-round-score>0</span>
+          <span class="score" data-player-round-wins>0</span>
         </div>
         <div data-last-column>
           Computer:
-          <span class="score loss" data-computer-round-score>0</span>
+          <span class="score loss" data-computer-round-wins>0</span>
         </div>
       </section>
 
       <!-- Rules modal -->
-      <section class="start-game-modal open" data-modal>
+      <dialog class="start-game-modal open" data-modal>
         <h2>How it works (rules)</h2>
         <div class="rules">
           <ul class="rules-list">
@@ -68,7 +68,7 @@
             </li>
           </ul>
           <img
-            src="assets/images/rules.png"
+            src="./src/assets/images/rules.png"
             class="modal-image"
             alt="Rock-paper-lizard-Spock game rules diagram"
           />
@@ -78,10 +78,10 @@
           <p>In order to play just click the button below then a yellow icon!</p>
         </div>
         <button class="btn" data-play-btn>Play game</button>
-      </section>
+      </dialog>
 
       <!-- Game scores modal -->
-      <section class="game-scores-modal" data-game-scores-modal>
+      <dialog class="game-scores-modal" data-game-scores-modal>
         <h2 data-end-game-message></h2>
         <div class="game-scores">
           <div>
@@ -94,7 +94,7 @@
           </div>
         </div>
         <button class="btn" data-play-btn>Continue</button>
-      </section>
+      </dialog>
       <div class="overlay open" data-overlay></div>
     </main>
     <footer>
