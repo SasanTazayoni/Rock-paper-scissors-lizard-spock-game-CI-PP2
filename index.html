@@ -15,88 +15,11 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
     <link rel="stylesheet" href="./src/assets/css/styles.css">
-    <script src="./src/script.ts" type="module"></script>
+    <script type="module" src="./src/main.tsx"></script>
     <title>Rock paper scissors lizard spock game</title>
   </head>
   <body>
-    <nav class="btns">
-      <button class="btn--reset" aria-label="Reset Button" data-reset-btn>Reset</button>
-      <div class="btn-container">
-        <button class="btn--dark" aria-label="Dark Theme Button" data-rules-btn>See rules</button>
-        <button class="btn--dark" aria-label="Dark Theme Button" data-game-scores-btn>Wins & losses</button>
-      </div>
-    </nav>
-    <header><h1>Rock Paper Scissors Lizard Spock game</h1></header>
-    <main>
-      <section class="selections">
-        <button class="selection" data-selection="rock" aria-label="Rock icon: A fist raised in a rock gesture">✊</button>
-        <button class="selection" data-selection="paper" aria-label="Paper icon: An open hand with fingers spread">🖐</button>
-        <button class="selection" data-selection="scissors" aria-label="Scissors icon: A hand showing the scissors gesture">✌️</button>
-        <button class="selection" data-selection="lizard" aria-label="Lizard icon: A hand showing the lizard gesture">🤏</button>
-        <button class="selection" data-selection="spock" aria-label="Spock icon: A hand showing the Spock gesture">🖖</button>
-      </section>
-      <section class="scores">
-        <div>
-          Player:
-          <span class="score" data-player-round-wins>0</span>
-        </div>
-        <div data-last-column>
-          Computer:
-          <span class="score loss" data-computer-round-wins>0</span>
-        </div>
-      </section>
-
-      <!-- Rules modal -->
-      <dialog class="start-game-modal open" data-modal>
-        <h2>How it works (rules)</h2>
-        <div class="rules">
-          <ul class="rules-list">
-            <li>
-              <span class="icon" aria-label="Rock icon: A fist raised in a rock gesture">✊</span> Rock beats scissors and lizard but loses to paper and spock.
-            </li>
-            <li>
-              <span class="icon" aria-label="Paper icon: An open hand with fingers spread">🖐</span> Paper beats rock and spock but loses to scissors and lizard.
-            </li>
-            <li>
-              <span class="icon" aria-label="Scissors icon: A hand showing the scissors gesture">✌️</span> Scissors beats paper and lizard but loses to spock and rock.
-            </li>
-            <li>
-              <span class="icon" aria-label="Lizard icon: A hand showing the lizard gesture">🤏</span> Lizard beats spock and paper but loses to rock and scissors.
-            </li>
-            <li>
-              <span class="icon" aria-label="Spock icon: A hand showing the Spock gesture">🖖</span> Spock beats rock and scissors but loses to paper and lizard.
-            </li>
-          </ul>
-          <img
-            src="./src/assets/images/rules.png"
-            class="modal-image"
-            alt="Rock-paper-lizard-Spock game rules diagram"
-          />
-        </div>
-        <div class="rules-text">
-          <p>The winner of a game is the first to win 5 rounds.</p>
-          <p>In order to play just click the button below then a yellow icon!</p>
-        </div>
-        <button class="btn" data-play-btn>Play game</button>
-      </dialog>
-
-      <!-- Game scores modal -->
-      <dialog class="game-scores-modal" data-game-scores-modal>
-        <h2 data-end-game-message></h2>
-        <div class="game-scores">
-          <div>
-            Total wins:
-            <span class="player-game-score" data-player-game-wins>0</span>
-          </div>
-          <div>
-            Total losses:
-            <span class="computer-game-score" data-computer-game-wins>0</span>
-          </div>
-        </div>
-        <button class="btn" data-play-btn>Continue</button>
-      </dialog>
-      <div class="overlay open" data-overlay></div>
-    </main>
+    <div id="root"></div>
     <footer>
       <p>
         &copy; Rock Paper Scissors Lizard Spock game 2023 created by Sasan
