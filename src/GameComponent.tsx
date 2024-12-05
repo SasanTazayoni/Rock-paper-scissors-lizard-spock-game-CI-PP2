@@ -1,21 +1,20 @@
 import React, { useState, useRef, useEffect } from "react";
+import { getComputerChoice } from "./utils/computerChoice.ts";
+import { getPlayerChoice } from "./utils/playerChoice.ts";
+import { playGameRound } from "./utils/gameLogic.ts";
+import {
+  adjustOverlayHeight,
+  resetOverlayHeight,
+} from "./utils/overlayUtils.ts";
+import { updateGameScores } from "./utils/gameScores.ts";
+import { Selection } from "./utils/rules.ts";
 
 type Result = {
   symbol: string;
   isWinner: boolean;
 };
 
-type Selection = "rock" | "paper" | "scissors" | "lizard" | "spock";
-
 const GameComponent: React.FC = () => {
-  const rules = [
-    { name: "rock", beats: ["scissors", "lizard"], symbol: "✊" },
-    { name: "paper", beats: ["rock", "spock"], symbol: "🖐" },
-    { name: "scissors", beats: ["paper", "lizard"], symbol: "✌️" },
-    { name: "lizard", beats: ["spock", "paper"], symbol: "🤏" },
-    { name: "spock", beats: ["rock", "scissors"], symbol: "🖖" },
-  ];
-
   const [playerScore, setPlayerScore] = useState(0);
   const [computerScore, setComputerScore] = useState(0);
   const [playerGameWins, setPlayerGameWins] = useState(0);
@@ -40,9 +39,9 @@ const GameComponent: React.FC = () => {
     if (playerScore >= 5 || computerScore >= 5) {
       setIsGameOver(true);
       if (playerScore >= 5) {
-        updateGameScores("WIN");
+        updateGameScores("WIN", setPlayerGameWins, setComputerGameWins);
       } else {
-        updateGameScores("LOSE");
+        updateGameScores("LOSE", setPlayerGameWins, setComputerGameWins);
       }
       setShowGameScoresModal(true);
       setIsOverlayOpen(true);
@@ -70,59 +69,7 @@ const GameComponent: React.FC = () => {
     };
   }, []);
 
-  const getPlayerChoice = (name: Selection) => {
-    return rules.find((rule) => rule.name === name)!;
-  };
-
-  const getComputerChoice = (): { name: string; symbol: string } => {
-    const randomIndex = Math.floor(Math.random() * rules.length);
-    return rules[randomIndex];
-  };
-
-  const playGameRound = (playerChoice: Selection): "WIN" | "LOSE" | "DRAW" => {
-    const computerChoice = getComputerChoice();
-    const player = getPlayerChoice(playerChoice);
-
-    if (player.name === computerChoice.name) {
-      return "DRAW";
-    }
-
-    if (player.beats.includes(computerChoice.name)) {
-      return "WIN";
-    }
-
-    return "LOSE";
-  };
-
-  const adjustOverlayHeight = () => {
-    const bodyHeight = document.body.scrollHeight;
-    const overlay = document.querySelector(".overlay") as HTMLElement;
-    if (overlay) {
-      overlay.style.height = `${bodyHeight}px`;
-    }
-  };
-
-  const resetOverlayHeight = () => {
-    if (overlayRef.current) {
-      overlayRef.current.style.height = "";
-    }
-  };
-
-  const updateGameScores = (result: "WIN" | "LOSE") => {
-    let playerWins = localStorage.getItem("playerWins") || "0";
-    let computerWins = localStorage.getItem("computerWins") || "0";
-
-    if (result === "WIN") {
-      playerWins = (parseInt(playerWins) + 1).toString();
-      localStorage.setItem("playerWins", playerWins);
-      setPlayerGameWins(parseInt(playerWins));
-    } else if (result === "LOSE") {
-      computerWins = (parseInt(computerWins) + 1).toString();
-      localStorage.setItem("computerWins", computerWins);
-      setComputerGameWins(parseInt(computerWins));
-    }
-  };
-
+  // Event handlers
   const handleSelection = (selection: Selection) => {
     const roundResult = playGameRound(selection);
     const playerChoice = getPlayerChoice(selection);
