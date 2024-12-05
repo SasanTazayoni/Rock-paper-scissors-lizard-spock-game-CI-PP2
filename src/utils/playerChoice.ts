@@ -1,4 +1,4 @@
-import { rules } from "./rules.ts";
+import { rules } from "./rules";
 
 export type Selection = "rock" | "paper" | "scissors" | "lizard" | "spock";
 

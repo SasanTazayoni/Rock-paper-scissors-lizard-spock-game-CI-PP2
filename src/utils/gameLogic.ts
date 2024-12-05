@@ -1,6 +1,6 @@
-import { getPlayerChoice } from "./playerChoice.ts";
-import { getComputerChoice } from "./computerChoice.ts";
-import { Selection } from "./rules.ts";
+import { getPlayerChoice } from "./playerChoice";
+import { getComputerChoice } from "./computerChoice";
+import { Selection } from "./rules";
 
 export const playGameRound = (
   playerChoice: Selection
