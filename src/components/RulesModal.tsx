@@ -62,7 +62,11 @@ const RulesModal: React.FC<RulesModalProps> = ({
             </li>
           </ul>
           <img
-            src="/images/rules.png"
+            src={
+              window.location.hostname === "localhost"
+                ? "./images/rules.png"
+                : "/images/rules.png"
+            }
             className="modal-image"
             alt="Rock-paper-lizard-Spock game rules diagram"
           />
