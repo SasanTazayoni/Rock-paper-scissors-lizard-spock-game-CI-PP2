@@ -1,13 +1,11 @@
 import React, { useState, useRef, useEffect } from "react";
-import { getComputerChoice } from "./utils/computerChoice.ts";
-import { getPlayerChoice } from "./utils/playerChoice.ts";
-import { playGameRound } from "./utils/gameLogic.ts";
-import {
-  adjustOverlayHeight,
-  resetOverlayHeight,
-} from "./utils/overlayUtils.ts";
-import { updateGameScores } from "./utils/gameScores.ts";
-import { Selection } from "./utils/rules.ts";
+import { getComputerChoice } from "./utils/computerChoice";
+import { getPlayerChoice } from "./utils/playerChoice";
+import { playGameRound } from "./utils/gameLogic";
+import { adjustOverlayHeight, resetOverlayHeight } from "./utils/overlayUtils";
+import { updateGameScores } from "./utils/gameScores";
+import { Selection } from "./utils/rules";
+import ResetButton from "./components/ResetBtn";
 
 type Result = {
   symbol: string;
@@ -20,9 +18,9 @@ const GameComponent: React.FC = () => {
   const [playerGameWins, setPlayerGameWins] = useState(0);
   const [computerGameWins, setComputerGameWins] = useState(0);
   const [isGameOver, setIsGameOver] = useState(false);
-  const [showRulesModal, setShowRulesModal] = useState(false);
+  const [showRulesModal, setShowRulesModal] = useState(true);
   const [showGameScoresModal, setShowGameScoresModal] = useState(false);
-  const [isOverlayOpen, setIsOverlayOpen] = useState(false);
+  const [isOverlayOpen, setIsOverlayOpen] = useState(true);
   const [playerResult, setPlayerResult] = useState<Result[]>([]);
   const [computerResult, setComputerResult] = useState<Result[]>([]);
   const lastColumnRef = useRef<HTMLDivElement | null>(null);
@@ -69,7 +67,6 @@ const GameComponent: React.FC = () => {
     };
   }, []);
 
-  // Event handlers
   const handleSelection = (selection: Selection) => {
     const roundResult = playGameRound(selection);
     const playerChoice = getPlayerChoice(selection);
@@ -99,24 +96,6 @@ const GameComponent: React.FC = () => {
     setComputerResult([]);
   };
 
-  const clearLocalStorage = () => {
-    localStorage.removeItem("playerWins");
-    localStorage.removeItem("computerWins");
-  };
-
-  const handleRippleEffect = (e: React.MouseEvent<HTMLButtonElement>) => {
-    const target = e.target as HTMLButtonElement;
-    const x = e.clientX - target.offsetLeft;
-    const y = e.clientY - target.offsetTop;
-
-    const ripple = document.createElement("span");
-    ripple.style.left = `${x}px`;
-    ripple.style.top = `${y}px`;
-    target.appendChild(ripple);
-
-    setTimeout(() => ripple.remove(), 500);
-  };
-
   const toggleRulesModal = () => {
     setShowRulesModal((prev) => !prev);
     setIsOverlayOpen((prev) => !prev);
@@ -137,25 +116,14 @@ const GameComponent: React.FC = () => {
     }
   };
 
-  const resetGameAndStorage = () => {
-    resetGame();
-    clearLocalStorage();
-    setPlayerGameWins(0);
-    setComputerGameWins(0);
-  };
-
   return (
     <>
       <nav className="btns">
-        <button
-          className="btn--reset"
-          aria-label="Reset Button"
-          data-reset-btn
-          onClick={resetGameAndStorage}
-          onMouseDown={handleRippleEffect}
-        >
-          Reset
-        </button>
+        <ResetButton
+          resetGame={resetGame}
+          setPlayerGameWins={setPlayerGameWins}
+          setComputerGameWins={setComputerGameWins}
+        />
         <div className="btn-container">
           <button
             className="btn--dark"
