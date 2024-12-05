@@ -7,6 +7,7 @@ import { updateGameScores } from "./utils/gameScores";
 import { Selection } from "./utils/rules";
 import ResetButton from "./components/ResetBtn";
 import RulesModal from "./components/RulesModal";
+import ScoresModal from "./components/ScoresModal";
 
 type Result = {
   symbol: string;
@@ -42,8 +43,8 @@ const GameComponent: React.FC = () => {
       } else {
         updateGameScores("LOSE", setPlayerGameWins, setComputerGameWins);
       }
-      setShowGameScoresModal(true);
       setIsOverlayOpen(true);
+      setShowGameScoresModal(true);
     }
   }, [playerScore, computerScore]);
 
@@ -134,7 +135,7 @@ const GameComponent: React.FC = () => {
             aria-label="Game Scores Button"
             data-game-scores-btn
             onClick={() => {
-              setShowGameScoresModal(true);
+              setShowGameScoresModal((prev) => !prev);
               setIsOverlayOpen(true);
             }}
           >
@@ -233,26 +234,12 @@ const GameComponent: React.FC = () => {
         />
 
         {showGameScoresModal && (
-          <dialog className="game-scores-modal open" data-game-scores-modal>
-            <h2>{isGameOver ? "Game Over!" : "Game Scores"}</h2>
-            <div className="game-scores">
-              <div>
-                Total wins:
-                <span className="player-game-score" data-player-game-wins>
-                  {playerGameWins}
-                </span>
-              </div>
-              <div>
-                Total losses:
-                <span className="computer-game-score" data-computer-game-wins>
-                  {computerGameWins}
-                </span>
-              </div>
-            </div>
-            <button className="btn" onClick={closeGameScoresModal}>
-              Continue
-            </button>
-          </dialog>
+          <ScoresModal
+            isGameOver={isGameOver}
+            playerGameWins={playerGameWins}
+            computerGameWins={computerGameWins}
+            closeGameScoresModal={closeGameScoresModal}
+          />
         )}
 
         {isOverlayOpen && (
