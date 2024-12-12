@@ -158,11 +158,13 @@ The main game UI with an open modal: <br>
 
 ## Technologies used
 
-### Languages used
+### Languages & tools used
 
 - HTML5
 - CSS3
-- JavaScript
+- TypeScript
+- React
+- Vite
 
 ### Frameworks, libraries and programs used
 
