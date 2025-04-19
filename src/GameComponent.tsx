@@ -70,9 +70,10 @@ const GameComponent: React.FC = () => {
   }, []);
 
   const handleSelection = (selection: Selection) => {
-    const roundResult = playGameRound(selection);
     const playerChoice = getPlayerChoice(selection);
     const computerChoice = getComputerChoice();
+
+    const roundResult = playGameRound(selection, computerChoice);
 
     if (roundResult === "WIN") {
       setPlayerScore((prev) => prev + 1);

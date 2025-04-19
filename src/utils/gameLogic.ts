@@ -1,17 +1,21 @@
 import { getPlayerChoice } from "./playerChoice";
-import { getComputerChoice } from "./computerChoice";
-import { Selection } from "./rules";
+import { Rule, Selection } from "./rules";
 
 export const playGameRound = (
-  playerChoice: Selection
+  playerChoice: Selection,
+  computerChoice: Rule
 ): "WIN" | "LOSE" | "DRAW" => {
-  const computerChoice = getComputerChoice();
   const player = getPlayerChoice(playerChoice);
+
   if (player.name === computerChoice.name) {
     return "DRAW";
   }
+
   if (player.beats.includes(computerChoice.name)) {
+    console.log(`Result: WIN — ${player.name} beats ${computerChoice.name}`);
     return "WIN";
   }
+
+  console.log(`Result: LOSE — ${computerChoice.name} beats ${player.name}`);
   return "LOSE";
 };
