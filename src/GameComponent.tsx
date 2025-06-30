@@ -28,7 +28,6 @@ const GameComponent: React.FC = () => {
   const [showRulesModal, setShowRulesModal] = useState(true);
   const [showGameScoresModal, setShowGameScoresModal] = useState(false);
   const [history, setHistory] = useState<RoundResult[]>([]);
-  const lastColumnRef = useRef<HTMLDivElement | null>(null);
   const overlayRef = useRef<HTMLDivElement | null>(null);
   const isGameOver = playerScore >= 5 || computerScore >= 5;
   const isOverlayOpen = showRulesModal || showGameScoresModal || isGameOver;
