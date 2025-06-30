@@ -2,9 +2,10 @@ import { useState, useEffect } from "react";
 import { getComputerChoice } from "./utils/computerChoice";
 import { getPlayerChoice } from "./utils/playerChoice";
 import { playGameRound } from "./utils/gameLogic";
-import { adjustOverlayHeight, resetOverlayHeight } from "./utils/overlayUtils";
 import { updateGameScores } from "./utils/gameScores";
 import { Selection } from "./utils/rules";
+import { useGameWins } from "./hooks/useGameWins";
+import { useOverlayHeight } from "./hooks/useOverlayHeight";
 import RulesModal from "./components/RulesModal";
 import ScoresModal from "./components/ScoresModal";
 import ResultColumn from "./components/ResultColumn";
@@ -22,24 +23,21 @@ type RoundResult = {
 };
 
 function GameComponent() {
+  const {
+    playerGameWins,
+    setPlayerGameWins,
+    computerGameWins,
+    setComputerGameWins,
+  } = useGameWins();
+
   const [playerScore, setPlayerScore] = useState(0);
   const [computerScore, setComputerScore] = useState(0);
-  const [playerGameWins, setPlayerGameWins] = useState(0);
-  const [computerGameWins, setComputerGameWins] = useState(0);
   const [showRulesModal, setShowRulesModal] = useState(true);
   const [showGameScoresModal, setShowGameScoresModal] = useState(false);
   const [history, setHistory] = useState<RoundResult[]>([]);
   const isGameOver = playerScore >= 5 || computerScore >= 5;
   const isOverlayOpen = showRulesModal || showGameScoresModal || isGameOver;
-
-  useEffect(() => {
-    const stored = localStorage.getItem("gameScores");
-    if (stored) {
-      const { player, computer } = JSON.parse(stored);
-      setPlayerGameWins(player || 0);
-      setComputerGameWins(computer || 0);
-    }
-  }, []);
+  useOverlayHeight(isOverlayOpen);
 
   useEffect(() => {
     if (playerScore >= 5 || computerScore >= 5) {
@@ -51,27 +49,6 @@ function GameComponent() {
       setShowGameScoresModal(true);
     }
   }, [playerScore, computerScore]);
-
-  useEffect(() => {
-    if (isOverlayOpen) {
-      adjustOverlayHeight();
-    } else {
-      resetOverlayHeight();
-    }
-  }, [isOverlayOpen]);
-
-  useEffect(() => {
-    const handleResize = () => {
-      adjustOverlayHeight();
-    };
-
-    adjustOverlayHeight();
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   const handleSelection = (selection: Selection) => {
     const playerChoice = getPlayerChoice(selection);
