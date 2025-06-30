@@ -14,6 +14,11 @@ type Result = {
   isWinner: boolean;
 };
 
+type RoundResult = {
+  player: Result;
+  computer: Result;
+};
+
 const GameComponent: React.FC = () => {
   const [playerScore, setPlayerScore] = useState(0);
   const [computerScore, setComputerScore] = useState(0);
@@ -21,8 +26,7 @@ const GameComponent: React.FC = () => {
   const [computerGameWins, setComputerGameWins] = useState(0);
   const [showRulesModal, setShowRulesModal] = useState(true);
   const [showGameScoresModal, setShowGameScoresModal] = useState(false);
-  const [playerResult, setPlayerResult] = useState<Result[]>([]);
-  const [computerResult, setComputerResult] = useState<Result[]>([]);
+  const [history, setHistory] = useState<RoundResult[]>([]);
   const lastColumnRef = useRef<HTMLDivElement | null>(null);
   const overlayRef = useRef<HTMLDivElement | null>(null);
   const isGameOver = playerScore >= 5 || computerScore >= 5;
@@ -79,22 +83,25 @@ const GameComponent: React.FC = () => {
       setComputerScore((prev) => prev + 1);
     }
 
-    setPlayerResult((prevChoices) => [
-      { symbol: playerChoice.symbol, isWinner: roundResult === "WIN" },
-      ...prevChoices,
-    ]);
-
-    setComputerResult((prevChoices) => [
-      { symbol: computerChoice.symbol, isWinner: roundResult === "LOSE" },
-      ...prevChoices,
+    setHistory((prev) => [
+      {
+        player: {
+          symbol: playerChoice.symbol,
+          isWinner: roundResult === "WIN",
+        },
+        computer: {
+          symbol: computerChoice.symbol,
+          isWinner: roundResult === "LOSE",
+        },
+      },
+      ...prev,
     ]);
   };
 
   const resetGame = () => {
     setPlayerScore(0);
     setComputerScore(0);
-    setPlayerResult([]);
-    setComputerResult([]);
+    setHistory([]);
   };
 
   const toggleRulesModal = () => {
@@ -195,12 +202,12 @@ const GameComponent: React.FC = () => {
                 {playerScore}
               </span>
             </div>
-            {playerResult.map((result, index) => (
+            {history.map((round, index) => (
               <div
                 key={index}
-                className={`result ${result.isWinner ? "winner" : ""}`}
+                className={`result ${round.player.isWinner ? "winner" : ""}`}
               >
-                {result.symbol}
+                {round.player.symbol}
               </div>
             ))}
           </div>
@@ -212,12 +219,12 @@ const GameComponent: React.FC = () => {
                 {computerScore}
               </span>
             </div>
-            {computerResult.map((result, index) => (
+            {history.map((round, index) => (
               <div
                 key={index}
-                className={`result ${result.isWinner ? "winner" : ""}`}
+                className={`result ${round.computer.isWinner ? "winner" : ""}`}
               >
-                {result.symbol}
+                {round.computer.symbol}
               </div>
             ))}
           </div>
