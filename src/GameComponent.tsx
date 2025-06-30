@@ -21,12 +21,12 @@ const GameComponent: React.FC = () => {
   const [computerGameWins, setComputerGameWins] = useState(0);
   const [showRulesModal, setShowRulesModal] = useState(true);
   const [showGameScoresModal, setShowGameScoresModal] = useState(false);
-  const [isOverlayOpen, setIsOverlayOpen] = useState(true);
   const [playerResult, setPlayerResult] = useState<Result[]>([]);
   const [computerResult, setComputerResult] = useState<Result[]>([]);
   const lastColumnRef = useRef<HTMLDivElement | null>(null);
   const overlayRef = useRef<HTMLDivElement | null>(null);
   const isGameOver = playerScore >= 5 || computerScore >= 5;
+  const isOverlayOpen = showRulesModal || showGameScoresModal || isGameOver;
 
   useEffect(() => {
     const playerWins = localStorage.getItem("playerWins") || "0";
@@ -42,7 +42,6 @@ const GameComponent: React.FC = () => {
       } else {
         updateGameScores("LOSE", setPlayerGameWins, setComputerGameWins);
       }
-      setIsOverlayOpen(true);
       setShowGameScoresModal(true);
     }
   }, [playerScore, computerScore]);
@@ -100,12 +99,10 @@ const GameComponent: React.FC = () => {
 
   const toggleRulesModal = () => {
     setShowRulesModal((prev) => !prev);
-    setIsOverlayOpen((prev) => !prev);
   };
 
   const closeGameScoresModal = () => {
     setShowGameScoresModal(false);
-    setIsOverlayOpen(false);
 
     if (isGameOver) {
       resetGame();
@@ -135,7 +132,6 @@ const GameComponent: React.FC = () => {
             data-game-scores-btn
             onClick={() => {
               setShowGameScoresModal((prev) => !prev);
-              setIsOverlayOpen(true);
             }}
           >
             Wins & losses
