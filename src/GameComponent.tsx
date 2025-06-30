@@ -32,10 +32,12 @@ function GameComponent() {
   const isOverlayOpen = showRulesModal || showGameScoresModal || isGameOver;
 
   useEffect(() => {
-    const playerWins = localStorage.getItem("playerWins") || "0";
-    const computerWins = localStorage.getItem("computerWins") || "0";
-    setPlayerGameWins(parseInt(playerWins));
-    setComputerGameWins(parseInt(computerWins));
+    const stored = localStorage.getItem("gameScores");
+    if (stored) {
+      const { player, computer } = JSON.parse(stored);
+      setPlayerGameWins(player || 0);
+      setComputerGameWins(computer || 0);
+    }
   }, []);
 
   useEffect(() => {

@@ -12,8 +12,7 @@ export default function ResetButton({
   setComputerGameWins,
 }: ResetButtonProps) {
   const clearLocalStorage = () => {
-    localStorage.removeItem("playerWins");
-    localStorage.removeItem("computerWins");
+    localStorage.removeItem("gameScores");
   };
 
   const handleRippleEffect = (e: MouseEvent<HTMLButtonElement>) => {
