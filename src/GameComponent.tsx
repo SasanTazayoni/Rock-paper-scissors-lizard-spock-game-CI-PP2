@@ -8,8 +8,9 @@ import { Selection } from "./utils/rules";
 import ResetButton from "./components/ResetBtn";
 import RulesModal from "./components/RulesModal";
 import ScoresModal from "./components/ScoresModal";
+import ResultColumn from "./components/ResultColumn";
 
-type Result = {
+export type Result = {
   symbol: string;
   isWinner: boolean;
 };
@@ -195,39 +196,18 @@ const GameComponent: React.FC = () => {
         </section>
 
         <section className="scores">
-          <div className="player-results">
-            <div>
-              Player:
-              <span className="score" data-player-round-wins>
-                {playerScore}
-              </span>
-            </div>
-            {history.map((round, index) => (
-              <div
-                key={index}
-                className={`result ${round.player.isWinner ? "winner" : ""}`}
-              >
-                {round.player.symbol}
-              </div>
-            ))}
-          </div>
+          <ResultColumn
+            label="Player"
+            score={playerScore}
+            results={history.map((round) => round.player)}
+          />
 
-          <div className="computer-results">
-            <div ref={lastColumnRef} data-last-column>
-              Computer:
-              <span className="score loss" data-computer-round-wins>
-                {computerScore}
-              </span>
-            </div>
-            {history.map((round, index) => (
-              <div
-                key={index}
-                className={`result ${round.computer.isWinner ? "winner" : ""}`}
-              >
-                {round.computer.symbol}
-              </div>
-            ))}
-          </div>
+          <ResultColumn
+            label="Computer"
+            score={computerScore}
+            results={history.map((round) => round.computer)}
+            extraClass="loss"
+          />
         </section>
 
         <RulesModal
