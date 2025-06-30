@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo, useCallback } from "react";
 import { getComputerChoice } from "./utils/computerChoice";
 import { getPlayerChoice } from "./utils/playerChoice";
 import { playGameRound } from "./utils/gameLogic";
@@ -35,8 +35,12 @@ function GameComponent() {
   const [showRulesModal, setShowRulesModal] = useState(true);
   const [showGameScoresModal, setShowGameScoresModal] = useState(false);
   const [history, setHistory] = useState<RoundResult[]>([]);
-  const isGameOver = playerScore >= 5 || computerScore >= 5;
-  const isOverlayOpen = showRulesModal || showGameScoresModal || isGameOver;
+  const isGameOver = useMemo(() => {
+    return playerScore >= 5 || computerScore >= 5;
+  }, [playerScore, computerScore]);
+  const isOverlayOpen = useMemo(() => {
+    return showRulesModal || showGameScoresModal || isGameOver;
+  }, [showRulesModal, showGameScoresModal, isGameOver]);
   useOverlayHeight(isOverlayOpen);
 
   useEffect(() => {
@@ -50,7 +54,7 @@ function GameComponent() {
     }
   }, [playerScore, computerScore]);
 
-  const handleSelection = (selection: Selection) => {
+  const handleSelection = useCallback((selection: Selection) => {
     const playerChoice = getPlayerChoice(selection);
     const computerChoice = getComputerChoice();
 
@@ -75,25 +79,24 @@ function GameComponent() {
       },
       ...prev,
     ]);
-  };
+  }, []);
 
-  const resetGame = () => {
+  const resetGame = useCallback(() => {
     setPlayerScore(0);
     setComputerScore(0);
     setHistory([]);
-  };
+  }, []);
 
-  const toggleRulesModal = () => {
+  const toggleRulesModal = useCallback(() => {
     setShowRulesModal((prev) => !prev);
-  };
+  }, []);
 
-  const closeGameScoresModal = () => {
+  const closeGameScoresModal = useCallback(() => {
     setShowGameScoresModal(false);
-
     if (isGameOver) {
       resetGame();
     }
-  };
+  }, [isGameOver, resetGame]);
 
   return (
     <>
