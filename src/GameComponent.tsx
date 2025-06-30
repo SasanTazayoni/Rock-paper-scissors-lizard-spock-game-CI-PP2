@@ -216,6 +216,7 @@ function GameComponent() {
         {showGameScoresModal && (
           <ScoresModal
             isGameOver={isGameOver}
+            gameOutcome={playerScore > computerScore ? "WIN" : "LOSE"}
             playerGameWins={playerGameWins}
             computerGameWins={computerGameWins}
             closeGameScoresModal={closeGameScoresModal}

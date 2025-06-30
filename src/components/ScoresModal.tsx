@@ -1,5 +1,6 @@
 type ScoresModalProps = {
   isGameOver: boolean;
+  gameOutcome?: "WIN" | "LOSE"; // new optional prop
   playerGameWins: number;
   computerGameWins: number;
   closeGameScoresModal: () => void;
@@ -7,13 +8,22 @@ type ScoresModalProps = {
 
 export default function ScoresModal({
   isGameOver,
+  gameOutcome,
   playerGameWins,
   computerGameWins,
   closeGameScoresModal,
 }: ScoresModalProps) {
+  let headerText = "Game Scores";
+
+  if (isGameOver) {
+    headerText = "Game Over!";
+    if (gameOutcome === "WIN") headerText += " You won!";
+    else if (gameOutcome === "LOSE") headerText += " You lost!";
+  }
+
   return (
     <dialog className="game-scores-modal open" data-game-scores-modal>
-      <h2>{isGameOver ? "Game Over!" : "Game Scores"}</h2>
+      <h2>{headerText}</h2>
       <div className="game-scores">
         <div>
           Total wins:
