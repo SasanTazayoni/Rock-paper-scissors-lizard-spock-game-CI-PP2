@@ -35,11 +35,11 @@ body {
 .btns {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
 .btn-container {
   display: flex;
-  justify-content: flex-end;
 }
 
 .btn--reset {

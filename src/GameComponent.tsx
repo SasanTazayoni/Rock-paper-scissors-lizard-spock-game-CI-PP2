@@ -5,10 +5,10 @@ import { playGameRound } from "./utils/gameLogic";
 import { adjustOverlayHeight, resetOverlayHeight } from "./utils/overlayUtils";
 import { updateGameScores } from "./utils/gameScores";
 import { Selection } from "./utils/rules";
-import ResetButton from "./components/ResetBtn";
 import RulesModal from "./components/RulesModal";
 import ScoresModal from "./components/ScoresModal";
 import ResultColumn from "./components/ResultColumn";
+import NavigationButtons from "./components/NavigationsButtons";
 
 export type Result = {
   symbol: string;
@@ -120,31 +120,13 @@ function GameComponent() {
   return (
     <>
       <nav className="btns">
-        <ResetButton
+        <NavigationButtons
           resetGame={resetGame}
           setPlayerGameWins={setPlayerGameWins}
           setComputerGameWins={setComputerGameWins}
+          toggleRulesModal={toggleRulesModal}
+          toggleGameScoresModal={() => setShowGameScoresModal((prev) => !prev)}
         />
-        <div className="btn-container">
-          <button
-            className="btn--dark"
-            aria-label="See Rules Button"
-            data-rules-btn
-            onClick={toggleRulesModal}
-          >
-            See rules
-          </button>
-          <button
-            className="btn--dark"
-            aria-label="Game Scores Button"
-            data-game-scores-btn
-            onClick={() => {
-              setShowGameScoresModal((prev) => !prev);
-            }}
-          >
-            Wins & losses
-          </button>
-        </div>
       </nav>
 
       <header>
