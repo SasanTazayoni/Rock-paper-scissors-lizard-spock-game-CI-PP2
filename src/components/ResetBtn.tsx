@@ -1,22 +1,22 @@
-import React from "react";
+import type { MouseEvent, Dispatch, SetStateAction } from "react";
 
 type ResetButtonProps = {
   resetGame: () => void;
-  setPlayerGameWins: React.Dispatch<React.SetStateAction<number>>;
-  setComputerGameWins: React.Dispatch<React.SetStateAction<number>>;
+  setPlayerGameWins: Dispatch<SetStateAction<number>>;
+  setComputerGameWins: Dispatch<SetStateAction<number>>;
 };
 
-const ResetButton: React.FC<ResetButtonProps> = ({
+export default function ResetButton({
   resetGame,
   setPlayerGameWins,
   setComputerGameWins,
-}) => {
+}: ResetButtonProps) {
   const clearLocalStorage = () => {
     localStorage.removeItem("playerWins");
     localStorage.removeItem("computerWins");
   };
 
-  const handleRippleEffect = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleRippleEffect = (e: MouseEvent<HTMLButtonElement>) => {
     const target = e.target as HTMLButtonElement;
     const x = e.clientX - target.offsetLeft;
     const y = e.clientY - target.offsetTop;
@@ -47,6 +47,4 @@ const ResetButton: React.FC<ResetButtonProps> = ({
       Reset
     </button>
   );
-};
-
-export default ResetButton;
+}
