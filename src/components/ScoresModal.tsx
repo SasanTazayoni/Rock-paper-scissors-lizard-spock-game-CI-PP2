@@ -1,5 +1,3 @@
-import React from "react";
-
 type ScoresModalProps = {
   isGameOver: boolean;
   playerGameWins: number;
@@ -7,12 +5,12 @@ type ScoresModalProps = {
   closeGameScoresModal: () => void;
 };
 
-const ScoresModal: React.FC<ScoresModalProps> = ({
+export default function ScoresModal({
   isGameOver,
   playerGameWins,
   computerGameWins,
   closeGameScoresModal,
-}) => {
+}: ScoresModalProps) {
   return (
     <dialog className="game-scores-modal open" data-game-scores-modal>
       <h2>{isGameOver ? "Game Over!" : "Game Scores"}</h2>
@@ -35,6 +33,4 @@ const ScoresModal: React.FC<ScoresModalProps> = ({
       </button>
     </dialog>
   );
-};
-
-export default ScoresModal;
+}
