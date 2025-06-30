@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, useCallback } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { getComputerChoice } from "./utils/computerChoice";
 import { getPlayerChoice } from "./utils/playerChoice";
 import { playGameRound } from "./utils/gameLogic";
@@ -35,12 +35,9 @@ function GameComponent() {
   const [showRulesModal, setShowRulesModal] = useState(true);
   const [showGameScoresModal, setShowGameScoresModal] = useState(false);
   const [history, setHistory] = useState<RoundResult[]>([]);
-  const isGameOver = useMemo(() => {
-    return playerScore >= 5 || computerScore >= 5;
-  }, [playerScore, computerScore]);
-  const isOverlayOpen = useMemo(() => {
-    return showRulesModal || showGameScoresModal || isGameOver;
-  }, [showRulesModal, showGameScoresModal, isGameOver]);
+  const isGameOver = playerScore >= 5 || computerScore >= 5;
+  const isOverlayOpen = showRulesModal || showGameScoresModal || isGameOver;
+
   useOverlayHeight(isOverlayOpen);
 
   useEffect(() => {
