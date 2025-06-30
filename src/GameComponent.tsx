@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import { getComputerChoice } from "./utils/computerChoice";
 import { getPlayerChoice } from "./utils/playerChoice";
 import { playGameRound } from "./utils/gameLogic";
@@ -51,7 +51,7 @@ function GameComponent() {
     }
   }, [playerScore, computerScore]);
 
-  const handleSelection = useCallback((selection: Selection) => {
+  const handleSelection = (selection: Selection) => {
     const playerChoice = getPlayerChoice(selection);
     const computerChoice = getComputerChoice();
 
@@ -76,24 +76,24 @@ function GameComponent() {
       },
       ...prev,
     ]);
-  }, []);
+  };
 
-  const resetGame = useCallback(() => {
+  const resetGame = () => {
     setPlayerScore(0);
     setComputerScore(0);
     setHistory([]);
-  }, []);
+  };
 
-  const toggleRulesModal = useCallback(() => {
+  const toggleRulesModal = () => {
     setShowRulesModal((prev) => !prev);
-  }, []);
+  };
 
-  const closeGameScoresModal = useCallback(() => {
+  const closeGameScoresModal = () => {
     setShowGameScoresModal(false);
     if (isGameOver) {
       resetGame();
     }
-  }, [isGameOver, resetGame]);
+  };
 
   return (
     <>
