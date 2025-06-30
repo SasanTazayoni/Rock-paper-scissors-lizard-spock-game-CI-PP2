@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { getComputerChoice } from "./utils/computerChoice";
 import { getPlayerChoice } from "./utils/playerChoice";
 import { playGameRound } from "./utils/gameLogic";
@@ -20,7 +20,7 @@ type RoundResult = {
   computer: Result;
 };
 
-const GameComponent: React.FC = () => {
+function GameComponent() {
   const [playerScore, setPlayerScore] = useState(0);
   const [computerScore, setComputerScore] = useState(0);
   const [playerGameWins, setPlayerGameWins] = useState(0);
@@ -28,7 +28,6 @@ const GameComponent: React.FC = () => {
   const [showRulesModal, setShowRulesModal] = useState(true);
   const [showGameScoresModal, setShowGameScoresModal] = useState(false);
   const [history, setHistory] = useState<RoundResult[]>([]);
-  const overlayRef = useRef<HTMLDivElement | null>(null);
   const isGameOver = playerScore >= 5 || computerScore >= 5;
   const isOverlayOpen = showRulesModal || showGameScoresModal || isGameOver;
 
@@ -223,12 +222,10 @@ const GameComponent: React.FC = () => {
           />
         )}
 
-        {isOverlayOpen && (
-          <div className="overlay open" data-overlay ref={overlayRef}></div>
-        )}
+        {isOverlayOpen && <div className="overlay open" data-overlay></div>}
       </main>
     </>
   );
-};
+}
 
 export default GameComponent;
