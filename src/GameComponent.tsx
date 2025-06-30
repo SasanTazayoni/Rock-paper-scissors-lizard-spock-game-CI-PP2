@@ -120,7 +120,7 @@ const GameComponent: React.FC = () => {
         <div className="btn-container">
           <button
             className="btn--dark"
-            aria-label="Dark Theme Button"
+            aria-label="See Rules Button"
             data-rules-btn
             onClick={toggleRulesModal}
           >
