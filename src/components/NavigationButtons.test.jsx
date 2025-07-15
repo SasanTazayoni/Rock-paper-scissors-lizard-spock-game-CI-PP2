@@ -1,10 +1,10 @@
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, fireEvent } from "@testing-library/react";
 import { describe, expect, test, vi } from "vitest";
 import NavigationButtons from "./NavigationsButtons";
 
 describe("NavigationButtons component", () => {
   test("renders all buttons with correct aria-labels", () => {
-    render(
+    const { getByRole } = render(
       <NavigationButtons
         resetGame={() => {}}
         setPlayerGameWins={() => {}}
@@ -14,14 +14,12 @@ describe("NavigationButtons component", () => {
       />
     );
 
+    expect(getByRole("button", { name: /reset button/i })).toBeInTheDocument();
     expect(
-      screen.getByRole("button", { name: /reset button/i })
+      getByRole("button", { name: /see rules button/i })
     ).toBeInTheDocument();
     expect(
-      screen.getByRole("button", { name: /see rules button/i })
-    ).toBeInTheDocument();
-    expect(
-      screen.getByRole("button", { name: /game scores button/i })
+      getByRole("button", { name: /game scores button/i })
     ).toBeInTheDocument();
   });
 
@@ -32,7 +30,7 @@ describe("NavigationButtons component", () => {
     const toggleRulesModalMock = vi.fn();
     const toggleGameScoresModalMock = vi.fn();
 
-    render(
+    const { getByRole } = render(
       <NavigationButtons
         resetGame={resetGameMock}
         setPlayerGameWins={setPlayerGameWinsMock}
@@ -42,17 +40,15 @@ describe("NavigationButtons component", () => {
       />
     );
 
-    fireEvent.click(screen.getByRole("button", { name: /reset button/i }));
+    fireEvent.click(getByRole("button", { name: /reset button/i }));
     expect(resetGameMock).toHaveBeenCalled();
     expect(setPlayerGameWinsMock).toHaveBeenCalledWith(0);
     expect(setComputerGameWinsMock).toHaveBeenCalledWith(0);
 
-    fireEvent.click(screen.getByRole("button", { name: /see rules button/i }));
+    fireEvent.click(getByRole("button", { name: /see rules button/i }));
     expect(toggleRulesModalMock).toHaveBeenCalled();
 
-    fireEvent.click(
-      screen.getByRole("button", { name: /game scores button/i })
-    );
+    fireEvent.click(getByRole("button", { name: /game scores button/i }));
     expect(toggleGameScoresModalMock).toHaveBeenCalled();
   });
 });
@@ -61,7 +57,7 @@ describe("NavigationButtons reset behavior", () => {
   test("calls localStorage.removeItem on reset", () => {
     const removeItemSpy = vi.spyOn(Storage.prototype, "removeItem");
 
-    render(
+    const { getByRole } = render(
       <NavigationButtons
         resetGame={() => {}}
         setPlayerGameWins={() => {}}
@@ -71,7 +67,7 @@ describe("NavigationButtons reset behavior", () => {
       />
     );
 
-    fireEvent.click(screen.getByRole("button", { name: /reset button/i }));
+    fireEvent.click(getByRole("button", { name: /reset button/i }));
     expect(removeItemSpy).toHaveBeenCalledWith("gameScores");
 
     removeItemSpy.mockRestore();
@@ -82,7 +78,7 @@ describe("NavigationButtons ripple effect", () => {
   test("creates and removes ripple span on mousedown", () => {
     vi.useFakeTimers();
 
-    render(
+    const { getByRole } = render(
       <NavigationButtons
         resetGame={() => {}}
         setPlayerGameWins={() => {}}
@@ -92,7 +88,7 @@ describe("NavigationButtons ripple effect", () => {
       />
     );
 
-    const resetBtn = screen.getByRole("button", { name: /reset button/i });
+    const resetBtn = getByRole("button", { name: /reset button/i });
     fireEvent.mouseDown(resetBtn);
 
     const ripple = resetBtn.querySelector("span");
