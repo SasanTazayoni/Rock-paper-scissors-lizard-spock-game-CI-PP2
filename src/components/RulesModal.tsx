@@ -15,48 +15,23 @@ export default function RulesModal({
       <div className="rules">
         <ul className="rules-list">
           <li>
-            <span
-              className="icon"
-              aria-label="Rock icon: A fist raised in a rock gesture"
-            >
-              ✊
-            </span>
+            <span className="icon">✊</span>
             Rock beats scissors and lizard but loses to paper and spock.
           </li>
           <li>
-            <span
-              className="icon"
-              aria-label="Paper icon: An open hand with fingers spread"
-            >
-              🖐
-            </span>
+            <span className="icon">🖐</span>
             Paper beats rock and spock but loses to scissors and lizard.
           </li>
           <li>
-            <span
-              className="icon"
-              aria-label="Scissors icon: A hand showing the scissors gesture"
-            >
-              ✌️
-            </span>
+            <span className="icon">✌️</span>
             Scissors beats paper and lizard but loses to spock and rock.
           </li>
           <li>
-            <span
-              className="icon"
-              aria-label="Lizard icon: A hand showing the lizard gesture"
-            >
-              🤏
-            </span>
+            <span className="icon">🤏</span>
             Lizard beats spock and paper but loses to rock and scissors.
           </li>
           <li>
-            <span
-              className="icon"
-              aria-label="Spock icon: A hand showing the Spock gesture"
-            >
-              🖖
-            </span>
+            <span className="icon">🖖</span>
             Spock beats rock and scissors but loses to paper and lizard.
           </li>
         </ul>
