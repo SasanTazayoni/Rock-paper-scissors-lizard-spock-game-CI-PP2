@@ -22,8 +22,14 @@ export default function ScoresModal({
   }
 
   return (
-    <dialog className="game-scores-modal open" data-game-scores-modal>
-      <h2>{headerText}</h2>
+    <dialog
+      className="game-scores-modal open"
+      role="dialog"
+      data-game-scores-modal
+      aria-modal="true"
+      aria-labelledby="game-scores-modal-title"
+    >
+      <h2 id="game-scores-modal-title">{headerText}</h2>
       <div className="game-scores">
         <div>
           Total wins:
