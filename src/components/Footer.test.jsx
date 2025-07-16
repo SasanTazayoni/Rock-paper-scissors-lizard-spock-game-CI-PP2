@@ -1,8 +1,23 @@
-import { render, screen } from "@testing-library/react";
-import { describe, test, expect } from "vitest";
+import { render, cleanup } from "@testing-library/react";
+import { describe, test, expect, beforeEach, afterEach } from "vitest";
 import Footer from "./Footer";
 
+function addFooterRoot() {
+  const div = document.createElement("div");
+  div.id = "footer-root";
+  document.body.appendChild(div);
+}
+
 describe("Footer", () => {
+  beforeEach(() => {
+    addFooterRoot();
+  });
+
+  afterEach(() => {
+    cleanup();
+    document.body.innerHTML = "";
+  });
+
   test("renders copyright text", () => {
     const { getByText } = render(<Footer />);
     expect(
