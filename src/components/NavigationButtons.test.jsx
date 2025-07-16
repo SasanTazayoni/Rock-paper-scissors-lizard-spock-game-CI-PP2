@@ -9,8 +9,8 @@ describe("NavigationButtons component", () => {
         resetGame={() => {}}
         setPlayerGameWins={() => {}}
         setComputerGameWins={() => {}}
-        toggleRulesModal={() => {}}
-        toggleGameScoresModal={() => {}}
+        openRulesModal={() => {}}
+        openGameScoresModal={() => {}}
       />
     );
 
@@ -27,16 +27,16 @@ describe("NavigationButtons component", () => {
     const resetGameMock = vi.fn();
     const setPlayerGameWinsMock = vi.fn();
     const setComputerGameWinsMock = vi.fn();
-    const toggleRulesModalMock = vi.fn();
-    const toggleGameScoresModalMock = vi.fn();
+    const openRulesModalMock = vi.fn();
+    const openGameScoresModalMock = vi.fn();
 
     const { getByRole } = render(
       <NavigationButtons
         resetGame={resetGameMock}
         setPlayerGameWins={setPlayerGameWinsMock}
         setComputerGameWins={setComputerGameWinsMock}
-        toggleRulesModal={toggleRulesModalMock}
-        toggleGameScoresModal={toggleGameScoresModalMock}
+        openRulesModal={openRulesModalMock}
+        openGameScoresModal={openGameScoresModalMock}
       />
     );
 
@@ -46,10 +46,10 @@ describe("NavigationButtons component", () => {
     expect(setComputerGameWinsMock).toHaveBeenCalledWith(0);
 
     fireEvent.click(getByRole("button", { name: /see rules button/i }));
-    expect(toggleRulesModalMock).toHaveBeenCalled();
+    expect(openRulesModalMock).toHaveBeenCalled();
 
     fireEvent.click(getByRole("button", { name: /game scores button/i }));
-    expect(toggleGameScoresModalMock).toHaveBeenCalled();
+    expect(openGameScoresModalMock).toHaveBeenCalled();
   });
 });
 
@@ -62,8 +62,8 @@ describe("NavigationButtons reset behavior", () => {
         resetGame={() => {}}
         setPlayerGameWins={() => {}}
         setComputerGameWins={() => {}}
-        toggleRulesModal={() => {}}
-        toggleGameScoresModal={() => {}}
+        openRulesModal={() => {}}
+        openGameScoresModal={() => {}}
       />
     );
 
@@ -89,8 +89,8 @@ describe("NavigationButtons ripple effect", () => {
         resetGame={() => {}}
         setPlayerGameWins={() => {}}
         setComputerGameWins={() => {}}
-        toggleRulesModal={() => {}}
-        toggleGameScoresModal={() => {}}
+        openRulesModal={() => {}}
+        openGameScoresModal={() => {}}
       />
     );
 
