@@ -11,6 +11,7 @@ import ScoresModal from "./components/ScoresModal";
 import ResultColumn from "./components/ResultColumn";
 import NavigationButtons from "./components/NavigationsButtons";
 import SelectionButtons from "./components/SelectionButtons";
+import Footer from "./components/Footer";
 
 export type Result = {
   symbol: string;
@@ -148,6 +149,7 @@ function GameComponent() {
 
         {isOverlayOpen && <div className="overlay open" data-overlay></div>}
       </main>
+      <Footer></Footer>
     </>
   );
 }
