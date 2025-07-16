@@ -1,5 +1,5 @@
 import { render, fireEvent } from "@testing-library/react";
-import { describe, expect, test, vi } from "vitest";
+import { afterEach, beforeEach, describe, expect, test, vi } from "vitest";
 import NavigationButtons from "./NavigationsButtons";
 
 describe("NavigationButtons component", () => {
@@ -75,9 +75,15 @@ describe("NavigationButtons reset behavior", () => {
 });
 
 describe("NavigationButtons ripple effect", () => {
-  test("creates and removes ripple span on mousedown", () => {
+  beforeEach(() => {
     vi.useFakeTimers();
+  });
 
+  afterEach(() => {
+    vi.useRealTimers();
+  });
+
+  test("creates and removes ripple span on mousedown", () => {
     const { getByRole } = render(
       <NavigationButtons
         resetGame={() => {}}
@@ -96,7 +102,5 @@ describe("NavigationButtons ripple effect", () => {
 
     vi.advanceTimersByTime(500);
     expect(resetBtn.querySelector("span")).toBeNull();
-
-    vi.useRealTimers();
   });
 });
