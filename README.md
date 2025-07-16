@@ -1,6 +1,6 @@
 # Rock Paper Scissors Lizard Spock game ✊ 🖐 ✌️ 🤏 🖖
 
-![HTML](./tech/html.png) ![CSS](./tech/css.png) ![Typescript](./tech/typescript.png) ![Vite](./tech/vite.png) ![React](./tech/react.png)
+![HTML](./tech/html.png) ![CSS](./tech/css.png) ![Typescript](./tech/typescript.png) ![Vite](./tech/vite.png) ![React](./tech/react.png) ![Jest](./tech/jest.png)
 
 Update (July 2025) - This project has had a major code refactor and has had Jest unit testing added using Vitest.<br>
 Update (November 2024) - This project has been remade with React.<br>
