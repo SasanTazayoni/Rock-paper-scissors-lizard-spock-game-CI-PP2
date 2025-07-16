@@ -31,6 +31,11 @@ export default function ResultColumn({
         <div
           key={index}
           className={`result ${result.isWinner ? "winner" : ""}`}
+          data-testid={
+            index === 0
+              ? `${label.toLowerCase()}-latest-result`
+              : `${label.toLowerCase()}-result-${index}`
+          }
         >
           {result.symbol}
         </div>
