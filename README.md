@@ -2,9 +2,9 @@
 
 ![HTML](./tech/html.png) ![CSS](./tech/css.png) ![Typescript](./tech/typescript.png) ![Vite](./tech/vite.png) ![React](./tech/react.png)
 
-Update (July 2025) - This project has had a major code refactor and has had Jest unit testing added using Vitest.
-Update (November 2024) - This project has been remade with React.
-Update (October 2024) - This project has been remade with Typescript and Vite.
+Update (July 2025) - This project has had a major code refactor and has had Jest unit testing added using Vitest.<br>
+Update (November 2024) - This project has been remade with React.<br>
+Update (October 2024) - This project has been remade with Typescript and Vite.<br>
 
 Introducing an enriched iteration of the classic 'Rock Paper Scissors' game, this version introduces two additional variables, elevating the decision-making process to new heights. Players make their selections simultaneously, infusing an element of suspense into each move. While this version is versatile enough for multiple players, this particular application is designed for a captivating two-player interaction. It pits the user against the computer, offering a game tailored for enthusiasts who appreciate pop culture references and delight in playful, social games. Triumph is attained by strategically outsmarting the computer's selections and selecting the icon that counters its choice. In the event of a tied match, a rematch ensues, persisting until a decisive victor emerges.
 
