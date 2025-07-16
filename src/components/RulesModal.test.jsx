@@ -31,4 +31,21 @@ describe("RulesModal", () => {
 
     expect(toggleMock).toHaveBeenCalledTimes(1);
   });
+
+  test("renders deployed image when hostname is not 'localhost'", () => {
+    Object.defineProperty(window, "location", {
+      value: { hostname: "example.com" },
+      writable: true,
+    });
+
+    const { getByAltText } = render(
+      <RulesModal showRulesModal={true} toggleRulesModal={() => {}} />
+    );
+
+    const image = getByAltText("Rock-paper-lizard-Spock game rules diagram");
+    expect(image).toHaveAttribute(
+      "src",
+      "/Rock-paper-scissors-lizard-spock-game-CI-PP2/images/rules.png"
+    );
+  });
 });
