@@ -5,7 +5,7 @@ import RulesModal from "./RulesModal";
 describe("RulesModal", () => {
   test("renders when showRulesModal is true", () => {
     const { getByText } = render(
-      <RulesModal showRulesModal={true} toggleRulesModal={() => {}} />
+      <RulesModal showRulesModal={true} closeRulesModal={() => {}} />
     );
 
     expect(getByText(/how it works/i)).toBeInTheDocument();
@@ -14,22 +14,22 @@ describe("RulesModal", () => {
 
   test("does not render when showRulesModal is false", () => {
     const { container } = render(
-      <RulesModal showRulesModal={false} toggleRulesModal={() => {}} />
+      <RulesModal showRulesModal={false} closeRulesModal={() => {}} />
     );
 
     expect(container).toBeEmptyDOMElement();
   });
 
-  test("calls toggleRulesModal when Play game button is clicked", () => {
-    const toggleMock = vi.fn();
+  test("calls closeRulesModal when Play game button is clicked", () => {
+    const closeMock = vi.fn();
     const { getByText } = render(
-      <RulesModal showRulesModal={true} toggleRulesModal={toggleMock} />
+      <RulesModal showRulesModal={true} closeRulesModal={closeMock} />
     );
 
     const button = getByText(/play game/i);
     fireEvent.click(button);
 
-    expect(toggleMock).toHaveBeenCalledTimes(1);
+    expect(closeMock).toHaveBeenCalledTimes(1);
   });
 
   test("renders deployed image when hostname is not 'localhost'", () => {
@@ -39,7 +39,7 @@ describe("RulesModal", () => {
     });
 
     const { getByAltText } = render(
-      <RulesModal showRulesModal={true} toggleRulesModal={() => {}} />
+      <RulesModal showRulesModal={true} closeRulesModal={() => {}} />
     );
 
     const image = getByAltText("Rock-paper-lizard-Spock game rules diagram");
