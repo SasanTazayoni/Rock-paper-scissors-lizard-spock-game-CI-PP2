@@ -18,8 +18,12 @@ export default function ResultColumn({
   return (
     <div className={`result-column ${extraClass}`}>
       <div>
-        {label}:
-        <span className="score" style={{ color: scoreColor }}>
+        <span aria-label={`${label} label`}>{label}:</span>
+        <span
+          className="score"
+          style={{ color: scoreColor }}
+          aria-label={`${label} score`}
+        >
           {score}
         </span>
       </div>
