@@ -23,19 +23,10 @@ describe("useGameWins hook", () => {
     expect(result.current.computerGameWins).toBe(0);
   });
 
-  test("can update playerGameWins using setter", () => {
+  test("handles missing or falsy player/computer values in localStorage", () => {
+    localStorage.setItem("gameScores", JSON.stringify({ player: 0 }));
     const { result } = renderHook(() => useGameWins());
-    act(() => {
-      result.current.setPlayerGameWins(5);
-    });
-    expect(result.current.playerGameWins).toBe(5);
-  });
-
-  test("can update computerGameWins using setter", () => {
-    const { result } = renderHook(() => useGameWins());
-    act(() => {
-      result.current.setComputerGameWins(4);
-    });
-    expect(result.current.computerGameWins).toBe(4);
+    expect(result.current.playerGameWins).toBe(0);
+    expect(result.current.computerGameWins).toBe(0);
   });
 });
