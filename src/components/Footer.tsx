@@ -1,5 +1,7 @@
+import { createPortal } from "react-dom";
+
 export default function Footer() {
-  return (
+  return createPortal(
     <footer className="footer">
       <p>
         &copy; Rock Paper Scissors Lizard Spock game 2025 created by Sasan
@@ -14,6 +16,7 @@ export default function Footer() {
       >
         <i className="fa-brands fa-github"></i>
       </a>
-    </footer>
+    </footer>,
+    document.getElementById("footer-root")!
   );
 }
