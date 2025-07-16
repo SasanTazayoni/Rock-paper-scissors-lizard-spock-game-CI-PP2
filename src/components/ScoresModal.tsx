@@ -23,6 +23,7 @@ export default function ScoresModal({
 
   return (
     <dialog
+      data-testid="game-scores-modal"
       className="game-scores-modal open"
       role="dialog"
       data-game-scores-modal
@@ -44,7 +45,12 @@ export default function ScoresModal({
           </span>
         </div>
       </div>
-      <button className="btn" onClick={closeGameScoresModal}>
+      <button
+        className="btn"
+        aria-label="Continue"
+        data-testid="continue-button"
+        onClick={closeGameScoresModal}
+      >
         Continue
       </button>
     </dialog>
