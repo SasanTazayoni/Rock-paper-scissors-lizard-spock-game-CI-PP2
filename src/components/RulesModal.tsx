@@ -10,8 +10,14 @@ export default function RulesModal({
   if (!showRulesModal) return null;
 
   return (
-    <dialog className="start-game-modal open" data-modal>
-      <h2>How it works (rules)</h2>
+    <dialog
+      className="rules-modal open"
+      data-modal
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="rules-modal-title"
+    >
+      <h2 id="rules-modal-title">How it works (rules)</h2>
       <div className="rules">
         <ul className="rules-list">
           <li>
