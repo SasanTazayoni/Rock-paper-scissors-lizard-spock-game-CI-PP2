@@ -167,6 +167,7 @@ The main game UI with an open modal: <br>
 - TypeScript
 - React
 - Vite
+- Vitest (unit testing)
 
 ### Frameworks, libraries and programs used
 
