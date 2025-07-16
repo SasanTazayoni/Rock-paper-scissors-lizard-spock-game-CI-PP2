@@ -85,8 +85,8 @@ function GameComponent() {
     setHistory([]);
   };
 
-  const toggleRulesModal = () => {
-    setShowRulesModal((prev) => !prev);
+  const openRulesModal = () => {
+    setShowRulesModal(true);
   };
 
   const closeGameScoresModal = () => {
@@ -103,8 +103,8 @@ function GameComponent() {
           resetGame={resetGame}
           setPlayerGameWins={setPlayerGameWins}
           setComputerGameWins={setComputerGameWins}
-          toggleRulesModal={toggleRulesModal}
-          toggleGameScoresModal={() => setShowGameScoresModal((prev) => !prev)}
+          openRulesModal={openRulesModal}
+          openGameScoresModal={() => setShowGameScoresModal(true)}
         />
       </nav>
 
@@ -134,7 +134,7 @@ function GameComponent() {
 
         <RulesModal
           showRulesModal={showRulesModal}
-          toggleRulesModal={toggleRulesModal}
+          closeRulesModal={() => setShowRulesModal(false)}
         />
 
         {showGameScoresModal && (
