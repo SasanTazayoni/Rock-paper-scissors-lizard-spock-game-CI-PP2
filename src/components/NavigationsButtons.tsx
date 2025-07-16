@@ -4,16 +4,16 @@ type NavigationButtonsProps = {
   resetGame: () => void;
   setPlayerGameWins: Dispatch<SetStateAction<number>>;
   setComputerGameWins: Dispatch<SetStateAction<number>>;
-  toggleRulesModal: () => void;
-  toggleGameScoresModal: () => void;
+  openRulesModal: () => void;
+  openGameScoresModal: () => void;
 };
 
 export default function NavigationButtons({
   resetGame,
   setPlayerGameWins,
   setComputerGameWins,
-  toggleRulesModal,
-  toggleGameScoresModal,
+  openRulesModal,
+  openGameScoresModal,
 }: NavigationButtonsProps) {
   const clearLocalStorage = () => {
     localStorage.removeItem("gameScores");
@@ -56,7 +56,7 @@ export default function NavigationButtons({
           className="btn--dark"
           aria-label="See Rules Button"
           data-rules-btn
-          onClick={toggleRulesModal}
+          onClick={openRulesModal}
         >
           See rules
         </button>
@@ -65,7 +65,7 @@ export default function NavigationButtons({
           className="btn--dark"
           aria-label="Game Scores Button"
           data-game-scores-btn
-          onClick={toggleGameScoresModal}
+          onClick={openGameScoresModal}
         >
           Wins & losses
         </button>
