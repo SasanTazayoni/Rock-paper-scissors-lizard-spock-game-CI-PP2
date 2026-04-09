@@ -35,19 +35,17 @@ describe("ResultColumn results rendering", () => {
 });
 
 describe("ResultColumn score color styling", () => {
-  test("applies green color when label is 'Player'", () => {
+  test("applies player-game-score class when label is 'Player'", () => {
     const { getByText } = render(
       <ResultColumn label="Player" score={0} results={[]} />
     );
-    const playerScore = getByText("0");
-    expect(playerScore).toHaveStyle({ color: "rgb(1, 207, 1)" });
+    expect(getByText("0")).toHaveClass("player-game-score");
   });
 
-  test("applies red color when label is not 'Player'", () => {
+  test("applies computer-game-score class when label is not 'Player'", () => {
     const { getByText } = render(
       <ResultColumn label="Computer" score={0} results={[]} />
     );
-    const computerScore = getByText("0");
-    expect(computerScore).toHaveStyle({ color: "rgb(255, 0, 0)" });
+    expect(getByText("0")).toHaveClass("computer-game-score");
   });
 });

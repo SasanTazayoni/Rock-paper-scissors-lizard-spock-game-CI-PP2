@@ -13,15 +13,14 @@ export default function ResultColumn({
   results,
   extraClass = "",
 }: ResultColumnProps) {
-  const scoreColor = label === "Player" ? "rgb(1, 207, 1)" : "red";
+  const scoreClass = label === "Player" ? "player-game-score" : "computer-game-score";
 
   return (
     <div className={`result-column ${extraClass}`}>
       <div>
         <span aria-label={`${label} label`}>{label}:</span>
         <span
-          className="score"
-          style={{ color: scoreColor }}
+          className={`score ${scoreClass}`}
           aria-label={`${label} score`}
         >
           {score}
