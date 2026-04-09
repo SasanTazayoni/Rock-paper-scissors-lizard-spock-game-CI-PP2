@@ -443,7 +443,7 @@ h2 {
 }
 
 .btn:hover::after,
-.btn:focus::before {
+.btn:focus::after {
   opacity: 1;
 }
 
