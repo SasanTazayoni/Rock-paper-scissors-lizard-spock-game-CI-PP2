@@ -192,7 +192,8 @@ h1 {
   transition: all 0.3s;
 }
 
-.selection:hover {
+.selection:hover,
+.selection:focus-visible {
   opacity: 1;
   transform: scale(1.15);
 }
