@@ -4,7 +4,13 @@ export const updateGameScores = (
   setComputerGameWins: React.Dispatch<React.SetStateAction<number>>
 ) => {
   const stored = localStorage.getItem("gameScores");
-  const { player = 0, computer = 0 } = stored ? JSON.parse(stored) : {};
+  let parsed: { player?: number; computer?: number } = {};
+  try {
+    parsed = stored ? JSON.parse(stored) : {};
+  } catch {
+    localStorage.removeItem("gameScores");
+  }
+  const { player = 0, computer = 0 } = parsed;
 
   let updatedPlayer = player;
   let updatedComputer = computer;

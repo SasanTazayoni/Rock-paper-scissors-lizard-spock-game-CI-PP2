@@ -11,8 +11,8 @@ describe("updateGameScores", () => {
       "gameScores",
       JSON.stringify({ player: 2, computer: 3 })
     );
-    const setPlayerGameWins = vi.fn<[number], void>();
-    const setComputerGameWins = vi.fn<[number], void>();
+    const setPlayerGameWins = vi.fn();
+    const setComputerGameWins = vi.fn();
 
     updateGameScores("WIN", setPlayerGameWins, setComputerGameWins);
 
@@ -28,8 +28,8 @@ describe("updateGameScores", () => {
       "gameScores",
       JSON.stringify({ player: 4, computer: 1 })
     );
-    const setPlayerGameWins = vi.fn<[number], void>();
-    const setComputerGameWins = vi.fn<[number], void>();
+    const setPlayerGameWins = vi.fn();
+    const setComputerGameWins = vi.fn();
 
     updateGameScores("LOSE", setPlayerGameWins, setComputerGameWins);
 
@@ -41,8 +41,22 @@ describe("updateGameScores", () => {
   });
 
   test("handles empty localStorage gracefully", () => {
-    const setPlayerGameWins = vi.fn<[number], void>();
-    const setComputerGameWins = vi.fn<[number], void>();
+    const setPlayerGameWins = vi.fn();
+    const setComputerGameWins = vi.fn();
+
+    updateGameScores("WIN", setPlayerGameWins, setComputerGameWins);
+
+    expect(setPlayerGameWins).toHaveBeenCalledWith(1);
+    expect(setComputerGameWins).not.toHaveBeenCalled();
+
+    const stored = JSON.parse(localStorage.getItem("gameScores")!);
+    expect(stored).toEqual({ player: 1, computer: 0 });
+  });
+
+  test("clears corrupted localStorage and treats scores as 0", () => {
+    localStorage.setItem("gameScores", "not-valid-json");
+    const setPlayerGameWins = vi.fn();
+    const setComputerGameWins = vi.fn();
 
     updateGameScores("WIN", setPlayerGameWins, setComputerGameWins);
 

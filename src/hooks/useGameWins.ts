@@ -7,9 +7,13 @@ export function useGameWins() {
   useEffect(() => {
     const stored = localStorage.getItem("gameScores");
     if (stored) {
-      const { player, computer } = JSON.parse(stored);
-      setPlayerGameWins(player || 0);
-      setComputerGameWins(computer || 0);
+      try {
+        const { player, computer } = JSON.parse(stored);
+        setPlayerGameWins(player || 0);
+        setComputerGameWins(computer || 0);
+      } catch {
+        localStorage.removeItem("gameScores");
+      }
     }
   }, []);
 

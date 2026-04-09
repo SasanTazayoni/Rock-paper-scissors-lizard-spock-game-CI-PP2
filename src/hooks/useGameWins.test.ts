@@ -29,4 +29,12 @@ describe("useGameWins hook", () => {
     expect(result.current.playerGameWins).toBe(0);
     expect(result.current.computerGameWins).toBe(0);
   });
+
+  test("clears corrupted localStorage and defaults to 0", () => {
+    localStorage.setItem("gameScores", "not-valid-json");
+    const { result } = renderHook(() => useGameWins());
+    expect(result.current.playerGameWins).toBe(0);
+    expect(result.current.computerGameWins).toBe(0);
+    expect(localStorage.getItem("gameScores")).toBeNull();
+  });
 });
