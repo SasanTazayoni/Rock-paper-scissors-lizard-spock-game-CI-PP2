@@ -43,11 +43,7 @@ export default function RulesModal({
               </li>
             </ul>
             <img
-              src={
-                window.location.hostname === "localhost"
-                  ? "./images/rules.png"
-                  : "/Rock-paper-scissors-lizard-spock-game-CI-PP2/images/rules.png"
-              }
+              src={`${import.meta.env.BASE_URL}images/rules.png`}
               className="modal-image"
               alt="Rock-paper-lizard-Spock game rules diagram"
               onError={(e) => {

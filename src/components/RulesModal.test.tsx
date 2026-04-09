@@ -43,12 +43,7 @@ describe("RulesModal", () => {
     expect(image.style.display).toBe("none");
   });
 
-  test("renders deployed image when hostname is not 'localhost'", () => {
-    Object.defineProperty(window, "location", {
-      value: { hostname: "example.com" },
-      writable: true,
-    });
-
+  test("renders image src using BASE_URL", () => {
     const { getByAltText } = render(
       <RulesModal showRulesModal={true} closeRulesModal={() => {}} />
     );
@@ -56,7 +51,7 @@ describe("RulesModal", () => {
     const image = getByAltText("Rock-paper-lizard-Spock game rules diagram");
     expect(image).toHaveAttribute(
       "src",
-      "/Rock-paper-scissors-lizard-spock-game-CI-PP2/images/rules.png"
+      `${import.meta.env.BASE_URL}images/rules.png`
     );
   });
 });
