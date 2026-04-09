@@ -2,17 +2,15 @@
 
 ![HTML](./tech/html.png) ![CSS](./tech/css.png) ![Typescript](./tech/typescript.png) ![Vite](./tech/vite.png) ![React](./tech/react.png) ![Jest](./tech/jest.png) ![gitpod](./tech/gitpod.png) ![ChatGPT](./tech/chatgpt.png)
 
-
 Introducing an enriched iteration of the classic 'Rock Paper Scissors' game, this version introduces two additional variables, elevating the decision-making process to new heights. Players make their selections simultaneously, infusing an element of suspense into each move. While this version is versatile enough for multiple players, this particular application is designed for a captivating two-player interaction. It pits the user against the computer, offering a game tailored for enthusiasts who appreciate pop culture references and delight in playful, social games. Triumph is attained by strategically outsmarting the computer's selections and selecting the icon that counters its choice. In the event of a tied match, a rematch ensues, persisting until a decisive victor emerges.
 
 This tailored application revolves around a user-computer dynamic, providing an experience that appeals to a wide range of age groups, from teenagers to adults who are familiar with the show and its references. It features a sequence of 9 rounds per game, offering an engaging twist on the traditional gameplay. To clinch an overall victory, players must achieve 5 wins within these rounds to win a game. Round scores are prominently displayed below the array of game icons, ensuring a clear view of the ongoing battle. Initiating gameplay is effortless: a simple click on the "Play game" button followed by a game icon (✊, 🖐, ✌️, 🤏, 🖖) in the main user interface and the computer will counter with its own randomized choice, culminating in an entertaining clash of wits!
 
-The development journey of this project reflects a steady progression towards a more modern and scalable architecture. It began with HTML and CSS for the bare-bones structure and styling, providing the foundational layout. JavaScript was then introduced to add interactivity, enabling the application to respond dynamically to user input. Building on this, the codebase was upgraded with TypeScript to ensure type safety and improve long-term maintainability. Vite was incorporated to provide a fast development environment and streamlined deployment. Finally, React was integrated alongside TypeScript and Vite, transforming the project into a component-driven, state-managed application — enhancing reusability, scalability, and the user experience with reactive UI updates and more modular code organisation.
+I built this project in stages, starting with HTML and CSS to create the basic layout. I then added JavaScript to handle user interactions and game logic. As the project grew, I introduced TypeScript to improve code reliability and make it easier to maintain. I also switched to Vite for a faster development workflow. Finally, I rebuilt the app using React, which allowed me to break the UI into reusable components and manage state more effectively.
 
-The two-player rendition of Rock Paper Scissors Lizard Spock not only offers a dynamic and interactive experience but also delivers the thrill of competition without necessitating a human adversary. The game's succinct rounds and distinct outcomes cater to convenient entertainment, appealing to fans of "The Big Bang Theory" and those who enjoy playful variations of classic games. The expanded choices and the challenge of predicting the AI's moves provide a rewarding sense of achievement, ensuring that players who appreciate pop culture references and strategic gameplay will find continuous enjoyment in this approachable design. With inherent replay value, it encourages repeated engagement, promoting strategic thinking and ensuring ongoing entertainment for enthusiasts of all kinds.
+This project is a two-player version of Rock Paper Scissors Lizard Spock, inspired by The Big Bang Theory. The player competes against an AI, with each round producing a clear outcome based on the game rules. Expanding the classic game with extra choices adds more variety and makes the gameplay a bit more strategic, while still keeping it simple and quick to play.
 
-You can play the game on the live site [here](https://sasantazayoni.github.io/Rock-paper-scissors-lizard-spock
-/).
+You can play the game on the live site [here](https://sasantazayoni.github.io/Rock-paper-scissors-lizard-spock/).
 
 ![Rock paper scissors lizard spock game on various devices](documentation/responsiveness.png)
 
@@ -35,7 +33,6 @@ You can play the game on the live site [here](https://sasantazayoni.github.io/Ro
   - [Validator testing](#validator-testing)
   - [Testing User Stories from (UX) section](#testing-user-stories-from-ux-section)
   - [Personal testing](#personal-testing)
-  - [Responsinator](#responsinator)
   - [Lighthouse testing](#lighthouse-testing)
   - [PowerMapper Compatibility](#powermapper-compatibility)
   - [Bugs](#bugs)
@@ -177,7 +174,6 @@ The main game UI with an open modal: <br>
 - [Caniuse](https://caniuse.com/) used to check compatibility of code syntax with other browsers.
 - [PowerMapper](https://www.powermapper.com/) used to check compatibility of website with other browsers.
 - [Amiresposive](https://amiresponsive.co.uk/) used to display website on the most common devices.
-- [Responsinator](http://www.responsinator.com/) used to check if site was responsive on different screen sizes.
 - [ChatGPT](https://chat.openai.com/) used to verify code.
 - [StackOverflow](https://stackoverflow.com/) used to problem solve and deal with queries.
 - [Getemoji](https://getemoji.com/) used to obtain game icons.
@@ -250,10 +246,6 @@ I used the following websites to check my code for syntax errors:
   - Opera
   - Brave
 
-### Responsinator
-
-Responsinator was used to make sure that the website was fully responsive on all devices. The results can be viewed [here](http://www.responsinator.com/?url=https%3A%2F%2Fsasantazayoni.github.io%2FRock-paper-scissors-lizard-spock-game-CI-PP2%2F). <br >
-
 ### Lighthouse testing
 
 Lighthouse was a helpful tool for checking where where the website was experiencing the most issues.
@@ -276,7 +268,7 @@ As the results show, the application is highly compatible across all browsers.
 ## Deployment
 
 1. Log into [GitHub](https://github.com/).
-2. Locate the [repository](https://github.com/SasanTazayoni/Rock-paper-scissors-lizard-spock).
+2. Locate the repository for this project.
 3. Locate the settings option along the options bar at the top of the page.
 4. Locate the 'Pages' option on the left side bar and click on it.
 5. Under the 'Branch' subheading there should be a drop-down menu - select 'main' from the branch options.
