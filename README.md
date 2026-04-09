@@ -2,9 +2,6 @@
 
 ![HTML](./tech/html.png) ![CSS](./tech/css.png) ![Typescript](./tech/typescript.png) ![Vite](./tech/vite.png) ![React](./tech/react.png) ![Jest](./tech/jest.png) ![gitpod](./tech/gitpod.png) ![ChatGPT](./tech/chatgpt.png)
 
-Update (July 2025) - This project has had a major code refactor and has had Jest unit testing added using Vitest.<br>
-Update (November 2024) - This project has been remade with React.<br>
-Update (October 2024) - This project has been remade with Typescript and Vite.<br>
 
 Introducing an enriched iteration of the classic 'Rock Paper Scissors' game, this version introduces two additional variables, elevating the decision-making process to new heights. Players make their selections simultaneously, infusing an element of suspense into each move. While this version is versatile enough for multiple players, this particular application is designed for a captivating two-player interaction. It pits the user against the computer, offering a game tailored for enthusiasts who appreciate pop culture references and delight in playful, social games. Triumph is attained by strategically outsmarting the computer's selections and selecting the icon that counters its choice. In the event of a tied match, a rematch ensues, persisting until a decisive victor emerges.
 
@@ -14,7 +11,8 @@ The development journey of this project reflects a steady progression towards a 
 
 The two-player rendition of Rock Paper Scissors Lizard Spock not only offers a dynamic and interactive experience but also delivers the thrill of competition without necessitating a human adversary. The game's succinct rounds and distinct outcomes cater to convenient entertainment, appealing to fans of "The Big Bang Theory" and those who enjoy playful variations of classic games. The expanded choices and the challenge of predicting the AI's moves provide a rewarding sense of achievement, ensuring that players who appreciate pop culture references and strategic gameplay will find continuous enjoyment in this approachable design. With inherent replay value, it encourages repeated engagement, promoting strategic thinking and ensuring ongoing entertainment for enthusiasts of all kinds.
 
-You can play the game on the live site [here](https://sasantazayoni.github.io/Rock-paper-scissors-lizard-spock-game-CI-PP2/).
+You can play the game on the live site [here](https://sasantazayoni.github.io/Rock-paper-scissors-lizard-spock
+/).
 
 ![Rock paper scissors lizard spock game on various devices](documentation/responsiveness.png)
 
@@ -38,7 +36,6 @@ You can play the game on the live site [here](https://sasantazayoni.github.io/Ro
   - [Testing User Stories from (UX) section](#testing-user-stories-from-ux-section)
   - [Personal testing](#personal-testing)
   - [Responsinator](#responsinator)
-  - [Third-party testing](#third-party-testing)
   - [Lighthouse testing](#lighthouse-testing)
   - [PowerMapper Compatibility](#powermapper-compatibility)
   - [Bugs](#bugs)
@@ -98,7 +95,6 @@ The main game UI with an open modal: <br>
 
 - The application is designed using Responsive Design and is fully responsive on all devices. This includes the modals and their content.
 - All buttons have a neon glow effect when hovered over for an enhanced user experience: <br>
-
   - Buttons: <br>
 
   ![The reset button](documentation/resetbtn.jpg)
@@ -106,7 +102,6 @@ The main game UI with an open modal: <br>
   ![The open-scores button](documentation/openscoresbtn.jpg)
   ![The close-rules button](documentation/closerulesbtn.jpg)
   ![The close-scores button](documentation/closescoresbtn.jpg)
-
   - Buttons with hover effects: <br>
 
   ![The reset button with hover](documentation/resetbtnhover.jpg)
@@ -133,15 +128,12 @@ The main game UI with an open modal: <br>
   ![The game icons](documentation/icons.jpg)
 
 - Whenever an icon is clicked, it is compared against the computer's choice (which is random) and the UI is updated accordingly.
-
   - When the player wins, the round score of the player is incremented by 1 and the player's chosen icon is displayed with maximum opacity and slightly enlarged in the space beneath the player's round score while the computer's choice is displayed with partial opacity in the space beneath the computer's round score: <br>
 
   ![Winning a round](documentation/win.jpg)
-
   - When the player loses, the round score of the computer is incremented by 1 and the computer's chosen icon is displayed with maximum opacity and slightly enlarged in the space beneath the computer's round score while the player's choice is displayed with partial opacity in the space beneath the player's round score: <br>
 
   ![Losing a round](documentation/lose.jpg)
-
   - In the case of a draw, neither round is incremented and both chosen icons display with partial opacity beneath the respective scores
 
   ![Drawing a round](documentation/draw.jpg)
@@ -205,7 +197,6 @@ I used the following websites to check my code for syntax errors:
 ### Testing User Stories from (UX) section
 
 - As a user, I want to immediately understand what the game is about and how it works.
-
   - Upon opening the application the rules modal is already open. This explains the rules of the game and how to play.
   - Screenshot of the view when the application is opened: <br>
 
@@ -215,25 +206,21 @@ I used the following websites to check my code for syntax errors:
   - The "play game" button (see previous screenshot) is clearly visible within the rules modal and on clicking gives access to the main game UI.
   - Alternatively the overlay can be clicked to close the modal and access the main game UI. <br>
 - As a user, I want a clear indication of my current score and to know my round result each time I play a round.
-
   - The scores are clearly indicated in the main UI: <br>
 
     ![The round scores](documentation/roundresult.jpg) <br>
 
 - As a user, I want to be able to keep a record of and track how many games I have won or lost overall.
-
   - Clicking the "Wins & Losses" button in the main UI will display the game scores modal: <br>
 
     ![The game scores modal](documentation/scoresmodal.jpg) <br>
 
 - As a user, I want to be able to check the game instructions in case I forget how the game works.
-
   - Clicking the "See rules" button in the main UI will open a modal that displays the rules: <br>
 
     ![The rules modal](documentation/rulesmodal.jpg) <br>
 
 - As a user, I want to be able to reset the record of game results.
-
   - Clicking the "Reset" button on the main UI which is visible in the main UI will achieve this: <br>
 
     ![The reset button](documentation/resetbtn.jpg) <br>
@@ -267,16 +254,6 @@ I used the following websites to check my code for syntax errors:
 
 Responsinator was used to make sure that the website was fully responsive on all devices. The results can be viewed [here](http://www.responsinator.com/?url=https%3A%2F%2Fsasantazayoni.github.io%2FRock-paper-scissors-lizard-spock-game-CI-PP2%2F). <br >
 
-### Third-Party Testing
-
-One of the most helpful ways to test the application was to have a few different people test it on various devices.
-
-| Name  | Age | Tech BG |
-| ----- | --- | ------- |
-| Joe   | 35  | High    |
-| Varun | 32  | Low     |
-| Saba  | 30  | High    |
-
 ### Lighthouse testing
 
 Lighthouse was a helpful tool for checking where where the website was experiencing the most issues.
@@ -299,10 +276,10 @@ As the results show, the application is highly compatible across all browsers.
 ## Deployment
 
 1. Log into [GitHub](https://github.com/).
-2. Locate the [repository](https://github.com/SasanTazayoni/Rock-paper-scissors-lizard-spock-game-CI-PP2).
+2. Locate the [repository](https://github.com/SasanTazayoni/Rock-paper-scissors-lizard-spock).
 3. Locate the settings option along the options bar at the top of the page.
 4. Locate the 'Pages' option on the left side bar and click on it.
-5. Under the 'Branch' subheading there should be a drop-down menu - select 'Master' from the branch options.
+5. Under the 'Branch' subheading there should be a drop-down menu - select 'main' from the branch options.
 6. Click the save button.
 7. Github pages will build your website with the code supplied and begin hosting it when it is completed - the process usually takes a few minutes.
 8. The website URL will now be visible on the green bar under the section header. This will remain there permanently and you can refer back to it at any time.
