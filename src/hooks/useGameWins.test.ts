@@ -1,4 +1,4 @@
-import { renderHook, act } from "@testing-library/react";
+import { renderHook } from "@testing-library/react";
 import { beforeEach, test, expect, describe } from "vitest";
 import { useGameWins } from "./useGameWins";
 

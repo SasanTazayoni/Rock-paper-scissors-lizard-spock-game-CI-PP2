@@ -1,6 +1,6 @@
 import { render, fireEvent } from "@testing-library/react";
 import { afterEach, beforeEach, describe, expect, test, vi } from "vitest";
-import NavigationButtons from "./NavigationsButtons";
+import NavigationButtons from "./NavigationButtons";
 
 describe("NavigationButtons component", () => {
   test("renders all buttons with correct aria-labels", () => {
@@ -11,15 +11,15 @@ describe("NavigationButtons component", () => {
         setComputerGameWins={() => {}}
         openRulesModal={() => {}}
         openGameScoresModal={() => {}}
-      />
+      />,
     );
 
     expect(getByRole("button", { name: /reset button/i })).toBeInTheDocument();
     expect(
-      getByRole("button", { name: /see rules button/i })
+      getByRole("button", { name: /see rules button/i }),
     ).toBeInTheDocument();
     expect(
-      getByRole("button", { name: /game scores button/i })
+      getByRole("button", { name: /game scores button/i }),
     ).toBeInTheDocument();
   });
 
@@ -37,7 +37,7 @@ describe("NavigationButtons component", () => {
         setComputerGameWins={setComputerGameWinsMock}
         openRulesModal={openRulesModalMock}
         openGameScoresModal={openGameScoresModalMock}
-      />
+      />,
     );
 
     fireEvent.click(getByRole("button", { name: /reset button/i }));
@@ -64,7 +64,7 @@ describe("NavigationButtons reset behavior", () => {
         setComputerGameWins={() => {}}
         openRulesModal={() => {}}
         openGameScoresModal={() => {}}
-      />
+      />,
     );
 
     fireEvent.click(getByRole("button", { name: /reset button/i }));
@@ -91,7 +91,7 @@ describe("NavigationButtons ripple effect", () => {
         setComputerGameWins={() => {}}
         openRulesModal={() => {}}
         openGameScoresModal={() => {}}
-      />
+      />,
     );
 
     const resetBtn = getByRole("button", { name: /reset button/i });

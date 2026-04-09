@@ -9,7 +9,7 @@ import { useOverlayHeight } from "./hooks/useOverlayHeight";
 import RulesModal from "./components/RulesModal";
 import ScoresModal from "./components/ScoresModal";
 import ResultColumn from "./components/ResultColumn";
-import NavigationButtons from "./components/NavigationsButtons";
+import NavigationButtons from "./components/NavigationButtons";
 import SelectionButtons from "./components/SelectionButtons";
 import Footer from "./components/Footer";
 

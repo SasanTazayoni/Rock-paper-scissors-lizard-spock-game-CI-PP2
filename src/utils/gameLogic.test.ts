@@ -1,6 +1,7 @@
 import { beforeEach, describe, expect, test, vi } from "vitest";
 import { playGameRound } from "./gameLogic";
 import * as playerChoiceModule from "./playerChoice";
+import type { Rule } from "./rules";
 
 describe("playGameRound", () => {
   beforeEach(() => {
@@ -8,7 +9,7 @@ describe("playGameRound", () => {
   });
 
   test("returns DRAW when player and computer choices are the same", () => {
-    const mockRule = {
+    const mockRule: Rule = {
       name: "rock",
       beats: ["scissors", "lizard"],
       symbol: "✊",
@@ -20,12 +21,12 @@ describe("playGameRound", () => {
   });
 
   test("returns WIN when player beats computer", () => {
-    const playerRule = {
+    const playerRule: Rule = {
       name: "paper",
       beats: ["rock", "spock"],
       symbol: "🖐",
     };
-    const computerRule = {
+    const computerRule: Rule = {
       name: "rock",
       beats: ["scissors", "lizard"],
       symbol: "✊",
@@ -38,12 +39,12 @@ describe("playGameRound", () => {
   });
 
   test("returns LOSE when computer beats player", () => {
-    const playerRule = {
+    const playerRule: Rule = {
       name: "rock",
       beats: ["scissors", "lizard"],
       symbol: "✊",
     };
-    const computerRule = {
+    const computerRule: Rule = {
       name: "paper",
       beats: ["rock", "spock"],
       symbol: "🖐",

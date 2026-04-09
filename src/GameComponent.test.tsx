@@ -1,4 +1,4 @@
-import { describe, test, expect, vi, beforeEach } from "vitest";
+import { describe, test, expect, vi } from "vitest";
 import { fireEvent, render, waitFor } from "@testing-library/react";
 import GameComponent from "./GameComponent";
 import RulesModal from "./components/RulesModal";
@@ -54,9 +54,9 @@ describe("GameComponent – initial render", () => {
     const playerScore =
       playerLabel.nextElementSibling ||
       playerLabel.querySelector(".score") ||
-      playerLabel.parentNode.querySelector(".score");
+      (playerLabel.parentNode as Element).querySelector(".score");
     expect(playerScore).toBeInTheDocument();
-    expect(playerScore.textContent).toBe("0");
+    expect((playerScore as Element).textContent).toBe("0");
 
     const computerLabel = getByText(/Computer:/i);
     expect(computerLabel).toBeInTheDocument();
@@ -64,9 +64,9 @@ describe("GameComponent – initial render", () => {
     const computerScore =
       computerLabel.nextElementSibling ||
       computerLabel.querySelector(".score") ||
-      computerLabel.parentNode.querySelector(".score");
+      (computerLabel.parentNode as Element).querySelector(".score");
     expect(computerScore).toBeInTheDocument();
-    expect(computerScore.textContent).toBe("0");
+    expect((computerScore as Element).textContent).toBe("0");
   });
 
   test("ScoresModal: should not be visible initially", () => {
@@ -114,7 +114,7 @@ describe("Score updates on selection", () => {
   });
 });
 
-describe("Game Over Behavior", () => {
+describe("Game Over Behavior", () => {
   test("game ends when PLAYER reaches 5 points, ScoresModal opens, wins updated", async () => {
     vi.spyOn(gameLogic, "playGameRound").mockReturnValue("WIN");
     const updateSpy = vi
@@ -129,12 +129,12 @@ describe("Game Over Behavior", () => {
     await waitFor(() => {
       expect(getByLabelText("Player score").textContent).toBe("5");
       expect(
-        container.querySelector("[data-game-scores-modal]")
+        container.querySelector("[data-game-scores-modal]"),
       ).toBeInTheDocument();
       expect(updateSpy).toHaveBeenCalledWith(
         "WIN",
         expect.any(Function),
-        expect.any(Function)
+        expect.any(Function),
       );
     });
   });
@@ -153,12 +153,12 @@ describe("Game Over Behavior", () => {
     await waitFor(() => {
       expect(getByLabelText("Computer score").textContent).toBe("5");
       expect(
-        container.querySelector("[data-game-scores-modal]")
+        container.querySelector("[data-game-scores-modal]"),
       ).toBeInTheDocument();
       expect(updateSpy).toHaveBeenCalledWith(
         "LOSE",
         expect.any(Function),
-        expect.any(Function)
+        expect.any(Function),
       );
     });
   });
@@ -169,7 +169,7 @@ describe("Reset button", () => {
     vi.spyOn(gameLogic, "playGameRound").mockReturnValue("WIN");
 
     const { getByLabelText, getByRole, queryByTestId } = render(
-      <GameComponent />
+      <GameComponent />,
     );
 
     fireEvent.click(getByRole("button", { name: /Rock icon/i }));
@@ -201,7 +201,7 @@ describe("Rules Modal Close Behavior", () => {
   test("clicking the Play game button closes the Rules modal", () => {
     const closeRulesModal = vi.fn();
     const { getByText } = render(
-      <RulesModal showRulesModal={true} closeRulesModal={closeRulesModal} />
+      <RulesModal showRulesModal={true} closeRulesModal={closeRulesModal} />,
     );
 
     fireEvent.click(getByText(/play game/i));
@@ -212,7 +212,7 @@ describe("Rules Modal Close Behavior", () => {
 describe("ScoresModal close behavior", () => {
   test("clicking Continue closes ScoresModal and resets game on WIN", async () => {
     const { getByRole, queryByTestId, getByLabelText, getByTestId } = render(
-      <GameComponent />
+      <GameComponent />,
     );
     vi.spyOn(gameLogic, "playGameRound").mockReturnValue("WIN");
 
@@ -237,21 +237,21 @@ describe("ScoresModal close behavior", () => {
 });
 
 describe("RulesModal behavior", () => {
-  test("clicking See rules button re‑opens the Rules modal (openRulesModal)", async () => {
+  test("clicking See rules button re‑opens the Rules modal (openRulesModal)", async () => {
     const { getByLabelText, getByText, queryByTestId } = render(
-      <GameComponent />
+      <GameComponent />,
     );
 
     fireEvent.click(getByText(/play game/i)); // closes Rules modal
     await waitFor(() =>
-      expect(queryByTestId("rules-modal")).not.toBeInTheDocument()
+      expect(queryByTestId("rules-modal")).not.toBeInTheDocument(),
     );
 
     const seeRulesBtn = getByLabelText("See Rules Button");
     fireEvent.click(seeRulesBtn);
 
     await waitFor(() =>
-      expect(queryByTestId("rules-modal")).toBeInTheDocument()
+      expect(queryByTestId("rules-modal")).toBeInTheDocument(),
     );
   });
 });

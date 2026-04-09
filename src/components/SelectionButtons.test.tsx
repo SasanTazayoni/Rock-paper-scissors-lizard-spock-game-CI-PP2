@@ -1,6 +1,7 @@
 import { render, fireEvent } from "@testing-library/react";
 import { describe, test, vi, expect } from "vitest";
 import SelectionButtons from "./SelectionButtons";
+import type { Selection } from "../utils/rules";
 
 describe("SelectionButtons", () => {
   test("renders all selection buttons with correct aria-labels", () => {
@@ -15,7 +16,7 @@ describe("SelectionButtons", () => {
     expect(getByRole("button", { name: /spock icon/i })).toBeInTheDocument();
   });
 
-  test.each([
+  test.each<[Selection, string]>([
     ["rock", "Rock icon: A fist raised in a rock gesture"],
     ["paper", "Paper icon: An open hand with fingers spread"],
     ["scissors", "Scissors icon: A hand showing the scissors gesture"],

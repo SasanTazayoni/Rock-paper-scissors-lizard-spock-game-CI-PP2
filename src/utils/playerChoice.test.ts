@@ -1,9 +1,10 @@
-import { getPlayerChoice } from "./playerChoice";
 import { describe, test, expect } from "vitest";
+import { getPlayerChoice } from "./playerChoice";
 import { rules } from "./rules";
+import type { Selection } from "./rules";
 
 describe("getPlayerChoice", () => {
-  test.each([["rock"], ["paper"], ["scissors"], ["lizard"], ["spock"]])(
+  test.each<[Selection]>([["rock"], ["paper"], ["scissors"], ["lizard"], ["spock"]])(
     "returns correct rule object for %s",
     (selection) => {
       const result = getPlayerChoice(selection);

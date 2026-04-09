@@ -3,7 +3,7 @@ import { describe, test, expect, vi, beforeEach, afterEach } from "vitest";
 import { useOverlayHeight } from "./useOverlayHeight";
 
 describe("useOverlayHeight", () => {
-  let overlay;
+  let overlay: HTMLDivElement;
 
   beforeEach(() => {
     overlay = document.createElement("div");
@@ -69,7 +69,7 @@ describe("useOverlayHeight", () => {
       value: 2000,
     });
 
-    const { rerender } = renderHook(({ isOpen }) => useOverlayHeight(isOpen), {
+    const { rerender } = renderHook(({ isOpen }: { isOpen: boolean }) => useOverlayHeight(isOpen), {
       initialProps: { isOpen: true },
     });
 
