@@ -32,6 +32,17 @@ describe("RulesModal", () => {
     expect(closeMock).toHaveBeenCalledTimes(1);
   });
 
+  test("hides image on load error", () => {
+    const { getByAltText } = render(
+      <RulesModal showRulesModal={true} closeRulesModal={() => {}} />
+    );
+
+    const image = getByAltText("Rock-paper-lizard-Spock game rules diagram") as HTMLImageElement;
+    fireEvent.error(image);
+
+    expect(image.style.display).toBe("none");
+  });
+
   test("renders deployed image when hostname is not 'localhost'", () => {
     Object.defineProperty(window, "location", {
       value: { hostname: "example.com" },

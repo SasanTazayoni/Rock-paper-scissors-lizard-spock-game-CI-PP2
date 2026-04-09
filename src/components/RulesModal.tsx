@@ -50,6 +50,9 @@ export default function RulesModal({
               }
               className="modal-image"
               alt="Rock-paper-lizard-Spock game rules diagram"
+              onError={(e) => {
+                (e.target as HTMLImageElement).style.display = "none";
+              }}
             />
           </div>
           <div className="rules-text">
