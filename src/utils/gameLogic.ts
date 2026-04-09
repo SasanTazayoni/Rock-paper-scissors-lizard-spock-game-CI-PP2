@@ -12,10 +12,8 @@ export const playGameRound = (
   }
 
   if (player.beats.includes(computerChoice.name)) {
-    console.log(`Result: WIN — ${player.name} beats ${computerChoice.name}`);
     return "WIN";
   }
 
-  console.log(`Result: LOSE — ${computerChoice.name} beats ${player.name}`);
   return "LOSE";
 };
