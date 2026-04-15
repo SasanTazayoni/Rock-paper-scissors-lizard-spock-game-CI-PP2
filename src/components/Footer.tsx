@@ -8,7 +8,7 @@ export default function Footer() {
         Tazayoni
       </p>
       <a
-        href="https://github.com/SasanTazayoni"
+        href="https://github.com/SasanTazayoni/Rock-paper-scissors-lizard-spock"
         target="_blank"
         rel="noopener noreferrer"
         className="github-link"
@@ -17,6 +17,6 @@ export default function Footer() {
         <i className="fa-brands fa-github"></i>
       </a>
     </footer>,
-    document.getElementById("footer-root")!
+    document.getElementById("footer-root")!,
   );
 }
